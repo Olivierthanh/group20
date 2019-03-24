@@ -18,3 +18,8 @@ input[type=date]::-webkit-inner-spin-button {
     width: 100%;
     padding: auto;
 }
+
+/* Footer */
+.footer {
+    padding: auto !important;
+}
