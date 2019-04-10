@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="nk-sidebar">
     <div class="nk-nav-scroll">
         <ul class="metismenu" id="menu">
@@ -45,7 +46,7 @@
             </a>
                 <ul aria-expanded="false">
                     <li>
-                        <a href="#" aria-expanded="false">View Profile</a>
+                        <a href="<c:url value="/profile" />" aria-expanded="false">View Profile</a>
                     </li>
                     <li>
                         <a href="#" aria-expanded="false">Change Password</a>
@@ -54,7 +55,7 @@
             </li>
             <li class="nav-label">Log out</li>
             <li>
-                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                <a class="has-arrow" href="<c:url value="/logout" />" aria-expanded="false">
                     <i class="mdi mdi-power"></i>
                     <span class="nav-text">Log out</span>
                     <span class="badge badge-success nav-badge">03</span>

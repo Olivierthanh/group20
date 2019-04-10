@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: toila
@@ -14,17 +15,17 @@
             <ul>
                 <li class="icons">
                     <a href="javascript:void(0)" class="log-user">
-                        <img src="resources/assets/images/avatar/1.jpg" alt=""> <span>User Name</span> <i
+                        <img src="<c:url value="resources/assets/images/avatar/1.jpg" />" alt=""> <span>${sessionScope.username}</span> <i
                             class="fa fa-caret-down f-s-14" aria-hidden="true"></i>
                     </a>
                     <div class="drop-down dropdown-profile animated bounceInDown">
                         <div class="dropdown-content-body">
                             <ul>
-                                <li><a href="#"><i class="icon-user"></i> <span>My Profile</span></a>
+                                <li><a href="<c:url value="/profile" />"><i class="icon-user"></i> <span>My Profile</span></a>
                                 </li>
-                                <li><a href="#"><i class="icon-wallet"></i> <span>My Wallet</span></a>
+                                <li><a href="<c:url value="/home" />"><i class="icon-wallet"></i> <span>My Wallet</span></a>
                                 </li>
-                                <li><a href="#"><i class="icon-power"></i> <span>Logout</span></a>
+                                <li><a href="<c:url value="/logout" />"><i class="icon-power"></i> <span>Logout</span></a>
                                 </li>
                             </ul>
                         </div>

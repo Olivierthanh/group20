@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: toila
@@ -8,9 +9,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="nav-header">
     <div class="brand-logo">
-        <a href="#">
+        <a href="<c:url value="/" />">
             <b>
-                <img src="resources/assets/images/wallet-sm.png" alt="">
+                <img src="<c:url value="resources/assets/images/wallet-sm.png" />" alt="">
             </b>
             <span class="brand-title">
                 <img src="#" alt="">

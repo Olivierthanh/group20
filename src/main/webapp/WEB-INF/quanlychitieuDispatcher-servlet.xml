@@ -7,12 +7,17 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
 
+	<context:annotation-config></context:annotation-config>
+	<import resource="classpath:IoC.xml"/>
+	<import resource="classpath:security.xml"/>
 	<context:component-scan
 		base-package="com.quanlychitieu.controller" />
-	<import resource="classpath:IoC.xml"/>
+	<context:component-scan base-package="com.quanlychitieu.dao" />
+	<context:component-scan base-package="com.quanlychitieu.service" />
+
 	<mvc:annotation-driven />
 	
-	<mvc:resources mapping="/resources/**" location="/resources/" cache-period="31556926" />
+	<mvc:resources mapping="/resources/**" location="/resources/" cache-period="10" />
 	
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
