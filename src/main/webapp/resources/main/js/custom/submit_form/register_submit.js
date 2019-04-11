@@ -8,7 +8,6 @@ $("#register-form").on("submit", event => {
     formData.forEach((v, k) => {
         data[k] = v;
     });
-    console.log(data);
     $.ajax({
         type: "GET",
         contentType: "application/json",

@@ -5,7 +5,7 @@
   Time: 11:11 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <html lang="en" class="h-100">
 <head>
@@ -15,6 +15,8 @@
     <title>Login</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<c:url value="resources/assets/images/wallet.png" /> ">
+    <%--Sweet Alert stylesheet--%>
+    <link href="<c:url value="resources/assets/plugins/sweetalert2/dist/sweetalert2.min.css" />" rel="stylesheet">
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="<c:url value="resources/main/css/custom.css" /> ">
     <link href="<c:url value="resources/main/css/style.css" /> " rel="stylesheet">
@@ -109,8 +111,15 @@
 <script src="<c:url value="resources/main/js/custom.min.js" /> "></script>
 <script src="<c:url value="resources/main/js/settings.js" /> "></script>
 <script src="<c:url value="resources/main/js/gleek.js" /> "></script>
+<%--Sweet alert2--%>
+<script src="<c:url value="resources/assets/plugins/sweetalert2/dist/sweetalert2.min.js" />"></script>
 <!-- Form validate -->
 <script src="<c:url value="resources/assets/plugins/jquery-validation/jquery.validate.min.js" /> "></script>
 <script src="<c:url value="resources/main/js/custom/validate/login_validate.js" /> "></script>
+<c:if test="${param.error == true}">
+    <script>
+        swal('Try again !!', 'Your email is not existed or your password is incorrect !!', 'error');
+    </script>
+</c:if>
 </body>
 </html>

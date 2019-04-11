@@ -14,7 +14,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Gleek - Bootstrap Admin Dashboard HTML Template</title>
+    <title>Registration</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<c:url value="resources/assets/images/wallet.png" />">
     <%--Sweet Alert stylesheet--%>
@@ -172,7 +172,7 @@
 <script src="<c:url value="resources/assets/plugins/jquery-validation/jquery.validate.min.js" />"></script>
 <script src="<c:url value="resources/assets/plugins/sweetalert2/dist/sweetalert2.min.js" />"></script>
 <script src="<c:url value="resources/main/js/custom/validate/register_validate.js" />"></script>
-<script src="<c:url value="resources/main/js/custom/submit_form/register.js" />"></script>
+<script src="<c:url value="resources/main/js/custom/submit_form/register_submit.js" />"></script>
 </body>
 
 </html>

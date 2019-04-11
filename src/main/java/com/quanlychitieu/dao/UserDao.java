@@ -2,11 +2,11 @@ package com.quanlychitieu.dao;
 
 import com.quanlychitieu.entity.User;
 import org.hibernate.Criteria;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -30,6 +30,18 @@ public class UserDao {
             flag = true;
         }
         else flag = false;
+        return flag;
+    }
+
+    public boolean updateUser(User user) {
+        boolean flag;
+        try {
+            getSession().update(user);
+            flag = true;
+        }
+        catch (HibernateException ex) {
+            flag = false;
+        }
         return flag;
     }
 

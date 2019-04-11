@@ -5,7 +5,7 @@
   Time: 10:25 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
@@ -18,7 +18,8 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<c:url value="resources/assets/images/wallet.png" />">
     <!-- Cdn css -->
-
+    <%--Sweet Alert stylesheet--%>
+    <link href="<c:url value="resources/assets/plugins/sweetalert2/dist/sweetalert2.min.css" />" rel="stylesheet">
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="<c:url value="resources/main/css/custom.css" />">
     <link href="<c:url value="resources/main/css/style.css" />" rel="stylesheet">
@@ -65,7 +66,7 @@
                         <div class="card-body">
                             <div class="user-info-settings">
                                 <h4 class="text-primary section-heading card-intro-title">Settings</h4>
-                                <form action="<c:url value="/profile/update_profile" />" class="user-info-setting-form">
+                                <form id="update-profile-form" action="<c:url value="/profile/update_profile" />" method="post" class="user-info-setting-form">
                                     <div class="form-group">
                                         <label class="text-label">Full Name</label>
                                         <input type="text" class="form-control" name="name" id="name" value="${user.name}" placeholder="Name" />
@@ -76,7 +77,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="text-label">Confirm Password</label>
-                                        <input type="password" class="form-control" name="confirm-password" id="confirm-password" placeholder="******" />
+                                        <input type="password" class="form-control" name="password" id="password" placeholder="******" />
                                     </div>
                                     <div class="form-group">
                                         <label class="text-label">Date Of Birth</label>
@@ -96,17 +97,17 @@
                                     <div class="form-group">
                                         <label class="text-label">Gender</label>
                                         <div class="form-check">
-                                            <input id="radio1" class="radio-outlined" name="gender" type="radio" <c:if test="${user.gender == 'male'}">checked</c:if> />
+                                            <input id="radio1" class="radio-outlined" value="male" name="gender" type="radio" <c:if test="${user.gender == 'male'}">checked</c:if> />
                                             <label for="radio1" class="">Male</label>
                                         </div>
                                         <div class="form-check">
-                                            <input id="radio2" class="radio-outlined" name="gender" type="radio" <c:if test="${user.gender == 'female'}">checked</c:if> />
+                                            <input id="radio2" class="radio-outlined" value="female" name="gender" type="radio" <c:if test="${user.gender == 'female'}">checked</c:if> />
                                             <label for="radio2" class="">Female</label>
                                         </div>
                                     </div>
                                     <div class="submit-buttons mb-5">
-                                        <button type="submit" class="btn btn-card btn-success">Update Profile</button>
-                                        <button type="submit" class="btn btn-card btn-danger">Cancel</button>
+                                        <button type="submit" class="btn btn-card btn-success" id="update-profile-submit-button" disabled>Update Profile</button>
+                                        <%--<button type="submit" class="btn btn-card btn-danger" id="cancel-update-profile-button" disabled>Cancel</button>--%>
                                     </div>
                                 </form>
                             </div>
@@ -138,22 +139,22 @@
                                         <h5>Social Profile</h5>
                                         <ul class="social-navigation">
                                             <li>
-                                                <a class="bg-facebook" href="javascript:void()">
+                                                <a class="bg-facebook" href="https://www.facebook.com">
                                                     <i class="fa fa-facebook color-white"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="bg-instagram" href="javascript:void()">
+                                                <a class="bg-instagram" href="https://www.instagram.com">
                                                     <i class="fa fa-instagram color-white"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="bg-twitter" href="javascript:void()">
+                                                <a class="bg-twitter" href="https://www.twitter.com">
                                                     <i class="fa fa-twitter color-white"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="bg-youtube" href="javascript:void()">
+                                                <a class="bg-youtube" href="https://www.youtube.com">
                                                     <i class="fa fa-youtube color-white"></i>
                                                 </a>
                                             </li>
@@ -181,8 +182,11 @@
 <script src="<c:url value="resources/main/js/custom.min.js" />"></script>
 <script src="<c:url value="resources/main/js/settings.js" />"></script>
 <script src="<c:url value="resources/main/js/gleek.js" />"></script>
-<script src="<c:url value="resources/main/js/styleSwitcher.js" />"></script>
-<script src="<c:url value="resources/main/js/custom/validate.js" />"></script>
+<!-- Form validate -->
+<script src="<c:url value="resources/assets/plugins/jquery-validation/jquery.validate.min.js" />"></script>
+<script src="<c:url value="resources/assets/plugins/sweetalert2/dist/sweetalert2.min.js" />"></script>
+<script src="<c:url value="resources/main/js/custom/validate/update_profile_validate.js" />"></script>
+<script src="<c:url value="resources/main/js/custom/submit_form/update_profile_submit.js" />"></script>
 <!-- End Script -->
 </body>
 </html>

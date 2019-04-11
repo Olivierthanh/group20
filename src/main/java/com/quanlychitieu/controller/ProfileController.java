@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -32,8 +33,8 @@ public class ProfileController {
     }
 
     @RequestMapping("/profile/update_profile")
-    public String updateProfile(HttpServletRequest request) {
-
-        return null;
+    public @ResponseBody String updateProfile(HttpServletRequest request) {
+        String message = userService.updateProfile(request);
+        return message;
     }
 }

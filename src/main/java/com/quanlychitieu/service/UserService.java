@@ -31,34 +31,27 @@ public class UserService {
 
     public String registerUser(HttpServletRequest request) {
         ObjectMapper mapper = new ObjectMapper();
-        AjaxMessage message = new AjaxMessage();
+        AjaxMessage message;
         String ajaxResponse = "";
         User user;
         try {
             user = getUserFromFormData(request);
+            user.setPassword(passwordEncoder.encode(user.getPassword()));
             boolean isSaved = userDao.saveUser(user);
             if (isSaved) {
-                message.setTitle("Register successfully");
-                message.setType("success");
-                message.setMessage("Please return login page to login");
+                message = new AjaxMessage("success", "Register successfully", "Please return login page to login");
             }
             else {
-                message.setTitle("Register unsuccessfully");
-                message.setType("error");
-                message.setMessage("This email " + user.getEmail() + " is already existed, please use another email");
+                message = new AjaxMessage("error", "Register unsuccessfully", "This email " + user.getEmail() + " is already existed, please use another email");
             }
         }
         catch (ParseException parseException) {
             parseException.printStackTrace();
-            message.setTitle("Error");
-            message.setType("error");
-            message.setMessage("Wrong date format (expected yyyy-MM-dd)");
+            message = new AjaxMessage("error", "Error", "Wrong date format (expected yyyy-MM-dd)");
         }
         catch (Exception ex) {
             ex.printStackTrace();
-            message.setTitle("Error");
-            message.setType("error");
-            message.setMessage("Some thing wrong happen");
+            message = new AjaxMessage("error", "Error", "Some thing wrong happen");
         }
 
         try {
@@ -70,10 +63,56 @@ public class UserService {
         return ajaxResponse;
     }
 
+    public String updateProfile(HttpServletRequest request) {
+        ObjectMapper mapper = new ObjectMapper();
+        AjaxMessage message;
+        String ajaxResponse = "";
+        User newProfile;
+        try {
+            newProfile = getUserFromFormData(request);
+            System.out.println(newProfile.getEmail());
+            User oldProfile = userDao.getUserByEmail(newProfile.getEmail());
+            System.out.println(oldProfile);
+            newProfile.setListWallet(oldProfile.getListWallet());
+            newProfile.setUserId(oldProfile.getUserId());
+
+            if (passwordEncoder.matches(newProfile.getPassword(), oldProfile.getPassword())) {
+                newProfile.setPassword(oldProfile.getPassword());
+                boolean isUpdated = userDao.updateUser(newProfile);
+                if (isUpdated) {
+                    message = new AjaxMessage("success", "Update successfully", "Your profile is updated");
+                }
+                else {
+                    message = new AjaxMessage("error", "Update unsuccessfully", "Your profile is not updated! Please try to update profile again");
+                }
+            }
+            else {
+                message = new AjaxMessage("error", "Incorrect Password", "Please enter the correct password");
+            }
+
+        }
+        catch (ParseException parseException) {
+            parseException.printStackTrace();
+            message = new AjaxMessage("error", "Error", "Wrong date format (expected yyyy-MM-dd)");
+        }
+        catch (Exception ex) {
+            ex.printStackTrace();
+            message = new AjaxMessage("error", "Error", "Some thing wrong happen");
+        }
+        try {
+            ajaxResponse = mapper.writeValueAsString(message);
+        }
+        catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return ajaxResponse;
+    }
+
     private User getUserFromFormData(HttpServletRequest request) throws ParseException {
         String email = request.getParameter("email");
         String name = request.getParameter("name");
-        String password = passwordEncoder.encode(request.getParameter("password"));
+        String password = request.getParameter("password");
         String address = request.getParameter("address");
         Gender gender = Gender.valueOf(request.getParameter("gender"));
         Set<Wallet> listWallet = new HashSet<Wallet>();
