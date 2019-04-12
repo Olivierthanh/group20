@@ -73,7 +73,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6 text-right">
-                                        <a href="javascript:void()">Forgot Password?</a>
+                                        <a id="forgot-password" href="<c:url value="/resetPassword" />">Forgot Password?</a>
                                     </div>
                                 </div>
                                 <div class="text-center mb-4 mt-4">
@@ -116,6 +116,7 @@
 <!-- Form validate -->
 <script src="<c:url value="resources/assets/plugins/jquery-validation/jquery.validate.min.js" /> "></script>
 <script src="<c:url value="resources/main/js/custom/validate/login_validate.js" /> "></script>
+<script src="<c:url value="resources/main/js/custom/submit_form/reset_password.js" />"></script>
 <c:if test="${param.error == true}">
     <script>
         swal('Try again !!', 'Your email is not existed or your password is incorrect !!', 'error');

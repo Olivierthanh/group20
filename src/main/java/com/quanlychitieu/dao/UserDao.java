@@ -61,4 +61,5 @@ public class UserDao {
         User foundUser = getUserByEmail(user.getEmail());
         return foundUser != null;
     }
+
 }

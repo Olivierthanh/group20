@@ -3,16 +3,7 @@ package com.quanlychitieu.entity;
 import java.util.Date;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 
 @Entity(name="wallet")
 public class Wallet {
@@ -25,9 +16,9 @@ public class Wallet {
 	private int balance;
 	private String currency;
 	
-	@OneToOne(cascade= CascadeType.ALL)
-	@JoinColumn(name="userId")
-	private User user;
+	@ManyToMany(cascade= CascadeType.ALL)
+	@JoinTable(name = "user_wallet", joinColumns = {@JoinColumn(name = "walletId")}, inverseJoinColumns = {@JoinColumn(name = "userId")})
+	private Set<User> listUser;
 	
 	@OneToMany(cascade=CascadeType.ALL)
 	@JoinColumn(name="incomeId")
@@ -44,14 +35,14 @@ public class Wallet {
 		
 	}
 	
-	public Wallet(int walletId, String walletName, int balance, String currency, User user, Set<Income> listIncome,
+	public Wallet(int walletId, String walletName, int balance, String currency, Set<User> listUser, Set<Income> listIncome,
 			Set<Expense> listExpense, Date createdDate) {
 		super();
 		this.walletId = walletId;
 		this.walletName = walletName;
 		this.balance = balance;
 		this.currency = currency;
-		this.user = user;
+		this.listUser = listUser;
 		this.listIncome = listIncome;
 		this.listExpense = listExpense;
 		this.createdDate = createdDate;
@@ -105,12 +96,12 @@ public class Wallet {
 		this.currency = currency;
 	}
 
-	public User getUser() {
-		return user;
+	public Set<User> getListUser() {
+		return listUser;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setListUser(Set<User> listUser) {
+		this.listUser = listUser;
 	}
 
 	public Date getCreatedDate() {

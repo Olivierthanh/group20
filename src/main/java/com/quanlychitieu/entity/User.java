@@ -3,17 +3,7 @@ package com.quanlychitieu.entity;
 import java.util.Date;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 
 
 @Entity(name = "user")
@@ -28,8 +18,8 @@ public class User {
     private String name;
     private String address;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "userId")
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "user_wallet", joinColumns = {@JoinColumn(name = "userId")}, inverseJoinColumns = {@JoinColumn(name = "walletId")})
     private Set<Wallet> listWallet;
 
     public Set<Wallet> getListWallet() {
