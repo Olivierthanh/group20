@@ -41,13 +41,13 @@
     <link rel="alternate" href="https://spring.io/blog/2019/04/03/spring-boot-1-5-20-available-now" />
     <category term="releases" label="Releases" />
     <author>
-      <name>Stéphane Nicoll</name>
+      <name>Stï¿½phane Nicoll</name>
     </author>
     <id>tag:spring.io,2019-04-03:3625</id>
     <updated>2019-04-03T13:13:00Z</updated>
     <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring Boot 1.5.20 has been released and is now available from &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and Maven Central.&lt;/p&gt;
 &lt;p&gt;Spring Boot 1.5.20 is a maintenance release that includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v1.5.20.RELEASE"&gt;over 30 dependency updates and selected bug fixes&lt;/a&gt;. These upgrades include Spring Security OAuth 2.0.17 which addresses a &lt;a href="https://spring.io/blog/2019/02/21/cve-2019-3778-spring-security-oauth-2-3-5-2-2-4-2-1-4-2-0-17-released"&gt;recently announced CVE&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;If you haven’t already upgraded to Spring Boot 2, please consider doing so as support for 1.x will &lt;a href="https://spring.io/blog/2018/07/30/spring-boot-1-x-eol-aug-1st-2019"&gt;end on August 1st 2019&lt;/a&gt;. &lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
+&lt;p&gt;If you havenï¿½t already upgraded to Spring Boot 2, please consider doing so as support for 1.x will &lt;a href="https://spring.io/blog/2018/07/30/spring-boot-1-x-eol-aug-1st-2019"&gt;end on August 1st 2019&lt;/a&gt;. &lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
 &lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="http://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="http://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/1.5.20.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
@@ -120,7 +120,7 @@
     <id>tag:spring.io,2019-03-28:3615</id>
     <updated>2019-04-02T00:00:00Z</updated>
     <content type="html">&lt;blockquote&gt;
-  &lt;p&gt;Asir Selvasingh | Principal PM Architect | Microsoft – Java on Azure&lt;/p&gt;
+  &lt;p&gt;Asir Selvasingh | Principal PM Architect | Microsoft ï¿½ Java on Azure&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Spring Cloud Stream Binder for Azure Event Hubs is now generally available. &lt;/p&gt;
 &lt;p&gt;It is simple to build highly scalable event-driven Java apps using Spring Cloud Stream with Event Hubs, a fully managed, real-time data ingestion service on Azure that is resilient and reliable service for any situation; this includes emergencies, thanks to its geo-disaster recovery and geo-replication features.&lt;/p&gt;
@@ -152,14 +152,14 @@
   &lt;li&gt;Learn more: &lt;a href="https://azure.microsoft.com/en-us/services/event-hubs/"&gt;Azure Event Hubs&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;h3&gt;&lt;a href="#about-the-author" class="anchor" name="about-the-author"&gt;&lt;/a&gt;About the Author&lt;/h3&gt;
 &lt;p&gt;Asir started his software engineering career in the early days of Java, in 1995, and built enterprise products, applications and open source projects for many years. Now, he is a Principal PM Architect at Microsoft focusing on a full gamut of services and tools for developers to build and scale Java workloads on Azure. He works closely with the community, delivering sessions at Java conferences and fostering strategic relations that enrich the Java ecosystem.&lt;/p&gt;
-&lt;p&gt;In his free-time, Asir loves to tinker with Java apps on Azure, which serves as a creative outlet from his day job. He’s passionate about cooking and photography and enjoys quality family time traveling the world.&lt;/p&gt;</content>
+&lt;p&gt;In his free-time, Asir loves to tinker with Java apps on Azure, which serves as a creative outlet from his day job. Heï¿½s passionate about cooking and photography and enjoys quality family time traveling the world.&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Spring Framework 5.1.6, 5.0.13 and 4.3.23 available now</title>
     <link rel="alternate" href="https://spring.io/blog/2019/04/01/spring-framework-5-1-6-5-0-13-and-4-3-23-available-now" />
     <category term="releases" label="Releases" />
     <author>
-      <name>Stéphane Nicoll</name>
+      <name>Stï¿½phane Nicoll</name>
     </author>
     <id>tag:spring.io,2019-04-01:3621</id>
     <updated>2019-04-01T08:41:00Z</updated>
@@ -672,7 +672,7 @@ dependencies {
   &lt;li&gt;&lt;a href="https://twitter.com/spring_io/status/1107666963592110081"&gt;Have you secured your tickets for the Spring I/O conference in bootiful Barcelona, Spain?&lt;/a&gt; I&amp;rsquo;ll be there, co-presenting four different talks with my friends in the ecosystem. Join us!&lt;/li&gt;
   &lt;li&gt;the Java Code Geeks have a nice post on using the &lt;a href="https://examples.javacodegeeks.com/enterprise-java/spring/boot/spring-boot-crossorigin-annotation-example/"&gt;Spring Boot &lt;code&gt;@CrossOrigin&lt;/code&gt; annotation&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://twitter.com/springcloud/status/1106776301090807808"&gt;Have you signed up for SpringOne Platform 2019&lt;/a&gt;? Get your tickets now!&lt;/li&gt;
-  &lt;li&gt;Great tweet from Spring Data lead Oliver Drotbohm &lt;a href="https://twitter.com/odrotbohm/status/1106645111402913794?s=20"&gt;on Twitter: &amp;quot;&amp;hellip;when comparing the different frameworks&amp;hellip;, more of those participants who implemented some security achieved a high score for security through Spring’s default implementation.“&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Great tweet from Spring Data lead Oliver Drotbohm &lt;a href="https://twitter.com/odrotbohm/status/1106645111402913794?s=20"&gt;on Twitter: &amp;quot;&amp;hellip;when comparing the different frameworks&amp;hellip;, more of those participants who implemented some security achieved a high score for security through Springï¿½s default implementation.ï¿½&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Nice! &lt;a href="https://twitter.com/sdeleuze/status/1106610144744562688?s=12"&gt;Kotlin coroutine support in Spring WebFlux&lt;/a&gt; is coming!&lt;/li&gt;
   &lt;li&gt;Good news everybody! In February &lt;a href="https://twitter.com/SpringData/status/1106550030410883072"&gt;Spring Data crossed 2.5 million downloads for the first time!&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Check out the slides from Olga Maciaszek-Sharma and Marcin Grzejszczak on using &lt;a href="https://twitter.com/springcloud/status/1106522322113101825"&gt;Spring in a post Spring Cloud Netflix world&lt;/a&gt;&lt;/li&gt;

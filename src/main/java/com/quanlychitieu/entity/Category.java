@@ -12,82 +12,65 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
-enum Type {
-	expense, income
-}
-
-@Entity(name="category")
+@Entity(name = "category")
 public class Category {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int categoryId;
-	private String categoryName;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int categoryId;
+    private String categoryName;
 
-	@Enumerated(EnumType.STRING)
-	private Type type;
-	
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="incomeId")
-	private Set<Income> listIncome ;
-	
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="expenseId")
-	private Set<Expense> listExpense ;
-	
+    @Enumerated(EnumType.STRING)
+    private TransactionType type;
 
-	public Category() {
-		
-	}
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "transactionId")
+    private Set<Transaction> listTransaction;
 
-	public Category(int categoryId, String categoryName, Type type, Set<Income> listIncome, Set<Expense> listExpense) {
-		super();
-		this.categoryId = categoryId;
-		this.categoryName = categoryName;
-		this.type = type;
-		this.listIncome = listIncome;
-		this.listExpense = listExpense;
-	}
 
-	public int getCategoryId() {
-		return categoryId;
-	}
+    public Category() {
 
-	public void setCategoryId(int categoryId) {
-		this.categoryId = categoryId;
-	}
+    }
 
-	public String getCategoryName() {
-		return categoryName;
-	}
+    public Category(int categoryId, String categoryName, TransactionType type, Set<Transaction> listTransaction) {
+        super();
+        this.categoryId = categoryId;
+        this.categoryName = categoryName;
+        this.type = type;
+        this.listTransaction = listTransaction;
+    }
 
-	public void setCategoryName(String categoryName) {
-		this.categoryName = categoryName;
-	}
+    public int getCategoryId() {
+        return categoryId;
+    }
 
-	public Type getType() {
-		return type;
-	}
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
+    }
 
-	public void setType(Type type) {
-		this.type = type;
-	}
+    public String getCategoryName() {
+        return categoryName;
+    }
 
-	public Set<Income> getListIncome() {
-		return listIncome;
-	}
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
 
-	public void setListIncome(Set<Income> listIncome) {
-		this.listIncome = listIncome;
-	}
+    public TransactionType getType() {
+        return type;
+    }
 
-	public Set<Expense> getListExpense() {
-		return listExpense;
-	}
+    public void setType(TransactionType type) {
+        this.type = type;
+    }
 
-	public void setListExpense(Set<Expense> listExpense) {
-		this.listExpense = listExpense;
-	}
-	
-	
+    public Set<Transaction> getListTransaction() {
+        return listTransaction;
+    }
+
+    public void setListTransaction(Set<Transaction> listTransaction) {
+        this.listTransaction = listTransaction;
+    }
+
+
 }

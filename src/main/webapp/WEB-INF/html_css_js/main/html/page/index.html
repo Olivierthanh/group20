@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/images/wallet.png">
     <!-- Cdn css -->
     <!-- <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.5.95/css/materialdesignicons.min.css"> -->
+    <link href="../../../assets/plugins/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="../../css/custom.css">
     <link href="../../css/style.css" rel="stylesheet">
@@ -162,22 +163,142 @@
         <!-- End menu -->
 
         <!-- Conent body -->
-        <div class="content-body">
+        <div class="content-body" style="min-height: 894px;">
             <div class="container-fluid">
-                <!-- <div class="row page-titles">
-                    <div class="col p-0">
-                        <h4>Hello, <span>Welcome here</span></h4>
+                <div class="row page-titles">
+                    <div class="col p-md-0">
+                        <h4>Dashboard</h4>
                     </div>
-                    <div class="col p-0">
+                    <div class="col p-md-0">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">App</a>
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a>
                             </li>
-                            <li class="breadcrumb-item active">Profile</li>
+                            <li class="breadcrumb-item active">
+                                <a href="">Restaurant</a>
+                            </li>
                         </ol>
                     </div>
-                </div> -->
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 col-xl-3">
+                        <div class="card">
+                            <div class="card-body stat-widget-seven gradient-7">
+                                <div class="media">
+                                    <img class="mr-5 m-t-13 m-l-5" src="../../../assets/images/icons/15.png" alt="">
+                                    <div class="media-body">
+                                        <h2 class="mt-0 mb-1">8</h2>
+                                        <h5>No. Wallets</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-xl-3">
+                        <div class="card">
+                            <div class="card-body stat-widget-seven gradient-5">
+                                <div class="media">
+                                    <img class="mr-5 m-t-13 m-l-5" src="../../../assets/images/icons/7.png" alt="">
+                                    <div class="media-body">
+                                        <h2 class="mt-0 mb-1">5</h2>
+                                        <h5>No. Personal Wallets</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-xl-3">
+                        <div class="card">
+                            <div class="card-body stat-widget-seven gradient-3">
+                                <div class="media">
+                                    <img class="mr-5 m-t-13 m-l-5" src="../../../assets/images/icons/8.png" alt="">
+                                    <div class="media-body">
+                                        <h2 class="mt-0 mb-1">3</h2>
+                                        <h5>No. Shared Wallets</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-xl-3">
+                        <div class="card">
+                            <div class="card-body stat-widget-seven gradient-4">
+                                <div class="media">
+                                    <img class="mr-5 m-t-13 m-l-5" src="../../../assets/images/icons/18.png" alt="">
+                                    <div class="media-body">
+                                        <h2 class="mt-0 mb-1">50</h2>
+                                        <h5>No. Transactions</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header pb-0">
+                                <h4 class="card-title">List of Wallet</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table id="example-api-1" class="table display" style="min-width: 845px">
+                                        <thead>
+                                            <tr>
+                                                <th>Wallet Name</th>
+                                                <th>Balance</th>
+                                                <th>Currency</th>
+                                                <th>Created Date</th>
+                                                <!-- <th>No. Transaction</th> -->
+                                                <th>Type</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Wallet 1</td>
+                                                <td>1000</td>
+                                                <td>$</td>
+                                                <td>01/01/2019</td>
+                                                <!-- <td>100</td> -->
+                                                <td>Cá nhân</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wallet 1</td>
+                                                <td>1000</td>
+                                                <td>$</td>
+                                                <td>01/01/2019</td>
+                                                <!-- <td>100</td> -->
+                                                <td>Dùng chung</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wallet 1</td>
+                                                <td>1000</td>
+                                                <td>$</td>
+                                                <td>01/01/2019</td>
+                                                <!-- <td>100</td> -->
+                                                <td>Cá nhân</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Balance</th>
+                                                <th>Currency</th>
+                                                <th>Created Date</th>
+                                                <!-- <th></th> -->
+                                                <th>Type</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
             </div>
-            <!-- #/ container -->
         </div>
         <!-- End content body -->
 
@@ -198,6 +319,82 @@
     <script src="../../js/gleek.js"></script>
     <script src="../../js/styleSwitcher.js"></script>
     <!-- End Script -->
+    <!-- Echart -->
+    <script src="../../../assets/plugins/echarts/echarts.min.js"></script>
+    <!-- <script src="../../../main/js/plugins-init/echarts-init.js"></script> -->
+
+    <script src="../../../assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <script src="../../../assets/plugins/chart.js/Chart.bundle.min.js"></script>
+    <script src="../../../assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script>
+        let dataSet = [
+            ["Tiger Nixon", "System Architect", "Edinburgh", "5421", "2011/04/25", "$320,800"],
+            ["Garrett Winters", "Accountant", "Tokyo", "8422", "2011/07/25", "$170,750"],
+            ["Ashton Cox", "Junior Technical Author", "San Francisco", "1562", "2009/01/12", "$86,000"],
+            ["Cedric Kelly", "Senior Javascript Developer", "Edinburgh", "6224", "2012/03/29", "$433,060"],
+            ["Airi Satou", "Accountant", "Tokyo", "5407", "2008/11/28", "$162,700"],
+            ["Brielle Williamson", "Integration Specialist", "New York", "4804", "2012/12/02", "$372,000"],
+            ["Herrod Chandler", "Sales Assistant", "San Francisco", "9608", "2012/08/06", "$137,500"],
+            ["Rhona Davidson", "Integration Specialist", "Tokyo", "6200", "2010/10/14", "$327,900"],
+            ["Colleen Hurst", "Javascript Developer", "San Francisco", "2360", "2009/09/15", "$205,500"],
+            ["Sonya Frost", "Software Engineer", "Edinburgh", "1667", "2008/12/13", "$103,600"],
+            ["Jena Gaines", "Office Manager", "London", "3814", "2008/12/19", "$90,560"],
+            ["Quinn Flynn", "Support Lead", "Edinburgh", "9497", "2013/03/03", "$342,000"],
+            ["Charde Marshall", "Regional Director", "San Francisco", "6741", "2008/10/16", "$470,600"],
+            ["Haley Kennedy", "Senior Marketing Designer", "London", "3597", "2012/12/18", "$313,500"],
+            ["Tatyana Fitzpatrick", "Regional Director", "London", "1965", "2010/03/17", "$385,750"],
+            ["Michael Silva", "Marketing Designer", "London", "1581", "2012/11/27", "$198,500"],
+            ["Paul Byrd", "Chief Financial Officer (CFO)", "New York", "3059", "2010/06/09", "$725,000"],
+            ["Gloria Little", "Systems Administrator", "New York", "1721", "2009/04/10", "$237,500"],
+            ["Bradley Greer", "Software Engineer", "London", "2558", "2012/10/13", "$132,000"],
+            ["Dai Rios", "Personnel Lead", "Edinburgh", "2290", "2012/09/26", "$217,500"],
+            ["Jenette Caldwell", "Development Lead", "New York", "1937", "2011/09/03", "$345,000"],
+            ["Yuri Berry", "Chief Marketing Officer (CMO)", "New York", "6154", "2009/06/25", "$675,000"],
+            ["Caesar Vance", "Pre-Sales Support", "New York", "8330", "2011/12/12", "$106,450"],
+            ["Doris Wilder", "Sales Assistant", "Sidney", "3023", "2010/09/20", "$85,600"],
+            ["Angelica Ramos", "Chief Executive Officer (CEO)", "London", "5797", "2009/10/09", "$1,200,000"],
+            ["Gavin Joyce", "Developer", "Edinburgh", "8822", "2010/12/22", "$92,575"],
+            ["Jennifer Chang", "Regional Director", "Singapore", "9239", "2010/11/14", "$357,650"],
+            ["Brenden Wagner", "Software Engineer", "San Francisco", "1314", "2011/06/07", "$206,850"],
+            ["Fiona Green", "Chief Operating Officer (COO)", "San Francisco", "2947", "2010/03/11", "$850,000"],
+            ["Shou Itou", "Regional Marketing", "Tokyo", "8899", "2011/08/14", "$163,000"],
+            ["Michelle House", "Integration Specialist", "Sidney", "2769", "2011/06/02", "$95,400"],
+            ["Suki Burks", "Developer", "London", "6832", "2009/10/22", "$114,500"],
+            ["Prescott Bartlett", "Technical Author", "London", "3606", "2011/05/07", "$145,000"],
+            ["Gavin Cortez", "Team Leader", "San Francisco", "2860", "2008/10/26", "$235,500"],
+            ["Martena Mccray", "Post-Sales support", "Edinburgh", "8240", "2011/03/09", "$324,050"],
+            ["Unity Butler", "Marketing Designer", "San Francisco", "5384", "2009/12/09", "$85,675"]
+        ];
+        $('#example-api-1 tfoot th').each(function () {
+            var title = $(this).text();
+            $(this).html('<input type="text"  placeholder="' + title + '" />');
+        });
+
+        // DataTable - individual column searching by text
+        var table = $('#example-api-1').DataTable({
+            bAutoWidth: false,
+            aoColumns: [
+                { "width": "15%" },
+                { "width": "15%" },
+                { "width": "15%" },
+                { "width": "15%" },
+                { "width": "15%" },
+            ]
+        });
+
+        // Apply the search
+        table.columns().every(function () {
+            var that = this;
+
+            $('input', this.footer()).on('keyup change', function () {
+                if (that.search() !== this.value) {
+                    that
+                        .search(this.value)
+                        .draw();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

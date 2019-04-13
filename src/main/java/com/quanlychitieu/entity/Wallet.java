@@ -14,54 +14,45 @@ public class Wallet {
 	
 	private String walletName;
 	private int balance;
-	private String currency;
+
+	@Enumerated(EnumType.STRING)
+	private Currency currency;
 	
 	@ManyToMany(cascade= CascadeType.ALL)
 	@JoinTable(name = "user_wallet", joinColumns = {@JoinColumn(name = "walletId")}, inverseJoinColumns = {@JoinColumn(name = "userId")})
 	private Set<User> listUser;
 	
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="incomeId")
-	private Set<Income> listIncome;
-	
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="expenseId")
-	private Set<Expense> listExpense;
+	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+	@JoinColumn(name="transactionId")
+	private Set<Transaction> listTransaction;
 	
 	@Temporal(TemporalType.DATE)
 	private Date createdDate;
+
+	@Enumerated(EnumType.STRING)
+	private WalletType walletType;
 	
 	public Wallet() {
 		
 	}
-	
-	public Wallet(int walletId, String walletName, int balance, String currency, Set<User> listUser, Set<Income> listIncome,
-			Set<Expense> listExpense, Date createdDate) {
-		super();
-		this.walletId = walletId;
+
+	public Wallet(String walletName, int balance, Currency currency, Set<User> listUser, Set<Transaction> listTransaction, Date createdDate, WalletType walletType) {
 		this.walletName = walletName;
 		this.balance = balance;
 		this.currency = currency;
 		this.listUser = listUser;
-		this.listIncome = listIncome;
-		this.listExpense = listExpense;
+		this.listTransaction = listTransaction;
 		this.createdDate = createdDate;
+		this.walletType = walletType;
 	}
 
-	public Set<Expense> getListExpense() {
-		return listExpense;
-	}
-
-	public void setListExpense(Set<Expense> listExpense) {
-		this.listExpense = listExpense;
-	}
-
-	public Set<Income> getListIncome() {
-		return listIncome;
-	}
-
-	public void setListIncome(Set<Income> listIncome) {
-		this.listIncome = listIncome;
+	public Wallet(String walletName, int balance, Currency currency, Set<User> listUser, Date createdDate, WalletType walletType) {
+		this.walletName = walletName;
+		this.balance = balance;
+		this.currency = currency;
+		this.listUser = listUser;
+		this.createdDate = createdDate;
+		this.walletType = walletType;
 	}
 
 	public int getWalletId() {
@@ -88,11 +79,11 @@ public class Wallet {
 		this.balance = balance;
 	}
 
-	public String getCurrency() {
+	public Currency getCurrency() {
 		return currency;
 	}
 
-	public void setCurrency(String currency) {
+	public void setCurrency(Currency currency) {
 		this.currency = currency;
 	}
 
@@ -104,6 +95,14 @@ public class Wallet {
 		this.listUser = listUser;
 	}
 
+	public Set<Transaction> getListTransaction() {
+		return listTransaction;
+	}
+
+	public void setListTransaction(Set<Transaction> listTransaction) {
+		this.listTransaction = listTransaction;
+	}
+
 	public Date getCreatedDate() {
 		return createdDate;
 	}
@@ -111,5 +110,12 @@ public class Wallet {
 	public void setCreatedDate(Date createdDate) {
 		this.createdDate = createdDate;
 	}
-	
+
+	public WalletType getWalletType() {
+		return walletType;
+	}
+
+	public void setWalletType(WalletType walletType) {
+		this.walletType = walletType;
+	}
 }

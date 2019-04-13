@@ -18,7 +18,7 @@ public class User {
     private String name;
     private String address;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "user_wallet", joinColumns = {@JoinColumn(name = "userId")}, inverseJoinColumns = {@JoinColumn(name = "walletId")})
     private Set<Wallet> listWallet;
 

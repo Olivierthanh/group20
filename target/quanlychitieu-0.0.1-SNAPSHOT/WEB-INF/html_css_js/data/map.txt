@@ -1,0 +1,54 @@
+https://static.moneylover.me/img/icon/ic_category_award.png Award
+https://static.moneylover.me/img/icon/ic_category_give.png  Gifts
+https://static.moneylover.me/img/icon/ic_category_interestmoney.png Interest Money
+https://static.moneylover.me/img/icon/ic_category_other_income.png  Others Income
+https://static.moneylover.me/img/icon/ic_category_salary.png    Salary
+https://static.moneylover.me/img/icon/ic_category_selling.png   Selling
+https://static.moneylover.me/img/icon/icon_135.png	Bills & Utilities
+https://static.moneylover.me/img/icon/icon_59.png	Business
+https://static.moneylover.me/img/icon/ic_category_education.png	Education
+https://static.moneylover.me/img/icon/ic_category_entertainment.png	Entertainment
+https://static.moneylover.me/img/icon/ic_category_family.png	Family
+https://static.moneylover.me/img/icon/icon_138.png	Fees & Charges
+https://static.moneylover.me/img/icon/ic_category_foodndrink.png	Food & Beverage
+https://static.moneylover.me/img/icon/ic_category_friendnlover.png	Friends & Lover
+https://static.moneylover.me/img/icon/ic_category_donations.png	Gifts & Donations
+https://static.moneylover.me/img/icon/ic_category_medical.png	Health & Fitness
+https://static.moneylover.me/img/icon/icon_137.png	Insurances
+https://static.moneylover.me/img/icon/ic_category_invest.png	Investment
+https://static.moneylover.me/img/icon/ic_category_other_expense.png	Others
+https://static.moneylover.me/img/icon/ic_category_shopping.png	Shopping
+https://static.moneylover.me/img/icon/ic_category_transport.png	Transportation
+https://static.moneylover.me/img/icon/ic_category_travel.png	Travel
+https://static.moneylover.me/img/icon/icon_withdrawal.png	Withdrawal
+https://static.moneylover.me/img/icon/icon_63.png	Accessories
+https://static.moneylover.me/img/icon/icon_35.png	Books
+https://static.moneylover.me/img/icon/icon_15.png	Café
+https://static.moneylover.me/img/icon/ic_category_give.png	Charity
+https://static.moneylover.me/img/icon/icon_38.png	Children & Babies
+https://static.moneylover.me/img/icon/icon_17.png	Clothing
+https://static.moneylover.me/img/icon/ic_category_doctor.png	Doctor
+https://static.moneylover.me/img/icon/icon_125.png	Electricity
+https://static.moneylover.me/img/icon/icon_9.png	Electronics
+https://static.moneylover.me/img/icon/icon_131.png	Footwear
+https://static.moneylover.me/img/icon/icon_11.png	Funeral
+https://static.moneylover.me/img/icon/icon_33.png	Games
+https://static.moneylover.me/img/icon/icon_139.png	Gas
+https://static.moneylover.me/img/icon/icon_8.png	Home Improvement
+https://static.moneylover.me/img/icon/icon_54.png	Home Services
+https://static.moneylover.me/img/icon/icon_126.png	Internet
+https://static.moneylover.me/img/icon/icon_130.png	Maintenance
+https://static.moneylover.me/img/icon/icon_10.png	Marriage
+https://static.moneylover.me/img/icon/icon_6.png	Movies
+https://static.moneylover.me/img/icon/icon_128.png	Parking Fees
+https://static.moneylover.me/img/icon/icon_132.png	Personal Care
+https://static.moneylover.me/img/icon/icon_129.png	Petrol
+https://static.moneylover.me/img/icon/icon_53.png	Pets
+https://static.moneylover.me/img/icon/ic_category_pharmacy.png	Pharmacy
+https://static.moneylover.me/img/icon/icon_134.png	Phone
+https://static.moneylover.me/img/icon/icon_136.png	Rentals
+https://static.moneylover.me/img/icon/icon_133.png	Restaurants
+https://static.moneylover.me/img/icon/icon_70.png	Sports
+https://static.moneylover.me/img/icon/icon_127.png	Taxi
+https://static.moneylover.me/img/icon/icon_84.png	Television
+https://static.moneylover.me/img/icon/icon_124.png	Water

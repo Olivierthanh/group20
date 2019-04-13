@@ -28,8 +28,7 @@ public class PasswordResetTokenDao {
         try {
             getSession().saveOrUpdate(passwordResetToken);
             isSaved = true;
-        }
-        catch (HibernateException ex) {
+        } catch (HibernateException ex) {
             isSaved = false;
         }
         return isSaved;
@@ -52,8 +51,7 @@ public class PasswordResetTokenDao {
         try {
             getSession().delete(token);
             flag = true;
-        }
-        catch (HibernateException ex) {
+        } catch (HibernateException ex) {
             ex.printStackTrace();
             flag = false;
         }

@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="C" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="nk-sidebar">
     <div class="nk-nav-scroll">
         <ul class="metismenu" id="menu">
@@ -22,15 +23,11 @@
                     <li>
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">View</a>
                         <ul aria-expanded="false">
-                            <li>
-                                <a href="#">Wallet1</a>
-                            </li>
-                            <li>
-                                <a href="#">Wallet2</a>
-                            </li>
-                            <li>
-                                <a href="#">Wallet3</a>
-                            </li>
+                            <C:forEach items="${sessionScope.walletList}" var="wallet" >
+                                <li>
+                                    <a href="#">${wallet.walletName}</a>
+                                </li>
+                            </C:forEach>
                         </ul>
                     </li>
                     <li>

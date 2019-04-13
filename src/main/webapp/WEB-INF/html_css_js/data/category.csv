@@ -1,0 +1,55 @@
+categoryId,categoryName,type
+1,Award,income
+2,Gifts,income
+3,Interest Money,income
+4,Others,income
+5,Salary,income
+6,Selling,income
+7,Bills & Utilities,expense
+8,Business,expense
+9,Education,expense
+10,Entertainment,expense
+11,Family,expense
+12,Fees & Charges,expense
+13,Food & Beverage,expense
+14,Friends & Lover,expense
+15,Gifts & Donations,expense
+16,Health & Fitness,expense
+17,Insurances,expense
+18,Investment,expense
+19,Others,expense
+20,Shopping,expense
+21,Transportation,expense
+22,Travel,expense
+23,Withdrawal,expense
+24,Accessories,expense
+25,Books,expense
+26,Café,expense
+27,Charity,expense
+28,Children & Babies,expense
+29,Clothing,expense
+30,Doctor,expense
+31,Electricity,expense
+32,Electronics,expense
+33,Footwear,expense
+34,Funeral,expense
+35,Games,expense
+36,Gas,expense
+37,Home Improvement,expense
+38,Home Services,expense
+39,Internet,expense
+40,Maintenance,expense
+41,Marriage,expense
+42,Movies,expense
+43,Parking Fees,expense
+44,Personal Care,expense
+45,Petrol,expense
+46,Pets,expense
+47,Pharmacy,expense
+48,Phone,expense
+49,Rentals,expense
+50,Restaurants,expense
+51,Sports,expense
+52,Taxi,expense
+53,Television,expense
+54,Water,expense
