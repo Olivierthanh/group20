@@ -6,7 +6,7 @@
 }
 
 /* date */
-input[type=date]::-webkit-inner-spin-button {
+input[type=date]::-webkit-inner-spin-button, input[type=month]::-webkit-inner-spin-button, input[type=datetime-local]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     display: none;
 }
@@ -22,4 +22,30 @@ input[type=date]::-webkit-inner-spin-button {
 /* Footer */
 .footer {
     padding: auto !important;
+}
+
+/* Add Transaction Button */
+button#add-transaction-button, button#delete-wallet-button {
+    transform: translate(60%, -60%);
+}
+
+/* View transaction */
+#view-transaction {
+    height: 80vh; 
+    overflow-y: auto;
+}
+
+/* Transperent button */
+.btn-primary-outline {
+    background-color: transparent;
+    border: 0;
+  }
+
+#transaction-category-select .modal-body {
+    height: 50vh;
+    overflow-y: auto;
+}
+
+#income .col-2:hover, #expense .col-2:hover {
+    background-color: rgba(0, 0, 0, 0.03);
 }

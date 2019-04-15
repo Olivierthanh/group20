@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Wallet</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/images/wallet.png">
+    <!-- Cdn css -->
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.5.95/css/materialdesignicons.min.css">
+    <!-- Sweetalert -->
+    <link href="../../../assets/plugins/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="../../css/custom.css">
+    <link href="../../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10">
+                </circle>
+            </svg>
+        </div>
+    </div>
+    <!-- End preloader -->
+
+    <!-- Main wrapper -->
+    <div id="main-wrapper" class="show menu-toggle">
+        <!-- Nav header -->
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="index.html">
+                    <b>
+                        <img src="../../../assets/images/wallet-sm.png" alt="">
+                    </b>
+                    <span class="brand-title">
+                        <img src="#" alt="">
+                    </span>
+                </a>
+            </div>
+            <div class="nav-control">
+                <div class="hamburger d-none">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <!-- End nav header -->
+
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <!-- <ul>
+                    <li class="icons position-relative"><a href="javascript:void(0)"><i
+                                class="icon-magnifier f-s-16"></i></a>
+                        <div class="drop-down animated bounceInDown">
+                            <div class="dropdown-content-body">
+                                <div class="header-search" id="header-search">
+                                    <form action="#">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search">
+                                            <div class="input-group-append"><span class="input-group-text"><i
+                                                        class="icon-magnifier"></i></span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul> -->
+                </div>
+                <div class="header-right">
+                    <ul>
+                        <li class="icons">
+                            <a href="javascript:void(0)" class="log-user">
+                                <img src="../../../assets/images/avatar/1.jpg" alt=""> <span>User Name</span> <i
+                                    class="fa fa-caret-down f-s-14" aria-hidden="true"></i>
+                            </a>
+                            <div class="drop-down dropdown-profile animated bounceInDown">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li><a href="#"><i class="icon-user"></i> <span>My Profile</span></a>
+                                        </li>
+                                        <li><a href="#"><i class="icon-wallet"></i> <span>My Wallet</span></a>
+                                        </li>
+                                        <li><a href="#"><i class="icon-power"></i> <span>Logout</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End Header -->
+
+        <!-- Menu -->
+        <div class="nk-sidebar">
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+
+                    <li class="nav-label">Wallet</li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="mdi mdi-wallet"></i>
+                            <span class="nav-text">Wallet</span>
+                            <span class="badge bg-lgreen text-white nav-badge">০3</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li>
+                                <a class="has-arrow" href="javascript:void()" aria-expanded="false">View</a>
+                                <ul aria-expanded="false">
+                                    <li>
+                                        <a href="#">Wallet1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wallet2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wallet3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" aria-expanded="false">Add Wallet</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-label">Profile</li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="mdi mdi-account"></i>
+                            <span class="nav-text">Profile</span>
+                            <span class="badge badge-primary nav-badge">13</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li>
+                                <a href="profile.html" aria-expanded="false">View Profile</a>
+                            </li>
+                            <li>
+                                <a href="#" aria-expanded="false">Change Password</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-label">Log out</li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="mdi mdi-power"></i>
+                            <span class="nav-text">Log out</span>
+                            <span class="badge badge-success nav-badge">03</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End menu -->
+
+        <!-- Conent body -->
+        <div class="content-body">
+            <div class="container-fluid">
+                <!-- <div class="row page-titles">
+                <div class="col p-0">
+                    <h4>Hello, <span>Welcome here</span></h4>
+                </div>
+                <div class="col p-0">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">App</a>
+                        </li>
+                        <li class="breadcrumb-item active">Profile</li>
+                    </ol>
+                </div>
+            </div> -->
+                <div class="row">
+                    <div class="col-md-5">
+                        <!-- begin overview -->
+                        <div class="card">
+                            <div class="card-header pb-0">
+                                <h4 class="card-title m-t-10">Overview</h4>
+                                <div class="table-action float-right">
+                                    <span data-toggle="modal" data-target="#add-transaction-view">
+                                        <button type="button" class="btn btn-circle btn-success"
+                                            id="add-transaction-button" data-toggle="tooltip" data-placement="right"
+                                            title data-original-title="Add transaction"><i class="fa fa-plus"
+                                                aria-hidden="true"></i>
+                                        </button>
+                                    </span>
+                                    <!-- begin modal -->
+                                    <div class="modal fade" id="add-transaction-view">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Add transaction</h5>
+                                                    <button type="button" class="close"
+                                                        data-dismiss="modal"><span>&times;</span>
+                                                    </button>
+                                                </div>
+                                                <hr>
+                                                <form action="#" id="add-transaction-form">
+                                                    <div class="modal-body px-5">
+                                                        <div class="row px-5 mb-4">
+                                                            <div class="col-2 align-middle">
+                                                                <span class="mdi mdi-help mdi-36px"></span>
+                                                            </div>
+                                                            <div class="col">
+                                                                <!-- Category select -->
+                                                                <!-- <select class="form-control" name="category"
+                                                                    id="category-select">
+                                                                    <option value="">Category</option>
+                                                                    <option value="income">Income</option>
+                                                                    <option value="expense">Expense</option>
+                                                                </select> -->
+                                                                <!-- End category select -->
+                                                                <input class="form-control" type="text" name="category" id="category" value="" category-id="" placeholder="Category" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="row px-5 mb-4">
+                                                            <div class="col-2 align-middle">
+                                                                <span class="mdi mdi-currency-usd mdi-36px"></span>
+                                                            </div>
+                                                            <div class="col">
+                                                                <input type="text" class="form-control" name="amount"
+                                                                    id="amount" placeholder="How much?">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row px-5 mb-4">
+                                                            <div class="col-2 align-middle">
+                                                                <span
+                                                                    class="mdi mdi-note-multiple-outline mdi-36px"></span>
+                                                            </div>
+                                                            <div class="col">
+                                                                <textarea class="form-control" name="note" cols="30"
+                                                                    rows="5" id="note" placeholder="Note"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row px-5 mb-4">
+                                                            <div class="col-2 align-middle">
+                                                                <span class="mdi mdi-calendar-clock mdi-36px"></span>
+                                                            </div>
+                                                            <div class="col">
+                                                                <input type="datetime-local" class="form-control"
+                                                                    name="date-transaction" id="date-transaction">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer px-5">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                        <button type="submit" class="btn btn-primary">Add</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End modal -->
+                                    <!-- Begin category modal -->
+                                    <div class="modal fade" id="transaction-category-select">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header pb-0">
+                                                    <ul class="nav nav-tabs mb-4">
+                                                        <li class="nav-item"><a class="nav-link active" id="income-tab" data-toggle="tab" href="#income">Income</a>
+                                                        </li>
+                                                        <li class="nav-item"><a class="nav-link" id="expense-tab" data-toggle="tab" href="#expense">Expense</a>
+                                                        </li>
+                                                    </ul>
+                                                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body py-0">
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <!-- Begin tab category -->
+                                                            <!-- Nav tabs -->
+                                                            <div class="custom-tab-1 col">
+                                                                <div class="tab-content tab-content-default">
+                                                                    <div class="tab-pane fade show active" id="income" role="tabpanel">
+                                                                        <div class="row">
+                                                                            <div class="col-2">
+                                                                                <a href="#" class="img-category" category-id="1" category-name="Awards">
+                                                                                    <!-- <img src="../../../data/img/cat_1.png" alt="" class="img-fluid"> -->
+                                                                                    <figure class="figure">
+                                                                                        <img src="../../../data/img/cat_1.png" class="figure-img img-fluid rounded" alt="Awards">
+                                                                                        <figcaption class="figure-caption text-center">Awards</figcaption>
+                                                                                    </figure>
+                                                                                </a>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <a href="#" class="img-category" category-id="1" category-name="Awards">
+                                                                                    <!-- <img src="../../../data/img/cat_1.png" alt="" class="img-fluid"> -->
+                                                                                    <figure class="figure">
+                                                                                        <img src="../../../data/img/cat_1.png" class="figure-img img-fluid rounded" alt="Awards">
+                                                                                        <figcaption class="figure-caption text-center">Awards</figcaption>
+                                                                                    </figure>
+                                                                                </a>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <a href="#" class="img-category" category-id="1" category-name="Awards">
+                                                                                    <!-- <img src="../../../data/img/cat_1.png" alt="" class="img-fluid"> -->
+                                                                                    <figure class="figure">
+                                                                                        <img src="../../../data/img/cat_1.png" class="figure-img img-fluid rounded" alt="Awards">
+                                                                                        <figcaption class="figure-caption text-center">Awards</figcaption>
+                                                                                    </figure>
+                                                                                </a>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <a href="#" class="img-category" category-id="1" category-name="Awards">
+                                                                                    <!-- <img src="../../../data/img/cat_1.png" alt="" class="img-fluid"> -->
+                                                                                    <figure class="figure">
+                                                                                        <img src="../../../data/img/cat_1.png" class="figure-img img-fluid rounded" alt="Awards">
+                                                                                        <figcaption class="figure-caption text-center">Awards</figcaption>
+                                                                                    </figure>
+                                                                                </a>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <a href="#" class="img-category" category-id="1" category-name="Awards">
+                                                                                    <!-- <img src="../../../data/img/cat_1.png" alt="" class="img-fluid"> -->
+                                                                                    <figure class="figure">
+                                                                                        <img src="../../../data/img/cat_1.png" class="figure-img img-fluid rounded" alt="Awards">
+                                                                                        <figcaption class="figure-caption text-center">Awards</figcaption>
+                                                                                    </figure>
+                                                                                </a>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <a href="#" class="img-category" category-id="1" category-name="Awards">
+                                                                                    <!-- <img src="../../../data/img/cat_1.png" alt="" class="img-fluid"> -->
+                                                                                    <figure class="figure">
+                                                                                        <img src="../../../data/img/cat_1.png" class="figure-img img-fluid rounded" alt="Awards">
+                                                                                        <figcaption class="figure-caption text-center">Awards</figcaption>
+                                                                                    </figure>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-2">
+                                                                                <a href="#" class="img-category" category-id="1" category-name="Awards">
+                                                                                    <!-- <img src="../../../data/img/cat_1.png" alt="" class="img-fluid"> -->
+                                                                                    <figure class="figure">
+                                                                                        <img src="../../../data/img/cat_1.png" class="figure-img img-fluid rounded" alt="Awards">
+                                                                                        <figcaption class="figure-caption text-center">Awards</figcaption>
+                                                                                    </figure>
+                                                                                </a>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <a href="#" class="img-category" category-id="1" category-name="Awards">
+                                                                                    <!-- <img src="../../../data/img/cat_1.png" alt="" class="img-fluid"> -->
+                                                                                    <figure class="figure">
+                                                                                        <img src="../../../data/img/cat_1.png" class="figure-img img-fluid rounded" alt="Awards">
+                                                                                        <figcaption class="figure-caption text-center">Awards</figcaption>
+                                                                                    </figure>
+                                                                                </a>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <a href="#" class="img-category" category-id="1" category-name="Awards">
+                                                                                    <!-- <img src="../../../data/img/cat_1.png" alt="" class="img-fluid"> -->
+                                                                                    <figure class="figure">
+                                                                                        <img src="../../../data/img/cat_1.png" class="figure-img img-fluid rounded" alt="Awards">
+                                                                                        <figcaption class="figure-caption text-center">Awards</figcaption>
+                                                                                    </figure>
+                                                                                </a>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <a href="#" class="img-category" category-id="1" category-name="Awards">
+                                                                                    <!-- <img src="../../../data/img/cat_1.png" alt="" class="img-fluid"> -->
+                                                                                    <figure class="figure">
+                                                                                        <img src="../../../data/img/cat_1.png" class="figure-img img-fluid rounded" alt="Awards">
+                                                                                        <figcaption class="figure-caption text-center">Awards</figcaption>
+                                                                                    </figure>
+                                                                                </a>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <a href="#" class="img-category" category-id="1" category-name="Awards">
+                                                                                    <!-- <img src="../../../data/img/cat_1.png" alt="" class="img-fluid"> -->
+                                                                                    <figure class="figure">
+                                                                                        <img src="../../../data/img/cat_1.png" class="figure-img img-fluid rounded" alt="Awards">
+                                                                                        <figcaption class="figure-caption text-center">Awards</figcaption>
+                                                                                    </figure>
+                                                                                </a>
+                                                                            </div>
+                                                                            <div class="col-2">
+                                                                                <a href="#" class="img-category" category-id="1" category-name="Awards">
+                                                                                    <!-- <img src="../../../data/img/cat_1.png" alt="" class="img-fluid"> -->
+                                                                                    <figure class="figure">
+                                                                                        <img src="../../../data/img/cat_1.png" class="figure-img img-fluid rounded" alt="Awards">
+                                                                                        <figcaption class="figure-caption text-center">Awards</figcaption>
+                                                                                    </figure>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-2">
+                                                                                <a href="#" class="img-category" category-id="1" category-name="Awards">
+                                                                                    <!-- <img src="../../../data/img/cat_1.png" alt="" class="img-fluid"> -->
+                                                                                    <figure class="figure">
+                                                                                        <img src="../../../data/img/cat_1.png" class="figure-img img-fluid rounded" alt="Awards">
+                                                                                        <figcaption class="figure-caption text-center">Awards</figcaption>
+                                                                                    </figure>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-2">
+                                                                                <a href="#" class="img-category" category-id="1" category-name="Awards">
+                                                                                    <!-- <img src="../../../data/img/cat_1.png" alt="" class="img-fluid"> -->
+                                                                                    <figure class="figure">
+                                                                                        <img src="../../../data/img/cat_1.png" class="figure-img img-fluid rounded" alt="Awards">
+                                                                                        <figcaption class="figure-caption text-center">Awards</figcaption>
+                                                                                    </figure>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-2">
+                                                                                <a href="#" class="img-category" category-id="1" category-name="Awards">
+                                                                                    <!-- <img src="../../../data/img/cat_1.png" alt="" class="img-fluid"> -->
+                                                                                    <figure class="figure">
+                                                                                        <img src="../../../data/img/cat_1.png" class="figure-img img-fluid rounded" alt="Awards">
+                                                                                        <figcaption class="figure-caption text-center">Awards</figcaption>
+                                                                                    </figure>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-2">
+                                                                                <a href="#" class="img-category" category-id="1" category-name="Awards">
+                                                                                    <!-- <img src="../../../data/img/cat_1.png" alt="" class="img-fluid"> -->
+                                                                                    <figure class="figure">
+                                                                                        <img src="../../../data/img/cat_1.png" class="figure-img img-fluid rounded" alt="Awards">
+                                                                                        <figcaption class="figure-caption text-center">Awards</figcaption>
+                                                                                    </figure>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-2">
+                                                                                <a href="#" class="img-category" category-id="1" category-name="Awards">
+                                                                                    <!-- <img src="../../../data/img/cat_1.png" alt="" class="img-fluid"> -->
+                                                                                    <figure class="figure">
+                                                                                        <img src="../../../data/img/cat_1.png" class="figure-img img-fluid rounded" alt="Awards">
+                                                                                        <figcaption class="figure-caption text-center">Awards</figcaption>
+                                                                                    </figure>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane fade" id="expense">
+                                                                        <div class="row">
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- End tab category -->
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End category modal -->
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="row">
+                                    <div class="offset-2 col-4">
+                                        <div class="card-content">
+                                            <div class="row p-2">
+                                                <p>Inflow</p>
+                                            </div>
+                                            <div class="row p-2">
+                                                <p>Outflow</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="card-content">
+                                            <div class="row p-2">
+                                                <p class="w-100 text-right">+1000000</p>
+                                            </div>
+                                            <div class="row p-2">
+                                                <p class="w-100 text-right">-5000000</p>
+                                            </div>
+                                            <hr>
+                                            <div class="row p-2">
+                                                <p class="w-100 text-right">+500000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End overview -->
+
+                        <!-- Wallet Detail -->
+                        <div class="card">
+                            <div class="card-header pb-0">
+                                <h4 class="card-title">Wallet Detail</h4>
+                                <div class="table-action float-right">
+                                    <form action="#" id="delete-wallet-form">
+                                        <button type="submit" class="btn btn-circle btn-danger" data-toggle="tooltip"
+                                            data-placement="right" title data-original-title="Delete wallet"
+                                            id="delete-wallet-button"><i class="fa fa-trash" aria-hidden="true"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="card-body px-0 pt-0">
+                                <div class="row">
+                                    <div class="offset-2 col-4">
+                                        <p>Loại:</p>
+                                    </div>
+                                    <div class="col">
+                                        <p>Ví cá nhân</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="offset-2 col-4">
+                                        <p>Người sử dụng:</p>
+                                    </div>
+                                    <div class="col">
+                                        <span class="d-block">
+                                            <form action="#" class="delete-shared-user-form">
+                                                <span class="shared-user-name">Nguyễn Văn A</span>
+                                                <input type="text" name="wallet-id" value="" hidden />
+                                                <input type="text" name="user-id" value="" hidden />
+                                                <button type="submit" class="text-danger btn-primary-outline" data-toggle="tooltip"
+                                                    data-placement="right" title
+                                                    data-original-title="Delete Nguyễn Văn A"><i
+                                                        class="fa fa-times"></i></button>
+                                            </form>
+                                        </span>
+                                        <span class="d-block">
+                                            <form action="#" class="delete-shared-user-form">
+                                                <span class="shared-user-name">Nguyễn Văn B</span>
+                                                <input type="text" name="wallet-id" value="" hidden />
+                                                <input type="text" name="user-id" value="" hidden />
+                                                <button type="submit" class="text-danger btn-primary-outline" data-toggle="tooltip"
+                                                    data-placement="right" title
+                                                    data-original-title="Delete Nguyễn Văn B"><i
+                                                        class="fa fa-times"></i></button>
+                                            </form>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Wallet Detail -->
+
+                        <!-- Begin view transaction -->
+                        <div class="card">
+                            <div class="card-header pb-5">
+                                <h4 class="card-title m-t-10">Transaction</h4>
+                                <div class="table-action float-right">
+                                    <form action="#">
+                                        <!-- <div class="form-row">
+                                                <div class="form-group m-b-0">
+                                                    <select class="selectpicker show-tick" data-width="auto">
+                                                        <option selected="selected">Last 30 Days</option>
+                                                        <option>Last 1 MOnth</option>
+                                                        <option>Last 6 MOnth</option>
+                                                        <option>Last Year</option>
+                                                    </select>
+                                                </div>
+                                            </div> -->
+
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="card-body" id="view-transaction">
+                                <div class="row">
+                                    <div class="col">
+                                        <!-- One day -->
+                                        <div class="card w-100 p-4">
+                                            <div class="card-header">
+                                                <h3 class="card-title m-t-10">2019-10-11</h3>
+                                                <div class="float-right">
+                                                    <p>-600000</p>
+                                                </div>
+                                            </div>
+                                            <!-- One transaction -->
+                                            
+                                            <div class="card-body py-0">
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <img class="img-fluid"
+                                                             src="../../../data/img/cat_1.png" alt="des" />
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="row">
+                                                            <p>
+                                                                <span class="d-block">Award</span>
+                                                                <span>Nguyen Van A</span> -
+                                                                <span>00:00:00</span>
+                                                            </p>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Sit, voluptates.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="row float-right">
+                                                            <form action="#" class="delete-transaction-form">
+                                                                <p>+100000</p>
+                                                                <input type="text" name="transaction-id" value="" hidden />
+                                                                <button type="submit" class="btn btn-circle btn-danger"
+                                                                    data-toggle="tooltip" data-placement="right" title
+                                                                    data-original-title="Delete transaction"><i
+                                                                        class="fa fa-trash"></i> </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End one transaction -->
+
+                                            <!-- One transaction -->
+                                            
+                                            <div class="card-body py-0">
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <img class="img-fluid"
+                                                             src="../../../data/img/cat_1.png" alt="des" />
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="row">
+                                                            <p>
+                                                                <span class="d-block">Award</span>
+                                                                <span>Nguyen Van A</span> -
+                                                                <span>00:00:00</span>
+                                                            </p>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Sit, voluptates.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="row float-right">
+                                                            <form action="#" class="delete-transaction-form">
+                                                                <p>+100000</p>
+                                                                <input type="text" name="transaction-id" value="" hidden />
+                                                                <button type="submit" class="btn btn-circle btn-danger"
+                                                                    data-toggle="tooltip" data-placement="right" title
+                                                                    data-original-title="Delete transaction"><i
+                                                                        class="fa fa-trash"></i> </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End one transaction -->
+                                            <!-- One transaction -->
+                                            
+                                            <div class="card-body py-0">
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <img class="img-fluid"
+                                                             src="../../../data/img/cat_1.png" alt="des" />
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="row">
+                                                            <p>
+                                                                <span class="d-block">Award</span>
+                                                                <span>Nguyen Van A</span> -
+                                                                <span>00:00:00</span>
+                                                            </p>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Sit, voluptates.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="row float-right">
+                                                            <form action="#" class="delete-transaction-form">
+                                                                <p>+100000</p>
+                                                                <input type="text" name="transaction-id" value="" hidden />
+                                                                <button type="submit" class="btn btn-circle btn-danger"
+                                                                    data-toggle="tooltip" data-placement="right" title
+                                                                    data-original-title="Delete transaction"><i
+                                                                        class="fa fa-trash"></i> </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End one transaction -->
+
+                                        </div>
+                                        <!-- End one day -->
+                                        <!-- One day -->
+                                        <div class="card w-100 p-4">
+                                            <div class="card-header">
+                                                <h3 class="card-title m-t-10">2019-10-10</h3>
+                                                <div class="float-right">
+                                                    <p>-600000</p>
+                                                </div>
+                                            </div>
+                                            <!-- One transaction -->
+                                            
+                                            <div class="card-body py-0">
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <img class="img-fluid"
+                                                             src="../../../data/img/cat_1.png" alt="des" />
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="row">
+                                                            <p>
+                                                                <span class="d-block">Award</span>
+                                                                <span>Nguyen Van A</span> -
+                                                                <span>00:00:00</span>
+                                                            </p>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Sit, voluptates.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="row float-right">
+                                                            <form action="#" class="delete-transaction-form">
+                                                                <p>+100000</p>
+                                                                <input type="text" name="transaction-id" value="" hidden />
+                                                                <button type="submit" class="btn btn-circle btn-danger"
+                                                                    data-toggle="tooltip" data-placement="right" title
+                                                                    data-original-title="Delete transaction"><i
+                                                                        class="fa fa-trash"></i> </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End one transaction -->
+
+                                            <!-- One transaction -->
+                                            
+                                            <div class="card-body py-0">
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <img class="img-fluid"
+                                                             src="../../../data/img/cat_1.png" alt="des" />
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="row">
+                                                            <p>
+                                                                <span class="d-block">Award</span>
+                                                                <span>Nguyen Van A</span> -
+                                                                <span>00:00:00</span>
+                                                            </p>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Sit, voluptates.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="row float-right">
+                                                            <form action="#" class="delete-transaction-form">
+                                                                <p>+100000</p>
+                                                                <input type="text" name="transaction-id" value="" hidden />
+                                                                <button type="submit" class="btn btn-circle btn-danger"
+                                                                    data-toggle="tooltip" data-placement="right" title
+                                                                    data-original-title="Delete transaction"><i
+                                                                        class="fa fa-trash"></i> </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End one transaction -->
+                                            <!-- One transaction -->
+                                            
+                                            <div class="card-body py-0">
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <img class="img-fluid"
+                                                             src="../../../data/img/cat_1.png" alt="des" />
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="row">
+                                                            <p>
+                                                                <span class="d-block">Award</span>
+                                                                <span>Nguyen Van A</span> -
+                                                                <span>00:00:00</span>
+                                                            </p>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Sit, voluptates.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="row float-right">
+                                                            <form action="#" class="delete-transaction-form">
+                                                                <p>+100000</p>
+                                                                <input type="text" name="transaction-id" value="" hidden />
+                                                                <button type="submit" class="btn btn-circle btn-danger"
+                                                                    data-toggle="tooltip" data-placement="right" title
+                                                                    data-original-title="Delete transaction"><i
+                                                                        class="fa fa-trash"></i> </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End one transaction -->
+
+                                        </div>
+                                        <!-- End one day -->
+                                        <!-- One day -->
+                                        <div class="card w-100 p-4">
+                                            <div class="card-header">
+                                                <h3 class="card-title m-t-10">2019-10-14</h3>
+                                                <div class="float-right">
+                                                    <p>-600000</p>
+                                                </div>
+                                            </div>
+                                            <!-- One transaction -->
+                                            
+                                            <div class="card-body py-0">
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <img class="img-fluid"
+                                                             src="../../../data/img/cat_1.png" alt="des" />
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="row">
+                                                            <p>
+                                                                <span class="d-block">Award</span>
+                                                                <span>Nguyen Van A</span> -
+                                                                <span>00:00:00</span>
+                                                            </p>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Sit, voluptates.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="row float-right">
+                                                            <form action="#" class="delete-transaction-form">
+                                                                <p>+100000</p>
+                                                                <input type="text" name="transaction-id" value="" hidden />
+                                                                <button type="submit" class="btn btn-circle btn-danger"
+                                                                    data-toggle="tooltip" data-placement="right" title
+                                                                    data-original-title="Delete transaction"><i
+                                                                        class="fa fa-trash"></i> </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End one transaction -->
+
+                                            <!-- One transaction -->
+                                            
+                                            <div class="card-body py-0">
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <img class="img-fluid"
+                                                             src="../../../data/img/cat_1.png" alt="des" />
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="row">
+                                                            <p>
+                                                                <span class="d-block">Award</span>
+                                                                <span>Nguyen Van A</span> -
+                                                                <span>00:00:00</span>
+                                                            </p>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Sit, voluptates.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="row float-right">
+                                                            <form action="#" class="delete-transaction-form">
+                                                                <p>+100000</p>
+                                                                <input type="text" name="transaction-id" value="" hidden />
+                                                                <button type="submit" class="btn btn-circle btn-danger"
+                                                                    data-toggle="tooltip" data-placement="right" title
+                                                                    data-original-title="Delete transaction"><i
+                                                                        class="fa fa-trash"></i> </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End one transaction -->
+                                            <!-- One transaction -->
+                                            
+                                            <div class="card-body py-0">
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <img class="img-fluid"
+                                                             src="../../../data/img/cat_1.png" alt="des" />
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="row">
+                                                            <p>
+                                                                <span class="d-block">Award</span>
+                                                                <span>Nguyen Van A</span> -
+                                                                <span>00:00:00</span>
+                                                            </p>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Sit, voluptates.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="row float-right">
+                                                            <form action="#" class="delete-transaction-form">
+                                                                <p>+100000</p>
+                                                                <input type="text" name="transaction-id" value="" hidden />
+                                                                <button type="submit" class="btn btn-circle btn-danger"
+                                                                    data-toggle="tooltip" data-placement="right" title
+                                                                    data-original-title="Delete transaction"><i
+                                                                        class="fa fa-trash"></i> </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End one transaction -->
+
+                                        </div>
+                                        <!-- End one day -->
+                                        <!-- One day -->
+                                        <div class="card w-100 p-4">
+                                            <div class="card-header">
+                                                <h3 class="card-title m-t-10">2019-10-15</h3>
+                                                <div class="float-right">
+                                                    <p>-600000</p>
+                                                </div>
+                                            </div>
+                                            <!-- One transaction -->
+                                            
+                                            <div class="card-body py-0">
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <img class="img-fluid"
+                                                             src="../../../data/img/cat_1.png" alt="des" />
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="row">
+                                                            <p>
+                                                                <span class="d-block">Award</span>
+                                                                <span>Nguyen Van A</span> -
+                                                                <span>00:00:00</span>
+                                                            </p>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Sit, voluptates.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="row float-right">
+                                                            <form action="#" class="delete-transaction-form">
+                                                                <p>+100000</p>
+                                                                <input type="text" name="transaction-id" value="" hidden />
+                                                                <button type="submit" class="btn btn-circle btn-danger"
+                                                                    data-toggle="tooltip" data-placement="right" title
+                                                                    data-original-title="Delete transaction"><i
+                                                                        class="fa fa-trash"></i> </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End one transaction -->
+
+                                            <!-- One transaction -->
+                                            
+                                            <div class="card-body py-0">
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <img class="img-fluid"
+                                                             src="../../../data/img/cat_1.png" alt="des" />
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="row">
+                                                            <p>
+                                                                <span class="d-block">Award</span>
+                                                                <span>Nguyen Van A</span> -
+                                                                <span>00:00:00</span>
+                                                            </p>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Sit, voluptates.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="row float-right">
+                                                            <form action="#" class="delete-transaction-form">
+                                                                <p>+100000</p>
+                                                                <input type="text" name="transaction-id" value="" hidden />
+                                                                <button type="submit" class="btn btn-circle btn-danger"
+                                                                    data-toggle="tooltip" data-placement="right" title
+                                                                    data-original-title="Delete transaction"><i
+                                                                        class="fa fa-trash"></i> </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End one transaction -->
+                                            <!-- One transaction -->
+                                            
+                                            <div class="card-body py-0">
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <img class="img-fluid"
+                                                             src="../../../data/img/cat_1.png" alt="des" />
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="row">
+                                                            <p>
+                                                                <span class="d-block">Award</span>
+                                                                <span>Nguyen Van A</span> -
+                                                                <span>00:00:00</span>
+                                                            </p>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Sit, voluptates.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="row float-right">
+                                                            <form action="#" class="delete-transaction-form">
+                                                                <p>+100000</p>
+                                                                <input type="text" name="transaction-id" value="" hidden />
+                                                                <button type="submit" class="btn btn-circle btn-danger"
+                                                                    data-toggle="tooltip" data-placement="right" title
+                                                                    data-original-title="Delete transaction"><i
+                                                                        class="fa fa-trash"></i> </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End one transaction -->
+
+                                        </div>
+                                        <!-- End one day -->
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="card-footer text-center">
+                                <nav>
+                                    <ul class="pagination pagination-rounded pagination-md float-right">
+                                        <li class="page-item"><a class="page-link"
+                                                data-toggle="tooltip" data-placement="left" title
+                                                data-original-title="Previous">
+                                                << </a> </li> 
+                                        <li class="page-item"><a class="page-link"
+                                                         data-toggle="tooltip"
+                                                        data-placement="right" title data-original-title="Next"> >> </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- End view transaction -->
+                    </div>
+
+                    <!-- Chart -->
+                    <div class="col-md-7">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <h4 class="card-title m-t-10">Statics</h4>
+                                <!-- <select class="selectpicker float-right">
+                                        <option>This month</option>
+                                        <option>2019-03</option>
+                                        <option>2019-02</option>
+                                </select>  -->
+                                <input class="form-control float-right" type="month" max="2019-05" id="month"
+                                    name="month" style="width: 20%;" />
+                            </div>
+
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="card w-100">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Balance </h4>
+                                            <div id="b-line" style="height: 370px"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="card w-100">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Income</h4>
+                                                <div id="basic-Pie" style="height: 370px"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card w-100">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Expense</h4>
+                                                <div id="basic-Pie-1" style="height: 370px"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End chart -->
+                </div>
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!-- End content body -->
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright © <a href="#">Group 20 - Cong nghe web -</a> 2018 - 2</p>
+            </div>
+        </div>
+        <!-- End footer -->
+
+        <!-- End main wrapper -->
+    </div>
+    <!-- Script -->
+    <script src="../../../assets/plugins/common/common.min.js"></script>
+    <script src="../../js/custom.min.js"></script>
+    <script src="../../js/settings.js"></script>
+    <script src="../../js/gleek.js"></script>
+    <script src="../../js/styleSwitcher.js"></script>
+    <!-- Sweetalert2 -->
+    <script src="../../../assets/plugins/sweetalert2/dist/sweetalert2.min.js"></script>
+    <!-- Echart -->
+    <script src="../../../assets/plugins/echarts/echarts.min.js"></script>
+    <!-- Jquery validate -->
+    <script src="../../../assets/plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script>
+        var chartOneDom = document.getElementById("b-line");
+        var chartOne = echarts.init(chartOneDom);
+
+        var chartOneOption = {
+            color: ['#34C73B'],
+
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                show: true,
+                color: '#fff',
+                data: ['Balance']
+            },
+
+            calculable: true,
+
+            xAxis: [
+                {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
+                        '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
+                        '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'
+                    ]
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    axisLabel: {
+                        formatter: '{value}'
+                    }
+                }
+            ],
+            series: [
+                {
+                    name: 'Balance',
+                    type: 'line',
+                    data: [100000, -100000, 100000, -500000, 1000000, 400000,
+                        100000, -100000, 100000, -500000, 1000000, 400000,
+                        100000, -100000, 100000, -500000, 1000000, 400000,
+                        100000, -100000, 100000, -500000, 1000000, 400000,
+                        100000, -100000, 100000, -500000, 1000000, 400000,
+                    ],
+                    markPoint: {
+                        data: [
+                            { type: 'max', name: 'Max' },
+                            { type: 'min', name: 'Min' }
+                        ]
+                    },
+                    markLine: {
+                        data: [
+                            { type: 'average', name: 'Average' }
+                        ]
+                    }
+                },
+            ]
+        };
+
+        if (chartOneOption && typeof chartOneOption === "object") {
+            chartOne.setOption(chartOneOption, true);
+        }
+    </script>
+
+    <script>
+        var dom = document.getElementById("basic-Pie");
+        var bpChart = echarts.init(dom);
+
+        var app = {};
+        option = null;
+        option = {
+            color: ['#0000FF', '#00A2FF', '#F44336', '#34C73B', '#DCDCDC'],
+            tooltip: {
+                trigger: 'item',
+                formatter: '{a} <br/>{b} : {c} ({d}%)'
+            },
+            legend: {
+                orient: 'vertical',
+                x: 'left',
+                data: ['Direct', 'Mail', 'Affiliate', 'AD', 'Search']
+            },
+            calculable: true,
+            series: [
+                {
+                    name: 'Source',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['50%', '60%'],
+                    data: [
+                        { value: 335, name: 'Direct' },
+                        { value: 310, name: 'Mail' },
+                        { value: 234, name: 'Affiliate' },
+                        { value: 135, name: 'AD' },
+                        { value: 1548, name: 'Search' }
+                    ]
+                }
+            ]
+        };
+
+        if (option && typeof option === "object") {
+            bpChart.setOption(option, false);
+        }
+
+    </script>
+    <script>
+        var dom = document.getElementById("basic-Pie-1");
+        var bpChart = echarts.init(dom);
+
+        var app = {};
+        option = null;
+        option = {
+            color: ['#0000FF', '#00A2FF', '#F44336', '#34C73B', '#DCDCDC'],
+            tooltip: {
+                trigger: 'item',
+                formatter: '{a} <br/>{b} : {c} ({d}%)'
+            },
+            legend: {
+                orient: 'vertical',
+                x: 'left',
+                data: ['Direct', 'Mail', 'Affiliate', 'AD', 'Search']
+            },
+            calculable: true,
+            series: [
+                {
+                    name: 'Source',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['50%', '60%'],
+                    data: [
+                        { value: 335, name: 'Direct' },
+                        { value: 310, name: 'Mail' },
+                        { value: 234, name: 'Affiliate' },
+                        { value: 135, name: 'AD' },
+                        { value: 1548, name: 'Search' }
+                    ]
+                }
+            ]
+        };
+
+        if (option && typeof option === "object") {
+            bpChart.setOption(option, false);
+        }
+
+    </script>
+
+    <script>
+        $("#delete-wallet-form").on("submit", event => {
+            event.preventDefault();
+            swal(
+                {
+                    title: "Are you sure to delete ?",
+                    text: "You will not be able to recover this wallet !!",
+                    type: "warning",
+                    showCancelButton: !0,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Yes, delete it !!",
+                    closeOnConfirm: !1
+                }
+            ).then(isConfirmed => {
+                if (isConfirmed.value) {
+                    swal("Deleted !!", "Hey, your imaginary file has been deleted !!", "success");
+                }
+            });
+        })
+    </script>
+
+    <script>
+        $(".delete-shared-user-form").on("submit", event => {
+            event.preventDefault();
+            sharedUserName = $(event.target).find("span.shared-user-name").text();
+            swal(
+                {
+                    title: `Are you sure to delete ${sharedUserName} ?`,
+                    text: "You will not be able to recover this user !!",
+                    type: "warning",
+                    showCancelButton: !0,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Yes, delete  !!",
+                    closeOnConfirm: !1
+                }
+            ).then(isConfirmed => {
+                if (isConfirmed.value) {
+                    $(event.target).remove();
+                    swal("Deleted !!", `Hey, ${sharedUserName} has been deleted from your wallet !!`, "success");
+                }
+            });
+        })
+    </script>
+
+    <script>
+        active = 0;
+        $("#view-transaction").find(".card").each((index, day) => {
+            if (index != 0) {
+                $(day).addClass("d-none");
+            }
+        });
+        
+        $(".page-link").on("click", event => {
+            cards = $("#view-transaction").find(".card");
+            if($(event.target).attr("data-original-title") == "Next") {
+                if (active + 1 < cards.length) {
+                    $(cards[active]).addClass("d-none");
+                    active = active + 1;
+                    $(cards[active]).removeClass("d-none");
+                }
+            }
+            else if ($(event.target).attr("data-original-title") == "Previous") {
+                if (active > 0) {
+                    $(cards[active]).addClass("d-none");
+                    active = active - 1;
+                    $(cards[active]).removeClass("d-none");
+                }
+            }
+        })
+    </script>
+
+<script>
+    $(".delete-transaction-form").on("submit", event => {
+        event.preventDefault();
+        
+        swal(
+            {
+                title: `Are you sure to delete this transaction ?`,
+                text: "You will not be able to recover this user !!",
+                type: "warning",
+                showCancelButton: !0,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, delete  !!",
+                closeOnConfirm: !1
+            }
+        ).then(isConfirmed => {
+            if (isConfirmed.value) {
+                if ($(event.target).closest(".card").find(".card-body").length === 1) {
+                    cards = $("#view-transaction").find(".card");
+                    $(event.target).closest(".card").remove();
+                    if (active > 0) {
+                        active = active - 1;
+                        $(cards[active]).removeClass("d-none");
+                    }
+                    else if (active + 1 < cards.length) {
+                        $(cards[active + 1]).removeClass("d-none");
+                    }
+                }
+                else {
+                    $(event.target).closest(".card-body").remove();
+                }
+                swal("Deleted !!", `Hey, this transaction has been deleted from your wallet !!`, "success");
+            }
+        });
+    })
+</script>
+
+    <!-- <script>
+        $("select#category-select").on("change", event => {
+            type = $(event.target).val();
+
+            if (type === "income") {
+                $("#expense-tab").removeClass("active show");
+                $("#expense").removeClass("active show");
+                $("#income-tab").addClass("active show");
+                $("#income").addClass("active show");
+                
+            }
+            else {
+                $("#income-tab").removeClass("active show");
+                $("#income").removeClass("active show");
+                $("#expense-tab").addClass("active show");
+                $("#expense").addClass("active show");
+            }
+            $("#add-transaction-view").modal("hide");
+
+            $("#transaction-category-select").modal('show');
+        });
+
+        $(".img-category").on("click", event => {
+            event.preventDefault();
+            console.log($(this));
+            categoryId = $(event.currentTarget).attr("category-id");
+            categoryName = $(event.currentTarget).attr("category-name");
+            console.log(categoryId, categoryName);
+            $("#category").val(categoryId);
+            $("#category-select").val(categoryName);
+        })
+    </script> -->
+
+    <script>
+        $("#category").on("click", event => {
+            $("#add-transaction-view").modal("hide").on('hidden.bs.modal', event => {
+                $("#transaction-category-select").modal('show');
+                $(event.target).off('hidden.bs.modal');
+            });
+        });
+
+        $(".img-category").on("click", event => {
+            event.preventDefault();
+            categoryId = $(event.currentTarget).attr("category-id");
+            categoryName = $(event.currentTarget).attr("category-name");
+            console.log(categoryId, categoryName);
+            $("#category").val(categoryName);
+            $("#category").attr("category-id", categoryId);
+            $("#transaction-category-select").modal('hide').on('hidden.bs.modal', event => {
+                $("#add-transaction-view").modal("show");
+                $(event.target).off('hidden.bs.modal');
+            });
+            
+        });
+    </script>
+
+    <script>
+        jQuery.validator.addMethod("dateLessThan",
+            function(value, element, params) {
+                if (params === "now")
+                    if (!/Invalid|NaN/.test(new Date(value))) {
+                        return new Date(value) < new Date();
+                    }
+            }
+        );
+
+        // Add transaction validate
+
+        $("#add-transaction-form").validate({
+            "rules": {
+                "category": {
+                    required: !0,
+                },
+                "amount": {
+                    required: !0,
+                    number: 5
+                },
+                "note": {
+
+                },
+                "date-transaction": {
+                    required: !0,
+                    dateLessThan: "now"
+                }
+            },
+            "messages": {
+                "email": "Please enter a valid email address",
+                "password": {
+                    required: "Please provide a password",
+                    minlength: "Your password must be at least 5 characters long"
+                }
+            },
+            ignore: [],
+            errorClass: "invalid-feedback animated fadeInUp",
+            errorElement: "div",
+            errorPlacement: function(e, a) {
+                jQuery(a).parents(".col").append(e)
+            },
+            highlight: function(e) {
+                jQuery(e).closest(".col").removeClass("is-invalid").addClass("is-invalid")
+            },
+            success: function(e) {
+                jQuery(e).closest(".col").removeClass("is-invalid"), jQuery(e).remove()
+            },
+        })
+    </script>
+    <!-- End Script -->
+</body>
+
+</html>

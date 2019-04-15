@@ -25,13 +25,13 @@
                         <ul aria-expanded="false">
                             <C:forEach items="${sessionScope.walletList}" var="wallet" >
                                 <li>
-                                    <a href="#">${wallet.walletName}</a>
+                                    <a href="<c:url value="/viewWallet" />">${wallet.walletName}</a>
                                 </li>
                             </C:forEach>
                         </ul>
                     </li>
                     <li>
-                        <a href="#" aria-expanded="false">Add Wallet</a>
+                        <a href="#" aria-expanded="false" data-toggle="modal" data-target="#add-wallet-view">Add Wallet</a>
                     </li>
                 </ul>
             </li>
@@ -61,3 +61,50 @@
         </ul>
     </div>
 </div>
+
+<!-- begin modal -->
+<div class="modal fade" id="add-wallet-view">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add Wallet</h4>
+                <button type="button" class="close"
+                        data-dismiss="modal"><span>&times;</span>
+                </button>
+            </div>
+            <hr>
+            <form action="#" id="add-wallet-form">
+                <div class="modal-body px-5">
+                    <div class="row px-5 mb-4">
+                        <div class="col-2 align-middle">
+                            <span class="mdi mdi-help mdi-36px"></span>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" name="wallet-name"
+                                   id="wallet-name" placeholder="Wallet Name">
+                        </div>
+                    </div>
+                    <div class="row px-5 mb-4">
+                        <div class="col-2 align-middle">
+                            <span class="mdi mdi-currency-usd mdi-36px"></span>
+                        </div>
+                        <div class="col">
+                            <select class="form-control" name="currency"
+                                    id="currency">
+                                <option>Currency</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer px-5">
+                    <div class="px-5">
+                        <button type="button" class="btn btn-secondary"
+                                data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- End modal -->

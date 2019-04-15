@@ -11,139 +11,134 @@
     <!-- Cdn css -->
     <!-- <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.5.95/css/materialdesignicons.min.css"> -->
     <!-- Custom Stylesheet -->
-    <style type="text/css">/* Chart.js */
-@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
-<link rel="stylesheet" href="../../css/custom.css">
-<link href="../../css/style.css" rel="stylesheet">
-<link href="../../assets/plugins/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/custom.css">
+    <link href="../../css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader">
-            <svg class="circular" viewBox="25 25 50 50">
-                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10">
-                </circle>
-            </svg>
-        </div>
+<!-- Preloader -->
+<div id="preloader">
+    <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10">
+            </circle>
+        </svg>
     </div>
-    <!-- End preloader -->
+</div>
+<!-- End preloader -->
 
-    <!-- Main wrapper -->
-    <div id="main-wrapper" class="show menu-toggle">
-        <!-- Nav header -->
-        <div class="nav-header">
-            <div class="brand-logo">
-                <a href="index.html">
-                    <b>
-                        <img src="../../../assets/images/wallet-sm.png" alt="">
-                    </b>
-                    <span class="brand-title">
+<!-- Main wrapper -->
+<div id="main-wrapper" class="show menu-toggle">
+    <!-- Nav header -->
+    <div class="nav-header">
+        <div class="brand-logo">
+            <a href="index.html">
+                <b>
+                    <img src="../../../assets/images/wallet-sm.png" alt="">
+                </b>
+                <span class="brand-title">
                         <img src="#" alt="">
                     </span>
-                </a>
-            </div>
-            <div class="nav-control">
-                <div class="hamburger d-none">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </div>
+            </a>
+        </div>
+        <div class="nav-control">
+            <div class="hamburger d-none">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
             </div>
         </div>
-        <!-- End nav header -->
+    </div>
+    <!-- End nav header -->
 
-        <!-- Header -->
-        <div class="header">
-            <div class="header-content">
-                <div class="header-left">
-                    <!-- <ul>
-                        <li class="icons position-relative"><a href="javascript:void(0)"><i
-                                    class="icon-magnifier f-s-16"></i></a>
-                            <div class="drop-down animated bounceInDown">
-                                <div class="dropdown-content-body">
-                                    <div class="header-search" id="header-search">
-                                        <form action="#">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" placeholder="Search">
-                                                <div class="input-group-append"><span class="input-group-text"><i
-                                                            class="icon-magnifier"></i></span>
-                                                </div>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <!-- <ul>
+                    <li class="icons position-relative"><a href="javascript:void(0)"><i
+                                class="icon-magnifier f-s-16"></i></a>
+                        <div class="drop-down animated bounceInDown">
+                            <div class="dropdown-content-body">
+                                <div class="header-search" id="header-search">
+                                    <form action="#">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search">
+                                            <div class="input-group-append"><span class="input-group-text"><i
+                                                        class="icon-magnifier"></i></span>
                                             </div>
-                                        </form>
-                                    </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                        </li>
-                    </ul> -->
-                </div>
-                <div class="header-right">
-                    <ul>
-                        <li class="icons">
-                            <a href="javascript:void(0)" class="log-user">
-                                <img src="../../../assets/images/avatar/1.jpg" alt=""> <span>User Name</span> <i
-                                class="fa fa-caret-down f-s-14" aria-hidden="true"></i>
-                            </a>
-                            <div class="drop-down dropdown-profile animated bounceInDown">
-                                <div class="dropdown-content-body">
-                                    <ul>
-                                        <li><a href="#"><i class="icon-user"></i> <span>My Profile</span></a>
-                                        </li>
-                                        <li><a href="#"><i class="icon-wallet"></i> <span>My Wallet</span></a>
-                                        </li>
-                                        <li><a href="#"><i class="icon-power"></i> <span>Logout</span></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                        </div>
+                    </li>
+                </ul> -->
             </div>
-        </div>
-        <!-- End Header -->
-
-        <!-- Menu -->
-        <div class="nk-sidebar">
-            <div class="nk-nav-scroll">
-                <ul class="metismenu" id="menu">
-
-                    <li class="nav-label">Wallet</li>
-                    <li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="mdi mdi-wallet"></i>
-                            <span class="nav-text">Wallet</span>
-                            <span class="badge bg-lgreen text-white nav-badge">০3</span>
+            <div class="header-right">
+                <ul>
+                    <li class="icons">
+                        <a href="javascript:void(0)" class="log-user">
+                            <img src="../../../assets/images/avatar/1.jpg" alt=""> <span>User Name</span> <i
+                                class="fa fa-caret-down f-s-14" aria-hidden="true"></i>
                         </a>
-                        <ul aria-expanded="false">
-                            <li>
-                                <a class="has-arrow" href="javascript:void()" aria-expanded="false">View</a>
-                                <ul aria-expanded="false">
-                                    <li>
-                                        <a href="#">Wallet1</a>
+                        <div class="drop-down dropdown-profile animated bounceInDown">
+                            <div class="dropdown-content-body">
+                                <ul>
+                                    <li><a href="#"><i class="icon-user"></i> <span>My Profile</span></a>
                                     </li>
-                                    <li>
-                                        <a href="#">Wallet2</a>
+                                    <li><a href="#"><i class="icon-wallet"></i> <span>My Wallet</span></a>
                                     </li>
-                                    <li>
-                                        <a href="#">Wallet3</a>
+                                    <li><a href="#"><i class="icon-power"></i> <span>Logout</span></a>
                                     </li>
                                 </ul>
-                            </li>
-                            <!-- ADD WALLET -->
-                            <li>
-                                <a href="#" aria-expanded="false" >Add Wallet</a>
-                            </li>
-                            <!-- END WALLET -->
-                        </ul>
+                            </div>
+                        </div>
                     </li>
-                    <li class="nav-label">Profile</li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                        <i class="mdi mdi-account"></i>
-                        <span class="nav-text">Profile</span>
-                        <span class="badge badge-primary nav-badge">13</span>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Menu -->
+    <div class="nk-sidebar">
+        <div class="nk-nav-scroll">
+            <ul class="metismenu" id="menu">
+
+                <li class="nav-label">Wallet</li>
+                <li>
+                    <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <i class="mdi mdi-wallet"></i>
+                        <span class="nav-text">Wallet</span>
+                        <span class="badge bg-lgreen text-white nav-badge">০3</span>
                     </a>
+                    <ul aria-expanded="false">
+                        <li>
+                            <a class="has-arrow" href="javascript:void()" aria-expanded="false">View</a>
+                            <ul aria-expanded="false">
+                                <li>
+                                    <a href="#">Wallet1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Wallet2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Wallet3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" aria-expanded="false" data-toggle="modal" data-target="#add-wallet-view">Add Wallet</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-label">Profile</li>
+                <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                    <i class="mdi mdi-account"></i>
+                    <span class="nav-text">Profile</span>
+                    <span class="badge badge-primary nav-badge">13</span>
+                </a>
                     <ul aria-expanded="false">
                         <li>
                             <a href="profile.html" aria-expanded="false">View Profile</a>
@@ -166,400 +161,82 @@
     </div>
     <!-- End menu -->
 
-
-
     <!-- Conent body -->
-    <div class="content-body" style="min-height: 697px;">
+    <div class="content-body">
         <div class="container-fluid">
-            <div class="row page-titles">
-                <div class="col p-md-0">
+            <!-- <div class="row page-titles">
+                <div class="col p-0">
                     <h4>Hello, <span>Welcome here</span></h4>
                 </div>
-                
-            </div>
-            <div class="row">
-                <!-- Overview -->
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden;pointer-events: none; visibility: hidden; z-index: -1;">
-                                <div style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                                    <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0">
-                                    </div>
-                                </div>
+                <div class="col p-0">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">App</a>
+                        </li>
+                        <li class="breadcrumb-item active">Profile</li>
+                    </ol>
+                </div>
+            </div> -->
+        </div>
+        <!-- #/ container -->
+    </div>
+    <!-- End content body -->
 
+    <!-- Footer -->
+    <div class="footer">
+        <div class="copyright">
+            <p>Copyright © <a href="#">Group 20 - Cong nghe web -</a> 2018 - 2</p>
+        </div>
+    </div>
+    <!-- End footer -->
+
+    <!-- begin modal -->
+    <div class="modal fade" id="add-wallet-view">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Wallet</h4>
+                    <button type="button" class="close"
+                        data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <hr>
+                <form action="#" id="add-wallet-form">
+                    <div class="modal-body px-5">
+                        <div class="row px-5 mb-4">
+                            <div class="col-2 align-middle">
+                                <span class="mdi mdi-help mdi-36px"></span>
                             </div>
-
-                            <h1 class="card-title" style="text-align: center;">Overview</h1>
-
-
-
-
-                            <!-- Inflow and Outflow -->
-                            <div class="table-responsive" style="margin-bottom:  40px;">
-                                <div id="example_wrapper" class="dataTables_wrapper">
-                                    <div class="dataTables_length" id="example_length">
-                                        <label>Show <select name="example_length" aria-controls="example" class=""><option value="">Walet</option><option value="">Walet1</option><option value="">Walet2</option><option value="">Walet3</option></select>
-                                        </label>
-                                    </div>
-                                    <div id="example_filter" class="dataTables_filter">
-                                        <label style="margin-bottom: 40px;">Search:<input type="search" class="" placeholder="Date" aria-controls="example">
-                                        </label>
-                                    </div>
-                                    <table id="example" class="display dataTable" style="min-width: 700px" role="grid" aria-describedby="example_info">
-                                        <thead>
-                                            <tr role="row " >
-                                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 120px;"></th>
-                                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"  style="width: 120px;padding-left: 20px;">Money</th>
-                                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"  style="width: 118px;">Category</th>
-                                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"  style="width: 70px;padding-left: 30px;">Date</th>
-                                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 90px;padding-left: 10px;" aria-sort="ascending">Description</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="odd" role="row" style="border-bottom-style: solid;border-width: 2px;">
-                                                <td class="">Inflow</td>
-                                                <td class="sorting_1" >$8000</td>
-                                                <td class="">All</td>
-                                                <td>09/04/2019</td>
-                                                <td>buy book</td>
-                                            </tr><tr class="odd" role="row" style="border-bottom-style: solid;">
-                                                <td class="">Outflow</td>
-                                                <td class="sorting_1" >-$1000</td>
-                                                <td class="">All</td>
-                                                <td>10/04/2019</td>
-                                                <td>go to shopping</td>
-                                            </tr></tr><tr class="odd" role="row" >
-                                                <td class="">Results</td>
-                                                <td class="sorting_1">$7000</td>
-                                            </tr></tbody>
-                                        </table>
-                                    </div>
-                                </div>
-
-
-                                <!-- End inflow and outflow -->
-
-
-                                <div class="bootstrap-modal" style="text-align: right;">
-                                 <div class="card-body">
-                                    <div class="bootstrap-modal">
-                                      <!-- ADD WALLET -->
-                                      <button type="button" class="btn btn-rounded btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm"><span class="btn-icon-left text-primary"><i class="fa fa-envelope" aria-hidden="true"></i> </span>Add wallet</button>
-                                      <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
-                                        <div class="modal-dialog modal-sm">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">Add wallet</h5>
-                                                    <button type="button" class="close" data-dismiss="modal"><span>×</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body"><!-- Modal body text goes here. -->
-
-
-                                                    <div class="form-group flex-grow-1" style="text-align: left;">
-                                                        <label class="text-label" ><a style="font-size: 20px;">Add wallet</a>
-                                                         <i class="fa fa-question" aria-hidden="true" style="font-size: 25px;"></i>                                                    </label>
-                                                         <input type="text" class="form-control" placeholder="name">
-                                                     </div>
-
-                                                     <div class="form-group flex-grow-1" style="text-align: left;">
-                                                        <label class="text-label"><a style="font-size: 20px;">Curency</a>
-                                                            <i class="fa fa-money" aria-hidden="true"></i>
-                                                        </label>
-                                                        <select id="department" class="form-control">
-                                                            <option selected="selected">USD</option>
-                                                            <option>VN</option>
-                                                            <option>GBP</option>
-                                                            <option>EUR</option>
-                                                            <option>AUD</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Add</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- ADD TRANSACTION -->
-                                    <button type="button" class="btn btn-rounded btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" style="margin: 40px;"><span class="btn-icon-left text-primary"><i class="fa fa-plus" aria-hidden="true"></i> </span>Add Transaction</button>
-                                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
-                                        <div class="modal-dialog ">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">Add Transaction</h5>
-                                                    <button type="button" class="close" data-dismiss="modal"><span>×</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body"><!-- Modal body text goes here. -->
-                                                    <div class="modal-body">
-
-                                                        <div class="form-group flex-grow-1" style="text-align: left;">
-                                                            <label class="text-label"><a style="font-size: 20px;">Category</a>
-                                                                <i class="fa fa-question" aria-hidden="true" style="font-size: 25px;"></i>
-                                                            </label>
-                                                            <select id="department" class="form-control">
-                                                                <option selected="selected">All Category</option>
-                                                                <option>Design</option>
-                                                                <option>Business</option>
-                                                                <option>Dictator</option>
-                                                                <option>Construction</option>
-                                                            </select>
-                                                        </div>
-
-                                                        <div class="form-group flex-grow-1" style="text-align: left;">
-                                                            <label class="text-label" ><a style="font-size: 20px;">How much</a>
-                                                             <i class="fa fa-usd" aria-hidden="true" style="font-size: 22px;"></i>
-                                                         </label>
-                                                         <input type="text" class="form-control" placeholder="How much?">
-                                                     </div>
-
-                                                     <div class="form-group flex-grow-1" style="text-align: left;">
-                                                        <label class="text-label" ><a style="font-size: 20px;">Note</a>
-                                                            <i class="fa fa-sticky-note" aria-hidden="true" style="font-size: 20px;"></i>
-                                                        </label>
-                                                        <input type="text" class="form-control" placeholder="Note" style="height: 120px;">
-                                                    </div>
-
-
-
-                                                    <div class="d-flex justify-content-sm-end justify-content-start mt-4 mt-sm-0">
-                                                        <div class="form-group absolute-icon-append-widget mr-4 mb-0">
-                                                            <span class="absolute-form-icon absolute-form-icon-append text-pale-sky">
-                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                            </span>
-                                                            <input type="text" placeholder="Aug 01 to Aug 05, 2018" name="input1" id="input1" class="form-control text-muted mydatepicker">
-                                                        </div>
-                                                        <div class="form-group absolute-icon-append-widget mb-0">
-                                                           <div class="table-action float" >
-                                                            <form action="#">
-                                                                <div class="form-row">
-                                                                    <div class="form-group mb-0" >
-                                                                        <div class="dropdown bootstrap-select show-tick" style="margin-right: 6px;" >
-                                                                            <select class="selectpicker show-tick" data-width="auto" tabindex="-98">
-                                                                                <option selected="selected">Wallet</option>
-                                                                                <option>Wallet 1 </option>
-                                                                                <option>Wallet 2</option>
-                                                                                <option>Wallet 3</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Add</button>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="col">
+                                <input type="text" class="form-control" name="wallet-name"
+                                    id="wallet-name" placeholder="Wallet Name">
                             </div>
-
+                        </div>
+                        <div class="row px-5 mb-4">
+                            <div class="col-2 align-middle">
+                                    <span class="mdi mdi-currency-usd mdi-36px"></span>
+                            </div>
+                            <div class="col">
+                                <select class="form-control" name="currency"
+                                    id="currency">
+                                    <option>Currency</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- /# card -->
-        </div>
-    </div>
-    <!-- /# column -->
-    <!-- Bar Chart -->
-    <div class="col-sm-12 col-md-6">
-        <div class="card">
-            <div class="card-body"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
-            <div class="card-header">
-                <h4 class="card-title m-t-10">Bar char</h4>
-                <div class="table-action float-right">
-                    <form action="#">
-                        <div class="form-row">
-                            <div class="form-group m-b-0">
-                                <div class="dropdown bootstrap-select show-tick" style="width: 125px;;">
-                                    <select class="selectpicker show-tick" data-width="auto" tabindex="-98" >
-                                        <option selected="selected" >This Month</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                    </select>
-                                    <button type="button" class="#" data-toggle="dropdown" role="button"  aria-expanded="false"></button>
-                                    <div class="dropdown-menu" role="combobox" style="min-width: 0px; max-height: 309px; overflow: hidden; min-height: 91px; position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);" x-placement="bottom-start">
-                                        <div class="inner show" role="listbox" aria-expanded="false" tabindex="-1" style="max-height: 297px; overflow-y: auto; min-height: 79px;">
-                                            <ul class="dropdown-menu inner show">
-                                                <li class="selected active">
-                                                    <a role="option" class="dropdown-item selected active" aria-disabled="false" tabindex="0" aria-selected="true">
-                                                        <span class=" bs-ok-default check-mark"></span>
-                                                        <span class="">1</span>
-                                                    </a>
-                                                </li>
-                                                <li class="selected active">
-                                                    <a role="option" class="dropdown-item selected active" aria-disabled="false" tabindex="0" aria-selected="true">
-                                                        <span class=" bs-ok-default check-mark"></span>
-                                                        <span class="">2</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a role="option" class="dropdown-item" aria-disabled="false" tabindex="0" aria-selected="false">
-                                                        <span class=" bs-ok-default check-mark"></span>
-                                                        <span class="">3</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="modal-footer px-5">
+                        <div class="px-5">
+                            <button type="button" class="btn btn-secondary"
+                                data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Add</button>
                         </div>
-
-                    </form>
-                </div>
-            </div>
-            <div class="card-body">
-                <canvas id="barChart" height="140" width="422" class="chartjs-render-monitor" style="display: block; width: 422px; height: 140px;"></canvas>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-</div>
-<!-- Statistical -->
-<div class="col-sm-12 col-md-6">
-    <div class="card">
-        <div class="card-body">
-            <div id="example3_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="example3_length"></div>
-            <div class="dataTables_scroll">
-                <div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;">
-                    <h1 class="card-title" style="text-align: center;margin-bottom: 30px;">Statistical</h1>
-                </div>
-                <div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%; height: 200px;">
-                    <table id="example3" class="table table-dark" style="width: 100%;" role="grid" aria-describedby="example3_info">
+    <!-- End modal -->
 
-
-
-                        <tbody style="margin-bottom: 40px;">
-                            <thead class="thead-secondary">
-                               <tr class="odd" role="row">
-                                <td class="">Date</td>
-                                <td>Description</td>
-                                <td>Money</td>
-                                <td>Sum Outflow</td>
-                            </tr>
-                        </thead>
-                        <tr class="even" role="row">
-                            <td class="">12/04/2019</td>
-                            <td>
-                                <table >
-                                    <tr><i class="fa fa-graduation-cap" aria-hidden="true">Education</i></tr><br>
-
-
-                                    <tr><i class="fa fa-heart" aria-hidden="true">Love</i></tr><br>
-
-
-                                    <tr><i class="fa fa-plane" aria-hidden="true">Travel</i></tr><br>
-
-
-                                    <tr><i class="fa fa-shopping-cart" aria-hidden="true">Shopping</i></tr><br>
-                                </table>
-                            </td>
-
-
-                            <td>
-                                <table>
-                                    <tr>$300</tr><br>
-
-                                    <tr>$200</tr><br>
-
-                                    <tr>$300</tr><br>
-
-                                    <tr>$100</tr><br>
-                                </table>
-
-                            </td>
-
-
-                            <td class="sorting_1">$900</td>
-
-                        </tr>
-                    </tbody>
-
-
-                    <tbody>
-                        <thead class="thead-secondary">
-                           <tr class="odd" role="row">
-                            <td class="">Date</td>
-                            <td>Description</td>
-                            <td>Money</td>
-                            <td>Sum Outflow</td>
-                        </tr>
-                    </thead>
-                    <tr class="even" role="row">
-                        <td class="">10/04/2019</td>
-                        <td>
-                            <table >
-                                <tr><i class="fa fa-film" aria-hidden="true">Movie</i></tr><br>
-
-
-                                <tr><i class="fa fa-cutlery" aria-hidden="true">Eat</i></tr><br>
-
-
-                                <tr><i class="fa fa-university" aria-hidden="true">Bank</i></tr><br>
-
-
-                                <tr><i class="fa fa-hospital-o" aria-hidden="true">Hospital</i></tr><br>
-                            </table>
-                        </td>
-
-
-                        <td>
-                            <table>
-                                <tr>$10</tr><br>
-
-                                <tr>$100</tr><br>
-
-                                <tr>$500</tr><br>
-
-                                <tr>$200</tr><br>
-                            </table>
-
-                        </td>
-
-
-                        <td class="sorting_1">$810</td>
-
-                    </tr>
-                </tbody>
-
-
-
-
-            </table>
-        </div>
-    </div>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-<!-- #/ container -->
-</div>
-<!-- End content body -->
-
-<!-- Footer -->
-<div class="footer">
-    <div class="copyright">
-        <p>Copyright © <a href="#">Group 20 - Cong nghe web -</a> 2018 - 2</p>
-    </div>
-</div>
-<!-- End footer -->
-
-<!-- End main wrapper -->
+    <!-- End main wrapper -->
 </div>
 <!-- Script -->
 <script src="../../../assets/plugins/common/common.min.js"></script>
@@ -567,23 +244,6 @@
 <script src="../../js/settings.js"></script>
 <script src="../../js/gleek.js"></script>
 <script src="../../js/styleSwitcher.js"></script>
-<script src="../../assets/plugins/chart.js/Chart.bundle.min.js"></script>
-<script src="../../main/js/plugins-init/chartjs-init.js"></script>
-<script src="../../assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
-<script src="../js/plugins-init/datatables.init.js"></script>
-<!-- Date picker plugin js -->
-<script src="../../assets/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<script src="../js/plugins-init/bs-date-picker-init.js"></script>
-<script src="../../assets/plugins/circle-progress/circle-progress.min.js"></script>
-<script src="../js/dashboard/dashboard-6.js"></script>
-<script src="../../assets/plugins/chart.js/Chart.bundle.min.js"></script>
-<!-- Flot chart js -->
-<script src="../../assets/plugins/flot/jquery.flot.js"></script>
-<script src="../../assets/plugins/flot/jquery.flot.pie.js"></script>
-<script src="../../assets/plugins/flot/jquery.flot.resize.js"></script>
-<script src="../../assets/plugins/flot-spline/jquery.flot.spline.min.js"></script>
-<script src="../../main/js/plugins-init/jquery.flot.init.js"></script>
-<script src="../../assets/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
 <!-- End Script -->
 </body>
 
