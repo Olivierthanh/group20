@@ -552,6 +552,42 @@
                                                         class="fa fa-times"></i></button>
                                             </form>
                                         </span>
+                                        <span class="d-block">
+                                            <a href="#" data-toggle="modal" data-target="#add-shared-user-view">Add user</a>
+                                            <!-- begin modal -->
+                                            <div class="modal fade" id="add-shared-user-view">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title">Add shared user</h5>
+                                                            <button type="button" class="close"
+                                                                data-dismiss="modal"><span>&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <hr>
+                                                        <form action="#" id="add-shared-user-form">
+                                                            <div class="modal-body px-5">
+                                                                <div class="row px-5 mb-4">
+                                                                    <div class="col-2 align-middle">
+                                                                        <span class="mdi mdi-account-circle-outline mdi-36px"></span>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <input class="form-control" type="text" name="shared-user" id="shared-user" value="" placeholder="Shared User" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer px-5">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-dismiss="modal">Close</button>
+                                                                <button type="submit" class="btn btn-primary">Add</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End modal -->
+
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -1498,6 +1534,32 @@
             errorElement: "div",
             errorPlacement: function(e, a) {
                 jQuery(a).parents(".col").append(e)
+            },
+            highlight: function(e) {
+                jQuery(e).closest(".col").removeClass("is-invalid").addClass("is-invalid")
+            },
+            success: function(e) {
+                jQuery(e).closest(".col").removeClass("is-invalid"), jQuery(e).remove()
+            },
+        })
+    </script>
+
+    <script>
+        $("#add-shared-user-form").validate({
+            "rules": {
+                "shared-user": {
+                    required: !0,
+                    email: !0
+                },
+            },
+            "messages": {
+                "shared-user": "Please enter a valid email address",
+            },
+            ignore: [],
+            errorClass: "invalid-feedback animated fadeInUp",
+            errorElement: "div",
+            errorPlacement: function(e, a) {
+                jQuery(a).closest(".col").append(e)
             },
             highlight: function(e) {
                 jQuery(e).closest(".col").removeClass("is-invalid").addClass("is-invalid")

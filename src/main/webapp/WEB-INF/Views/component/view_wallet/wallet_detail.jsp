@@ -59,6 +59,42 @@
                         </button>
                     </form>
                 </span>
+                <span class="d-block">
+                    <a href="#" data-toggle="modal" data-target="#add-shared-user-view">Add user</a>
+                    <!-- begin add user modal -->
+                    <div class="modal fade" id="add-shared-user-view">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Add shared user</h5>
+                                    <button type="button" class="close"
+                                            data-dismiss="modal"><span>&times;</span>
+                                    </button>
+                                </div>
+                                <hr>
+                                <form action="#" id="add-shared-user-form">
+                                    <div class="modal-body px-5">
+                                        <div class="row px-5 mb-4">
+                                            <div class="col-2 align-middle">
+                                                <span class="mdi mdi-account-circle-outline mdi-36px"></span>
+                                            </div>
+                                            <div class="col">
+                                                <input class="form-control" type="text" name="shared-user" id="shared-user" value="" placeholder="Shared User" />
+                                                <input type="text" name="wallet-id" hidden />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer px-5">
+                                        <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary">Add</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End add user modal -->
+                </span>
             </div>
         </div>
     </div>

@@ -126,5 +126,6 @@
 <%-- Validate form --%>
 <script src="<c:url value="resources/assets/plugins/jquery-validation/jquery.validate.min.js" /> "></script>
 <script src="<c:url value="resources/main/js/custom/validate/add_transaction_validate.js" />"></script>
+<script src="<c:url value="resources/main/js/custom/validate/add_shared_user_validate.js" />"></script>
 </body>
 </html>

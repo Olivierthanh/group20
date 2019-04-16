@@ -49,3 +49,7 @@ button#add-transaction-button, button#delete-wallet-button {
 #income .col-2:hover, #expense .col-2:hover {
     background-color: rgba(0, 0, 0, 0.03);
 }
+
+#b-line {
+    overflow: auto;
+}
