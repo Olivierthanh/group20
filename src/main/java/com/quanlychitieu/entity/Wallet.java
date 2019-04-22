@@ -1,6 +1,7 @@
 package com.quanlychitieu.entity;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -24,7 +25,7 @@ public class Wallet {
 	
 	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
 	@JoinColumn(name="transactionId")
-	private Set<Transaction> listTransaction;
+	private List<Transaction> listTransaction;
 	
 	@Temporal(TemporalType.DATE)
 	private Date createdDate;
@@ -36,7 +37,7 @@ public class Wallet {
 		
 	}
 
-	public Wallet(String walletName, int balance, Currency currency, Set<User> listUser, Set<Transaction> listTransaction, Date createdDate, WalletType walletType) {
+	public Wallet(String walletName, int balance, Currency currency, Set<User> listUser, List<Transaction> listTransaction, Date createdDate, WalletType walletType) {
 		this.walletName = walletName;
 		this.balance = balance;
 		this.currency = currency;
@@ -95,11 +96,11 @@ public class Wallet {
 		this.listUser = listUser;
 	}
 
-	public Set<Transaction> getListTransaction() {
+	public List<Transaction> getListTransaction() {
 		return listTransaction;
 	}
 
-	public void setListTransaction(Set<Transaction> listTransaction) {
+	public void setListTransaction(List<Transaction> listTransaction) {
 		this.listTransaction = listTransaction;
 	}
 
