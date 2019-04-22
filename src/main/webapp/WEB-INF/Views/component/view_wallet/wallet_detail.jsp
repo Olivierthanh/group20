@@ -25,7 +25,7 @@
                 <p>Loại:</p>
             </div>
             <div class="col">
-                <p>Ví cá nhân</p>
+                <p>${wallet.getWalletType()}</p>
             </div>
         </div>
         <div class="row">

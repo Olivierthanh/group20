@@ -156,14 +156,14 @@
             <div class="col-4">
                 <div class="card-content">
                     <div class="row p-2">
-                        <p class="w-100 text-right">+1000000</p>
+                        <p class="w-100 text-right">${inflow}</p>
                     </div>
                     <div class="row p-2">
-                        <p class="w-100 text-right">-5000000</p>
+                        <p class="w-100 text-right">${outflow }</p>
                     </div>
                     <hr>
                     <div class="row p-2">
-                        <p class="w-100 text-right">+500000</p>
+                        <p class="w-100 text-right">${sum}</p>
                     </div>
                 </div>
             </div>

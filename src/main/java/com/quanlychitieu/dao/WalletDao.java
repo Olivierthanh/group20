@@ -1,7 +1,9 @@
 package com.quanlychitieu.dao;
 
+import com.quanlychitieu.entity.PasswordResetToken;
 import com.quanlychitieu.entity.Wallet;
 import org.hibernate.Criteria;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
@@ -32,4 +34,20 @@ public class WalletDao {
         }
         return wallet;
     }
+    public boolean deleteWallet(Wallet wallet) {
+    	boolean flag;
+        try {
+            getSession().delete(wallet);
+            
+            flag = true;
+        } catch (HibernateException ex) {
+            ex.printStackTrace();
+            flag = false;
+        }
+        return flag;
+        
+    }
+    
+ 
+    
 }
