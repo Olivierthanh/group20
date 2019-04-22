@@ -25,7 +25,7 @@
                         <ul aria-expanded="false">
                             <C:forEach items="${sessionScope.walletList}" var="wallet" >
                                 <li>
-                                    <a href="<c:url value="/viewWallet" />">${wallet.walletName}</a>
+                                    <a href="<c:url value="/viewWallet${wallet.walletId}" />">${wallet.walletName}</a>
                                 </li>
                             </C:forEach>
                         </ul>

@@ -5,7 +5,7 @@
   Time: 10:41 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +19,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="<c:url value="resources/assets/images/wallet.png" />">
     <!-- Cdn css -->
     <!-- <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.5.95/css/materialdesignicons.min.css"> -->
+    <%-- Table Data css--%>
+    <link href="<c:url value="resources/assets/plugins/datatables/css/jquery.dataTables.min.css" />" rel="stylesheet">
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="<c:url value="resources/main/css/custom.css" />">
     <link href="<c:url value="resources/main/css/style.css" />" rel="stylesheet">
@@ -53,7 +55,7 @@
     <!-- Conent body -->
     <div class="content-body">
         <div class="container-fluid">
-
+            <jsp:include page="../component/dashboard.jsp" />
         </div>
         <!-- #/ container -->
     </div>
@@ -71,6 +73,9 @@
 <script src="<c:url value="resources/main/js/settings.js" />"></script>
 <script src="<c:url value="resources/main/js/gleek.js" />"></script>
 <script src="<c:url value="resources/main/js/styleSwitcher.js" />"></script>
+<%-- Table Data--%>
+<script src="<c:url value="resources/assets/plugins/datatables/js/jquery.dataTables.min.js" />"></script>
+<script src="<c:url value="resources/main/js/custom/table/init_wallet_table.js" />"></script>
 <!-- End Script -->
 </body>
 

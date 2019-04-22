@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: toila
@@ -25,7 +26,16 @@
                 <p>Loại:</p>
             </div>
             <div class="col">
-                <p>Ví cá nhân</p>
+                <p>
+                    <c:choose>
+                        <c:when test="${wallet.getWalletType() == 'personal'}">
+                            Ví cá nhân
+                        </c:when>
+                        <c:otherwise>
+                            Ví dùng chung
+                        </c:otherwise>
+                    </c:choose>
+                </p>
             </div>
         </div>
         <div class="row">

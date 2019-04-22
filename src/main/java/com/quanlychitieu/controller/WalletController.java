@@ -27,7 +27,7 @@ public class WalletController {
 	@Autowired
 	private WalletService walletService;
 
-    @RequestMapping("/{walletId}")
+    @RequestMapping("/viewWallet{walletId}")
     public String viewWallet(Principal principal, HttpSession session , Model model, @PathVariable(value = "walletId") int walletId	) {
     	String page;
         if (session.isNew()) {

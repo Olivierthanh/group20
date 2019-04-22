@@ -23,7 +23,7 @@ public class RegisterController {
         return "page/register";
     }
 
-    @RequestMapping(value = "/register_user", method = RequestMethod.POST)
+    @RequestMapping(value = "/register_user", method = RequestMethod.GET)
     public @ResponseBody String registerUser(HttpServletRequest request) {
         System.out.println(request.getParameter("email"));
         String message = userService.registerUser(request);
