@@ -1,5 +1,5 @@
 // Category select click
-$("#category").on("click", event => {
+$("#category-name").on("click", event => {
     $("#add-transaction-view").modal("hide").on('hidden.bs.modal', event => {
         $("#transaction-category-select").modal('show');
         $(event.target).off('hidden.bs.modal');
@@ -8,11 +8,13 @@ $("#category").on("click", event => {
 
 $(".img-category").on("click", event => {
     event.preventDefault();
-    categoryId = $(event.currentTarget).attr("category-id");
-    categoryName = $(event.currentTarget).attr("category-name");
+    let categoryId = $(event.currentTarget).attr("category-id");
+    let categoryName = $(event.currentTarget).attr("category-name");
+    let transactionType = $(event.currentTarget).attr("transaction-type");
     console.log(categoryId, categoryName);
-    $("#category").val(categoryName);
-    $("#category").attr("category-id", categoryId);
+    $("#category-name").val(categoryName);
+    $("#category-id").val(categoryId);
+    $("#transaction-type").val(transactionType);
     $("#transaction-category-select").modal('hide').on('hidden.bs.modal', event => {
         $("#add-transaction-view").modal("show");
         $(event.target).off('hidden.bs.modal');

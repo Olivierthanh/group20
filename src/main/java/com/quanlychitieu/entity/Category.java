@@ -23,22 +23,27 @@ public class Category {
     @Enumerated(EnumType.STRING)
     private TransactionType type;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "transactionId")
-    private Set<Transaction> listTransaction;
+//    @OneToMany(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "transactionId")
+//    private Set<Transaction> listTransaction;
 
 
     public Category() {
 
     }
 
-    public Category(int categoryId, String categoryName, TransactionType type, Set<Transaction> listTransaction) {
-        super();
-        this.categoryId = categoryId;
+    public Category(String categoryName, TransactionType type) {
         this.categoryName = categoryName;
         this.type = type;
-        this.listTransaction = listTransaction;
     }
+
+    //    public Category(int categoryId, String categoryName, TransactionType type, Set<Transaction> listTransaction) {
+//        super();
+//        this.categoryId = categoryId;
+//        this.categoryName = categoryName;
+//        this.type = type;
+//        this.listTransaction = listTransaction;
+//    }
 
     public int getCategoryId() {
         return categoryId;
@@ -64,13 +69,13 @@ public class Category {
         this.type = type;
     }
 
-    public Set<Transaction> getListTransaction() {
-        return listTransaction;
-    }
+//    public Set<Transaction> getListTransaction() {
+//        return listTransaction;
+//    }
 
-    public void setListTransaction(Set<Transaction> listTransaction) {
-        this.listTransaction = listTransaction;
-    }
+//    public void setListTransaction(Set<Transaction> listTransaction) {
+//        this.listTransaction = listTransaction;
+//    }
 
 
 }

@@ -1,38 +1,39 @@
-// Expense pie chart init
-var dom = document.getElementById("expense-Pie");
-var bpChart = echarts.init(dom);
 
-var app = {};
-option = null;
-option = {
-    color: ['#0000FF', '#00A2FF', '#F44336', '#34C73B', '#DCDCDC'],
-    tooltip: {
-        trigger: 'item',
-        formatter: '{a} <br/>{b} : {c} ({d}%)'
-    },
-    legend: {
-        orient: 'vertical',
-        x: 'left',
-        data: ['Direct', 'Mail', 'Affiliate', 'AD', 'Search']
-    },
-    calculable: true,
-    series: [
-        {
-            name: 'Source',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-                { value: 335, name: 'Direct' },
-                { value: 310, name: 'Mail' },
-                { value: 234, name: 'Affiliate' },
-                { value: 135, name: 'AD' },
-                { value: 1548, name: 'Search' }
-            ]
-        }
-    ]
-};
 
-if (option && typeof option === "object") {
-    bpChart.setOption(option, false);
+// Init Income Chart
+function initExpenseChart(expenseTransactions) {
+    let {legendData, seriesData} = getSeriesData(expenseTransactions);
+
+    var app = {};
+    let option = null;
+    option = {
+        color: ['#800080', '#FF00FF', '#000080', '#008080', '#00FFFF', '#008000', '#00FF00', '#808000', '#FFFF00',
+            '#800000', '#FF0000', '#000000', '#808080', '#C0C0C0', '#DCDCDC', '#34C73B',
+            '#F44336', '#00A2FF', '#0000FF'],
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b} : {c} ({d}%)'
+        },
+        legend: {
+            orient: 'horizontal',
+            // x: 'left',
+            y: 'top',
+            data: legendData
+        },
+        calculable: true,
+        series: [
+            {
+                name: 'Source',
+                type: 'pie',
+                radius: '55%',
+                center: ['50%', '70%'],
+                data: seriesData
+            }
+        ]
+    };
+
+    if (option && typeof option === "object") {
+        expenseChart.setOption(option, false);
+    }
 }
+

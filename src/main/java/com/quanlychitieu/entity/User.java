@@ -1,5 +1,10 @@
 package com.quanlychitieu.entity;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonManagedReference;
+
 import java.util.Date;
 import java.util.Set;
 
@@ -7,6 +12,7 @@ import javax.persistence.*;
 
 
 @Entity(name = "user")
+//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "userId")
 public class User {
 
     @Id
@@ -14,12 +20,15 @@ public class User {
     private int userId;
 
     private String email;
+
+    @JsonIgnore
     private String password;
     private String name;
     private String address;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = { CascadeType.PERSIST, CascadeType.MERGE })
     @JoinTable(name = "user_wallet", joinColumns = {@JoinColumn(name = "userId")}, inverseJoinColumns = {@JoinColumn(name = "walletId")})
+    @JsonManagedReference
     private Set<Wallet> listWallet;
 
     public Set<Wallet> getListWallet() {

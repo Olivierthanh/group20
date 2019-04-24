@@ -29,14 +29,16 @@
                             </button>
                         </div>
                         <hr>
-                        <form action="#" id="add-transaction-form">
+                        <form action="<c:url value="/addTransaction" />" method="get" id="add-transaction-form">
                             <div class="modal-body px-5">
                                 <div class="row px-5 mb-4">
                                     <div class="col-2 align-middle">
                                         <span class="mdi mdi-help mdi-36px"></span>
                                     </div>
                                     <div class="col">
-                                        <input class="form-control" type="text" name="category" id="category" value="" category-id="" placeholder="Category" />
+                                        <input class="form-control" type="text" name="category-name" id="category-name" value="" placeholder="Category" />
+                                        <input type="text" name="transaction-type" id="transaction-type" value="" hidden />
+                                        <input type="text" name="category-id" id="category-id" value="" hidden />
                                     </div>
                                 </div>
                                 <div class="row px-5 mb-4">
@@ -61,8 +63,9 @@
                                         <span class="mdi mdi-calendar-clock mdi-36px"></span>
                                     </div>
                                     <div class="col">
-                                        <input type="datetime-local" class="form-control"
+                                        <input type="date" class="form-control"
                                                name="date-transaction" id="date-transaction">
+                                        <input type="text" name="wallet-id" value="${wallet.walletId}" hidden />
                                     </div>
                                 </div>
                             </div>
@@ -99,30 +102,34 @@
                                         <div class="tab-content tab-content-default">
                                             <div class="tab-pane fade show active" id="income" role="tabpanel">
                                                 <div class="row">
-                                                    <%-- Begin one income category --%>
-                                                    <div class="col-3">
-                                                        <a href="#" class="img-category" category-id="1" category-name="Awards">
-                                                            <figure class="figure">
-                                                                <img src="<c:url value="resources/main/icons/category_icon/cat_1.png" />" class="figure-img img-fluid rounded" alt="Awards">
-                                                                <figcaption class="figure-caption text-center">Awards</figcaption>
-                                                            </figure>
-                                                        </a>
-                                                    </div>
-                                                    <%-- End one income category--%>
+                                                    <c:forEach var="category" items="${sessionScope.incomeCategoryList}">
+                                                        <%-- Begin one income category --%>
+                                                        <div class="col-3">
+                                                            <a href="#" class="img-category" category-id="${category.categoryId}" category-name="${category.categoryName}" transaction-type="income">
+                                                                <figure class="figure">
+                                                                    <img src="<c:url value="resources/main/icons/category_icon/cat_${category.categoryId}.png" />" class="figure-img img-fluid rounded" alt="${category.categoryName}">
+                                                                    <figcaption class="figure-caption text-center">${category.categoryName}</figcaption>
+                                                                </figure>
+                                                            </a>
+                                                        </div>
+                                                        <%-- End one income category--%>
+                                                    </c:forEach>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="expense">
                                                 <div class="row">
-                                                    <%-- Begin one expense category --%>
-                                                    <div class="col-3">
-                                                        <a href="#" class="img-category" category-id="18" category-name="Investment">
-                                                            <figure class="figure">
-                                                                <img src="<c:url value="resources/main/icons/category_icon/cat_18.png" />" class="figure-img img-fluid rounded" alt="Awards">
-                                                                <figcaption class="figure-caption text-center">Investment</figcaption>
-                                                            </figure>
-                                                        </a>
-                                                    </div>
-                                                    <%-- End one expense category --%>
+                                                    <c:forEach var="category" items="${sessionScope.expenseCategoryList}">
+                                                        <%-- Begin one expense category --%>
+                                                        <div class="col-3">
+                                                            <a href="#" class="img-category" category-id="${category.categoryId}" category-name="${category.categoryName}" transaction-type="expense">
+                                                                <figure class="figure">
+                                                                    <img src="<c:url value="resources/main/icons/category_icon/cat_${category.categoryId}.png" />" class="figure-img img-fluid rounded" alt="${category.categoryName}">
+                                                                    <figcaption class="figure-caption text-center">${category.categoryName}</figcaption>
+                                                                </figure>
+                                                            </a>
+                                                        </div>
+                                                        <%-- End one expense category --%>
+                                                    </c:forEach>
                                                 </div>
                                             </div>
                                         </div>
@@ -156,14 +163,14 @@
             <div class="col-4">
                 <div class="card-content">
                     <div class="row p-2">
-                        <p class="w-100 text-right">${inflow}</p>
+                        <p class="w-100 text-right" id="inflow">${inflow}</p>
                     </div>
                     <div class="row p-2">
-                        <p class="w-100 text-right">${outflow }</p>
+                        <p class="w-100 text-right" id="outflow">${outflow }</p>
                     </div>
                     <hr>
                     <div class="row p-2">
-                        <p class="w-100 text-right">${sum}</p>
+                        <p class="w-100 text-right" id="balance-amount">${sum}</p>
                     </div>
                 </div>
             </div>

@@ -1,3 +1,4 @@
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
@@ -40,35 +41,32 @@
         </div>
         <div class="row">
             <div class="offset-2 col-4">
-                <p>Người sử dụng:</p>
+                <p>Người dùng chung:</p>
             </div>
             <div class="col">
-                <span class="d-block">
-                    <form action="#" class="delete-shared-user-form">
-                        <span class="shared-user-name">Nguyễn Văn A</span>
-                        <input type="text" name="wallet-id" value="" hidden/>
-                        <input type="text" name="user-id" value="" hidden/>
-                        <button type="submit" class="text-danger btn-primary-outline"
-                                data-toggle="tooltip"
-                                data-placement="right" title
-                                data-original-title="Delete Nguyễn Văn A">
-                            <i class="fa fa-times"></i>
-                        </button>
-                    </form>
-                </span>
-                <span class="d-block">
-                    <form action="#" class="delete-shared-user-form">
-                        <span class="shared-user-name">Nguyễn Văn B</span>
-                        <input type="text" name="wallet-id" value="" hidden/>
-                        <input type="text" name="user-id" value="" hidden/>
-                        <button type="submit" class="text-danger btn-primary-outline"
-                                data-toggle="tooltip"
-                                data-placement="right" title
-                                data-original-title="Delete Nguyễn Văn B">
-                            <i class="fa fa-times"></i>
-                        </button>
-                    </form>
-                </span>
+                <c:choose>
+                    <c:when test="${fn:length(userList) > 0}" >
+                        <c:forEach var="sharedUser" items="${userList}" >
+                            <span class="d-block">
+                                <form action="#" class="delete-shared-user-form">
+                                    <span class="shared-user-name">${sharedUser.name}</span>
+                                    <input type="text" name="wallet-id" value="${wallet.walletId}" hidden/>
+                                    <input type="text" name="user-id" value="${sharedUser.userId}" hidden/>
+                                    <button type="submit" class="text-danger btn-primary-outline"
+                                            data-toggle="tooltip"
+                                            data-placement="right" title
+                                            data-original-title="Delete ${sharedUser.name}">
+                                        <i class="fa fa-times"></i>
+                                    </button>
+                                </form>
+                            </span>
+                        </c:forEach>
+                    </c:when>
+                    <c:otherwise>
+                        Không có
+                    </c:otherwise>
+                </c:choose>
+
                 <span class="d-block">
                     <a href="#" data-toggle="modal" data-target="#add-shared-user-view">Add user</a>
                     <!-- begin add user modal -->

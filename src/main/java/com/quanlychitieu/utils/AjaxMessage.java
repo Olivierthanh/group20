@@ -4,6 +4,7 @@ public class AjaxMessage {
     private String type;
     private String title;
     private String message;
+    private String attachedData = "";
 
     public AjaxMessage() {
 
@@ -13,6 +14,13 @@ public class AjaxMessage {
         this.type = type;
         this.title = title;
         this.message = message;
+    }
+
+    public AjaxMessage(String type, String title, String message, String attachedData) {
+        this.type = type;
+        this.title = title;
+        this.message = message;
+        this.attachedData = attachedData;
     }
 
     public String getType() {
@@ -37,5 +45,13 @@ public class AjaxMessage {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getAttachedData() {
+        return attachedData;
+    }
+
+    public void setAttachedData(String attachedData) {
+        this.attachedData = attachedData;
     }
 }

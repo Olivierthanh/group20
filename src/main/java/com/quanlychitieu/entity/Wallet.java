@@ -1,5 +1,11 @@
 package com.quanlychitieu.entity;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import org.codehaus.jackson.annotate.JsonBackReference;
+import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonManagedReference;
+
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -7,6 +13,7 @@ import java.util.Set;
 import javax.persistence.*;
 
 @Entity(name="wallet")
+//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "walletId")
 public class Wallet {
 	
 	@Id
@@ -19,12 +26,14 @@ public class Wallet {
 	@Enumerated(EnumType.STRING)
 	private Currency currency;
 	
-	@ManyToMany(cascade= CascadeType.ALL)
+	@ManyToMany(fetch = FetchType.EAGER, cascade = { CascadeType.PERSIST, CascadeType.MERGE })
 	@JoinTable(name = "user_wallet", joinColumns = {@JoinColumn(name = "walletId")}, inverseJoinColumns = {@JoinColumn(name = "userId")})
+    @JsonBackReference
 	private Set<User> listUser;
 	
 	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
 	@JoinColumn(name="transactionId")
+	@JsonIgnore
 	private List<Transaction> listTransaction;
 	
 	@Temporal(TemporalType.DATE)

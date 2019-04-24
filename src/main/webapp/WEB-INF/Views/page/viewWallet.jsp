@@ -98,6 +98,7 @@
 
 <!-- Script -->
 <script src="<c:url value="resources/assets/plugins/common/common.min.js" />"></script>
+<script src="<c:url value="resources/assets/plugins/jquery-xpath/jquery.xpath.min.js" />"></script>
 <script src="<c:url value="resources/main/js/custom.min.js" />"></script>
 <script src="<c:url value="resources/main/js/settings.js" />"></script>
 <script src="<c:url value="resources/main/js/gleek.js" />"></script>
@@ -108,9 +109,11 @@
 <script src="<c:url value="resources/assets/plugins/echarts/echarts.min.js" />"></script>
 
 <%-- Init chart --%>
+<script src="<c:url value="resources/main/js/custom/chart_init/utils.js" />"></script>
 <script src="<c:url value="resources/main/js/custom/chart_init/balance-chart.js" />"></script>
 <script src="<c:url value="resources/main/js/custom/chart_init/income-pie-chart.js" />"></script>
 <script src="<c:url value="resources/main/js/custom/chart_init/expense-pie-chart.js" />"></script>
+<script src="<c:url value="resources/main/js/custom/chart_init/ajax-init-chart.js" />"></script>
 
 <%-- Pagination --%>
 <script src="<c:url value="resources/main/js/custom/click/pagination_view_transaction_click.js" />"></script>
@@ -119,9 +122,13 @@
 <script src="<c:url value="resources/main/js/custom/submit_form/delete_wallet_submit.js" />"></script>
 <script src="<c:url value="resources/main/js/custom/submit_form/delete_shared_user_submit.js" />"></script>
 <script src="<c:url value="resources/main/js/custom/submit_form/delete_transaction_submit.js" />"></script>
+<script src="<c:url value="resources/main/js/custom/submit_form/add_transaction_submit.js" />"></script>
 
 <%-- Category select --%>
 <script src="<c:url value="resources/main/js/custom/click/category_select_click.js" />"></script>
+
+<%-- On change event --%>
+<script src="<c:url value="resources/main/js/custom/change/chart_by_yearmonth_on_change.js" />"></script>
 
 <%-- Validate form --%>
 <script src="<c:url value="resources/assets/plugins/jquery-validation/jquery.validate.min.js" /> "></script>

@@ -259,6 +259,6 @@ quixSettings.prototype.manageResponsiveSidebar = function() {
     }
 
     if(innerWidth < 768) {
-        body.attr("data-sidebar-style", "overlay");
+        body.attr("data-sidebar-style", "full");
     }
 }

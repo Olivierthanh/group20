@@ -40,11 +40,13 @@ public class HomeController {
         if (!isUsernameSet(session)) {
             String email = principal.getName();
             User user = userService.getUser(email);
+
             session.setAttribute("username", user.getName());
             session.setAttribute("walletList", user.getListWallet());
         }
         walletList = (Set<Wallet>) session.getAttribute("walletList");
         model.addAttribute("noWallet", walletList.size());
+
         int noSharedWallet = 0;
         int noPersonalWallet = 0;
         for(Wallet wallet: walletList) {

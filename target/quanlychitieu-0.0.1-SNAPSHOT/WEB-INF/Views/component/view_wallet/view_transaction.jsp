@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--
   Created by IntelliJ IDEA.
   User: toila
@@ -31,52 +32,78 @@
 	<div class="card-body" id="view-transaction">
 		<div class="row">
 			<div class="col">
-				<!-- One day -->
-				<div class="card w-100 p-4">
-					<div class="card-header">
-						<h3 class="card-title m-t-10">2019-10-11</h3>
-						<div class="float-right">
-							<p>-600000</p>
+				<c:forEach items="${transactionsByDateMap}" var="entry" >
+					<!-- One day -->
+					<div class="card w-100 p-4" transaction-date="<fmt:formatDate value="${entry.key}" pattern="yyyy-MM-dd" />">
+						<div class="card-header">
+							<h3 class="card-title m-t-10">
+								<fmt:formatDate value="${entry.key}" pattern="yyyy-MM-dd EEEE" />
+							</h3>
+							<c:set var="sum" value="${0}" />
+							<c:forEach var="transaction" items="${entry.value}" >
+								<c:choose>
+									<c:when test="${transaction.type == 'income'}" >
+										<c:set var="sum" value="${sum + transaction.amount}" />
+									</c:when>
+									<c:otherwise>
+										<c:set var="sum" value="${sum - transaction.amount}" />
+									</c:otherwise>
+								</c:choose>
+							</c:forEach>
+							<div class="float-right">
+								<p class="sum">${sum}</p>
+							</div>
 						</div>
-					</div>
-					<!-- One transaction -->
+						<!-- One transaction -->
 
-					<c:forEach var="transaction" items="${listTransaction}">
-						<div class="card-body py-0">
-							<hr>
-							<div class="row">
-								<div class="col-2">
-									<img class="img-fluid" src="resources/data/img/cat_1.png"
-										alt="des" />
-								</div>
-								<div class="col-6">
-									<div class="row">
-										<p>
-											<span class="d-block">Award</span> <span>nguyen van a</span>
-											- <span>${transaction.getDate()}</span>
-										</p>
-										<p>${transaction.getNote()}</p>
+						<c:forEach var="transaction" items="${entry.value}">
+							<div class="card-body py-0">
+								<hr>
+								<div class="row">
+									<div class="col-2">
+										<img class="img-fluid" src="<c:url value="resources/main/icons/category_icon/cat_${transaction.category.categoryId}.png" />"
+											 alt="des" />
 									</div>
-								</div>
-								<div class="col-4">
-									<div class="row float-right">
-										<form action="#" class="delete-transaction-form">
-											<p>${transaction.getAmount() }</p>
-											<input type="text" name="transaction-id" value="" hidden />
-											<button type="submit" class="btn btn-circle btn-danger"
-												data-toggle="tooltip" data-placement="right" title
-												data-original-title="Delete transaction">
-												<i class="fa fa-trash"></i>
-											</button>
-										</form>
+									<div class="col-6">
+										<div class="row">
+											<p class="w-100">
+												<span class="d-block">${transaction.category.categoryName}</span> <span>${transaction.user.name}</span>
+												- <span>${transaction.getDate()}</span>
+											</p>
+											<p class="w-100">${transaction.getNote()}</p>
+										</div>
+									</div>
+									<div class="col-4">
+										<div class="row float-right w-75">
+											<form action="<c:url value="/deleteTransaction" />" method="get" class="delete-transaction-form">
+												<p class="w-100 transaction-amount">
+													<c:choose>
+														<c:when test="${transaction.type == 'income'}" >
+															+
+														</c:when>
+														<c:otherwise>
+															-
+														</c:otherwise>
+													</c:choose>
+														${transaction.getAmount() }
+												</p>
+												<input type="text" name="transaction-id" value="${transaction.transactionId}" hidden />
+												<input type="text" name="wallet-id" value="${wallet.walletId}" hidden />
+												<button type="submit" class="btn btn-circle btn-danger"
+														data-toggle="tooltip" data-placement="right" title
+														data-original-title="Delete transaction">
+													<i class="fa fa-trash"></i>
+												</button>
+											</form>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</c:forEach>
-					<!-- End one transaction-->
-				</div>
-				<!-- End one day -->
+						</c:forEach>
+						<!-- End one transaction-->
+					</div>
+					<!-- End one day -->
+				</c:forEach>
 
 			</div>
 		</div>

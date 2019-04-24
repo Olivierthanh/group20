@@ -1134,17 +1134,17 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-lg-6">
                                         <div class="card w-100">
-                                            <div class="card-body">
+                                            <div class="card-body px-3">
                                                 <h4 class="card-title">Income</h4>
                                                 <div id="basic-Pie" style="height: 370px"></div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-lg-6">
                                         <div class="card w-100">
-                                            <div class="card-body">
+                                            <div class="card-body px-3">
                                                 <h4 class="card-title">Expense</h4>
                                                 <div id="basic-Pie-1" style="height: 370px"></div>
                                             </div>
@@ -1227,7 +1227,7 @@
                         100000, -100000, 100000, -500000, 1000000, 400000,
                         100000, -100000, 100000, -500000, 1000000, 400000,
                         100000, -100000, 100000, -500000, 1000000, 400000,
-                        100000, -100000, 100000, -500000, 1000000, 400000,
+                        // 100000, -100000, 100000, -500000, 1000000, 400000,
                     ],
                     markPoint: {
                         data: [
@@ -1250,8 +1250,8 @@
     </script>
 
     <script>
-        var dom = document.getElementById("basic-Pie");
-        var bpChart = echarts.init(dom);
+        var dom1 = document.getElementById("basic-Pie");
+        var bpChart1 = echarts.init(dom1);
 
         var app = {};
         option = null;
@@ -1262,7 +1262,7 @@
                 formatter: '{a} <br/>{b} : {c} ({d}%)'
             },
             legend: {
-                orient: 'vertical',
+                orient: 'horizontal',
                 x: 'left',
                 data: ['Direct', 'Mail', 'Affiliate', 'AD', 'Search']
             },
@@ -1285,7 +1285,7 @@
         };
 
         if (option && typeof option === "object") {
-            bpChart.setOption(option, false);
+            bpChart1.setOption(option, false);
         }
 
     </script>
@@ -1302,7 +1302,7 @@
                 formatter: '{a} <br/>{b} : {c} ({d}%)'
             },
             legend: {
-                orient: 'vertical',
+                orient: 'horizontal',
                 x: 'left',
                 data: ['Direct', 'Mail', 'Affiliate', 'AD', 'Search']
             },
@@ -1312,7 +1312,7 @@
                     name: 'Source',
                     type: 'pie',
                     radius: '55%',
-                    center: ['50%', '60%'],
+                    center: ['50%', '70%'],
                     data: [
                         { value: 335, name: 'Direct' },
                         { value: 310, name: 'Mail' },

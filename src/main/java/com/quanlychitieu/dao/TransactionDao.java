@@ -3,8 +3,8 @@ package com.quanlychitieu.dao;
 import com.quanlychitieu.entity.Transaction;
 import com.quanlychitieu.entity.TransactionType;
 
+import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
@@ -40,7 +40,7 @@ public class TransactionDao {
         return flag;
     }
     
-    public boolean insertTransaction(Transaction transaction) {
+    public boolean addTransaction(Transaction transaction) {
     	 boolean flag;
          try {
              getSession().save(transaction);
@@ -69,6 +69,18 @@ public class TransactionDao {
 		List<Transaction> result = list;
     	return result;
     }
+
+    @SuppressWarnings("unchecked")
+    public Transaction getTransactionByTransactionId(int transactionId) {
+        Transaction transaction = null;
+        Criteria criteria = getSession().createCriteria(Transaction.class);
+        criteria.add(Restrictions.eq("transactionId", transactionId));
+        List<Transaction> transactions = (List<Transaction>) criteria.list();
+        if (!transactions.isEmpty())  {
+            transaction = transactions.get(0);
+        }
+        return transaction;
+    }
   
     public int deleteTransactionByWalletId(int walletId) {
     	String hql = "delete FROM transaction where walletId = :walletId";
@@ -76,5 +88,14 @@ public class TransactionDao {
     	query.setParameter("walletId", walletId);
     	int result = query.executeUpdate();
     	return result;
+    }
+
+    @SuppressWarnings("unchecked")
+    public List<Transaction> getListTransactionByDateList(int walletId, List<Date> dateList) {
+        Criteria criteria = getSession().createCriteria(Transaction.class);
+        criteria.add(Restrictions.eq("wallet.walletId", walletId));
+        criteria.add(Restrictions.in("date", dateList));
+        criteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);
+        return (List<Transaction>) criteria.list();
     }
 }
