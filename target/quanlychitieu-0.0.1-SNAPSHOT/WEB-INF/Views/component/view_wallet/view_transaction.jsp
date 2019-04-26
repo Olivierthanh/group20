@@ -31,7 +31,7 @@
 
 	<div class="card-body" id="view-transaction">
 		<div class="row">
-			<div class="col">
+			<div class="col" id="transaction-day-list">
 				<c:forEach items="${transactionsByDateMap}" var="entry" >
 					<!-- One day -->
 					<div class="card w-100 p-4" transaction-date="<fmt:formatDate value="${entry.key}" pattern="yyyy-MM-dd" />">

@@ -86,9 +86,9 @@ function getTransactionNode(dataSubmit, dataReturn, username, action) {
     return $.parseHTML(node)[1];
 }
 
-function createTransactionDayNode(dataSubmit, dataReturn, deleteTransactionUrl) {
+function createTransactionDayNode(dataSubmit, dataReturn, deleteTransactionUrl, isVisible) {
     let node = `
-    <div class="card w-100 p-4 d-none" transaction-date="${dataSubmit['date-transaction']}">
+    <div class="card w-100 p-4 ${!isVisible ? 'd-none': ''}" transaction-date="${dataSubmit['date-transaction']}">
         <div class="card-header">
             <h3 class="card-title m-t-10">
                 ${dataSubmit['date-transaction']}
@@ -127,10 +127,18 @@ function updateModel(dataSubmit, dataReturn, deleteTransactionUrl) {
 }
 
 function addTransactionDayNode(dataSubmit, dataReturn, deleteTransactionUrl) {
-    let transactionDayNode = createTransactionDayNode(dataSubmit, dataReturn, deleteTransactionUrl);
+
     let activeDate = $("#view-transaction .card:not(.d-none)").attr("transaction-date");
-    console.log(transactionDayNode);
-    $(document).xpath(`//div[@id='view-transaction']//div[contains(@class, 'card') and (@transaction-date < '${dataSubmit['date-transaction']}')][1]`)[0].before(transactionDayNode);
+    // console.log(transactionDayNode)
+    let transactionDayAfter = $(document).xpath(`//div[@id='view-transaction']//div[contains(@class, 'card') and (@transaction-date < '${dataSubmit['date-transaction']}')][1]`)[0]
+    if (transactionDayAfter){
+        let transactionDayNode = createTransactionDayNode(dataSubmit, dataReturn, deleteTransactionUrl, false);
+        transactionDayAfter.before(transactionDayNode);
+    }
+    else {
+        let transactionDayNode = createTransactionDayNode(dataSubmit, dataReturn, deleteTransactionUrl, true);
+        $("#transaction-day-list").append(transactionDayNode);
+    }
     if (activeDate < dataSubmit['date-transaction']) {
         cardActive += 1;
     }

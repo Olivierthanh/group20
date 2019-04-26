@@ -126,16 +126,21 @@ public class WalletController {
     }
 
     @RequestMapping(value = "/deleteTransaction", method = RequestMethod.GET)
-    public @ResponseBody String deleteTransaction(Principal principal, HttpServletRequest request) {
+    public @ResponseBody String deleteTransaction(Principal principal, HttpServletRequest request, HttpSession session) {
         String email = principal.getName();
         int transactionId = Integer.parseInt(request.getParameter("transactionId"));
         int walletId = Integer.parseInt(request.getParameter("walletId"));
 
-        return transactionService.deleteTransaction(transactionId, walletId, email);
+        String message = transactionService.deleteTransaction(transactionId, walletId, email);
+
+        User user = userService.getUser(email);
+        session.setAttribute("walletList", user.getListWallet());
+
+        return message;
     }
 
     @RequestMapping(value = "/addTransaction", method = RequestMethod.GET)
-    public @ResponseBody String addTransaction(Principal principal, HttpServletRequest request) {
+    public @ResponseBody String addTransaction(Principal principal, HttpServletRequest request, HttpSession session) {
         String email = principal.getName();
         int categoryId = Integer.parseInt(request.getParameter("category-id"));
         TransactionType type = TransactionType.valueOf(request.getParameter("transaction-type"));
@@ -150,7 +155,11 @@ public class WalletController {
         }
         int walletId = Integer.parseInt(request.getParameter("wallet-id"));
 
-        return transactionService.addTransaction(categoryId, type, amount, note, date, walletId, email);
+        String message = transactionService.addTransaction(categoryId, type, amount, note, date, walletId, email);
+
+        User user = userService.getUser(email);
+        session.setAttribute("walletList", user.getListWallet());
+        return message;
     }
 
     @RequestMapping(value = "/addSharedUser", method = RequestMethod.GET)

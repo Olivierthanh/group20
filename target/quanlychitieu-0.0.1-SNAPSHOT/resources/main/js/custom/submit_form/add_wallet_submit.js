@@ -20,7 +20,7 @@ $(document).ready(() => {
                        if (data['type'] === 'success') {
                            let walletId = data['data']['walletId'];
                            let walletName = data['data']['walletName'];
-                           let viewWalletUrl = "/" + action.split("/")[1] + walletId;
+                           let viewWalletUrl = "/" + action.split("/")[1] + "/viewWallet" + walletId;
                            $("#wallet-list").append($(`<li><a  href="${viewWalletUrl}">${walletName}</a></li>`));
                            $(event.target)[0].reset();
                            if (window.location.pathname.split("/")[2].startsWith("home")) {

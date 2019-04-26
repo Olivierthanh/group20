@@ -50,8 +50,8 @@ $("body").on("submit", ".delete-transaction-form", event => {
                                 updateModelAfterDeleteTransaction(event, transactionDate, amount, false);
                             }
                             else {
-                                $(event.target).closest(".card-body").remove();
                                 updateModelAfterDeleteTransaction(event, transactionDate, amount, true);
+                                $(event.target).closest(".card-body").remove();
                             }
                         }
                     });

@@ -7,8 +7,10 @@ import java.util.Set;
 
 
 import com.quanlychitieu.dao.UserDao;
+import com.quanlychitieu.dao.WalletDao;
 import com.quanlychitieu.entity.TransactionType;
 import com.quanlychitieu.entity.User;
+import com.quanlychitieu.entity.Wallet;
 import com.quanlychitieu.utils.AjaxMessage;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,9 @@ public class TransactionService {
 
 	@Autowired
     private UserDao userDao;
+
+	@Autowired
+    private WalletDao walletDao;
 	
 	
 //	public String addTransaction(HttpServletRequest request) {
@@ -89,7 +94,9 @@ public class TransactionService {
         Transaction transaction = transactionDao.getTransactionByTransactionId(transactionId);
         if (transaction != null) {
             if (transaction.getWallet().getWalletId() == walletId && transaction.getUser().getEmail().equals(email)) {
-                if (transactionDao.deleteTransaction(transaction)) {
+                Wallet wallet = walletDao.getWalletByWalletId(walletId);
+                updateBalance(wallet, transaction.getType(), transaction.getAmount(), "delete");
+                if (walletDao.updateWallet(wallet) && transactionDao.deleteTransaction(transaction)) {
                     message = new AjaxMessage("success", "Hey, this transaction has been deleted from your wallet", "Deleted");
                 }
                 else {
@@ -118,7 +125,9 @@ public class TransactionService {
         AjaxMessage message;
         User user = userDao.getUserByEmail(email);
         Transaction transaction = new Transaction(amount, date, note, type, walletId, categoryId, user);
-        if (transactionDao.addTransaction(transaction)) {
+        Wallet wallet = walletDao.getWalletByWalletId(walletId);
+        updateBalance(wallet, type, amount, "add");
+        if (walletDao.updateWallet(wallet) && transactionDao.addTransaction(transaction)) {
             message = new AjaxMessage("success", "Added", "Add transaction successfully", String.valueOf(transaction.getTransactionId()));
         }
         else {
@@ -131,6 +140,25 @@ public class TransactionService {
             ex.printStackTrace();
         }
         return ajaxResponse;
+    }
+
+    private void updateBalance(Wallet wallet, TransactionType type, int amount, String action) {
+        int realAmount;
+        if (action.equals("add")) {
+            realAmount = amount;
+        }
+        else {
+            realAmount = -amount;
+        }
+
+        int oldBalance = wallet.getBalance();
+
+        if (type.equals(TransactionType.income)) {
+            wallet.setBalance(oldBalance + realAmount);
+        }
+        else {
+            wallet.setBalance(oldBalance - realAmount);
+        }
     }
 	
 }
