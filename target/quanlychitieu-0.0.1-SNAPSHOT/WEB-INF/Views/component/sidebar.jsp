@@ -14,15 +14,15 @@
 
             <li class="nav-label">Wallet</li>
             <li>
-                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                <a class="has-arrow" href="javascript:void(0)" aria-expanded="false">
                     <i class="mdi mdi-wallet"></i>
                     <span class="nav-text">Wallet</span>
                     <span class="badge bg-lgreen text-white nav-badge">০3</span>
                 </a>
                 <ul aria-expanded="false">
                     <li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">View</a>
-                        <ul aria-expanded="false">
+                        <a class="has-arrow" href="javascript:void(0)" aria-expanded="false">View</a>
+                        <ul aria-expanded="false" id="wallet-list">
                             <C:forEach items="${sessionScope.walletList}" var="wallet" >
                                 <li>
                                     <a href="<c:url value="/viewWallet${wallet.walletId}" />">${wallet.walletName}</a>
@@ -36,7 +36,7 @@
                 </ul>
             </li>
             <li class="nav-label">Profile</li>
-            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
+            <li><a class="has-arrow" href="javascript:void(0)" aria-expanded="false">
                 <i class="mdi mdi-account"></i>
                 <span class="nav-text">Profile</span>
                 <span class="badge badge-primary nav-badge">13</span>
@@ -46,7 +46,7 @@
                         <a href="<c:url value="/profile" />" aria-expanded="false">View Profile</a>
                     </li>
                     <li>
-                        <a href="#" aria-expanded="false">Change Password</a>
+                        <a href="<c:url value="/updatePassword" />" aria-expanded="false">Change Password</a>
                     </li>
                 </ul>
             </li>
@@ -73,7 +73,7 @@
                 </button>
             </div>
             <hr>
-            <form action="#" id="add-wallet-form">
+            <form action="<c:url value="/addWallet" />" method="get" id="add-wallet-form">
                 <div class="modal-body px-5">
                     <div class="row px-5 mb-4">
                         <div class="col-2 align-middle">
@@ -91,7 +91,9 @@
                         <div class="col">
                             <select class="form-control" name="currency"
                                     id="currency">
-                                <option>Currency</option>
+                                <c:forEach var="currency" items="${currencyList}">
+                                    <option value="${currency}">${currency}</option>
+                                </c:forEach>
                             </select>
                         </div>
                     </div>

@@ -24,6 +24,7 @@ public class WalletDao {
         return sessionFactory.getCurrentSession();
     }
 
+    @SuppressWarnings("unchecked")
     public Wallet getWalletByWalletId(int walletId) {
         Wallet wallet = null;
         Criteria criteria = getSession().createCriteria(Wallet.class);
@@ -38,7 +39,6 @@ public class WalletDao {
     	boolean flag;
         try {
             getSession().delete(wallet);
-            
             flag = true;
         } catch (HibernateException ex) {
             ex.printStackTrace();
@@ -47,7 +47,31 @@ public class WalletDao {
         return flag;
         
     }
+
+    public boolean addWallet(Wallet wallet) {
+        boolean flag;
+        try {
+            getSession().save(wallet);
+            flag = true;
+        }
+        catch (HibernateException ex) {
+            ex.printStackTrace();
+            flag = false;
+        }
+        return flag;
+    }
     
- 
+    public boolean updateWallet(Wallet wallet) {
+        boolean flag;
+        try {
+            getSession().update(wallet);
+            flag = true;
+        }
+        catch (HibernateException ex) {
+            ex.printStackTrace();
+            flag = false;
+        }
+        return flag;
+    }
     
 }

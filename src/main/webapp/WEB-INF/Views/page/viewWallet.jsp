@@ -19,7 +19,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="<c:url value="resources/assets/images/wallet.png" />">
     <!-- Cdn css -->
     <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.5.95/css/materialdesignicons.min.css">
-    <!-- Sweetalert -->
+    <!-- SweetAlert2 -->
     <link href="<c:url value="resources/assets/plugins/sweetalert2/dist/sweetalert2.min.css" />" rel="stylesheet">
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="<c:url value="resources/main/css/custom.css" />">
@@ -123,6 +123,8 @@
 <script src="<c:url value="resources/main/js/custom/submit_form/delete_shared_user_submit.js" />"></script>
 <script src="<c:url value="resources/main/js/custom/submit_form/delete_transaction_submit.js" />"></script>
 <script src="<c:url value="resources/main/js/custom/submit_form/add_transaction_submit.js" />"></script>
+<script src="<c:url value="resources/main/js/custom/submit_form/add_shared_user_submit.js" />"></script>
+<script src="<c:url value="resources/main/js/custom/submit_form/add_wallet_submit.js" />"></script>
 
 <%-- Category select --%>
 <script src="<c:url value="resources/main/js/custom/click/category_select_click.js" />"></script>
@@ -134,5 +136,6 @@
 <script src="<c:url value="resources/assets/plugins/jquery-validation/jquery.validate.min.js" /> "></script>
 <script src="<c:url value="resources/main/js/custom/validate/add_transaction_validate.js" />"></script>
 <script src="<c:url value="resources/main/js/custom/validate/add_shared_user_validate.js" />"></script>
+<script src="<c:url value="resources/main/js/custom/validate/add_wallet_validate.js" />"></script>
 </body>
 </html>

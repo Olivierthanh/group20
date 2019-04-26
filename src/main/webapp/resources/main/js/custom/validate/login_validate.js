@@ -30,5 +30,5 @@ $("#login-form").validate({
     success: function(e) {
         jQuery(e).closest(".form-group").removeClass("is-invalid"), jQuery(e).remove()
     },
-})
+});
 

@@ -70,6 +70,33 @@ public class UserService {
         return ajaxResponse;
     }
 
+    public String updatePassword(String oldPassword, String newPassword, String email){
+        String ajaxResponse = "";
+        AjaxMessage message;
+        User user = userDao.getUserByEmail(email);
+        if (passwordEncoder.matches(oldPassword, user.getPassword())) {
+            user.setPassword(passwordEncoder.encode(newPassword));
+            if (userDao.updateUser(user)) {
+                message = new AjaxMessage("success", "Updated password", "Your password is updated");
+            }
+            else {
+                message = new AjaxMessage("error", "Failed to update password", "Your password is not updated, please try gain");
+            }
+        }
+        else {
+            message = new AjaxMessage("error", "Incorrect password", "Your old password is incorrect, please try gain");
+        }
+
+        try {
+            ajaxResponse = new ObjectMapper().writeValueAsString(message);
+        }
+        catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return ajaxResponse;
+    }
+
     public String updateProfile(HttpServletRequest request) {
         ObjectMapper mapper = new ObjectMapper();
         AjaxMessage message;
@@ -208,4 +235,5 @@ public class UserService {
         }
         return returnMessage;
     }
+
 }

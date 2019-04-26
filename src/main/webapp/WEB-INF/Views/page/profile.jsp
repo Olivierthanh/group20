@@ -182,10 +182,18 @@
 <script src="<c:url value="resources/main/js/custom.min.js" />"></script>
 <script src="<c:url value="resources/main/js/settings.js" />"></script>
 <script src="<c:url value="resources/main/js/gleek.js" />"></script>
+
+<!-- SweetAlert2 -->
+<script src="<c:url value="resources/assets/plugins/sweetalert2/dist/sweetalert2.min.js" />"></script>
+
 <!-- Form validate -->
 <script src="<c:url value="resources/assets/plugins/jquery-validation/jquery.validate.min.js" />"></script>
 <script src="<c:url value="resources/assets/plugins/sweetalert2/dist/sweetalert2.min.js" />"></script>
 <script src="<c:url value="resources/main/js/custom/validate/update_profile_validate.js" />"></script>
+<script src="<c:url value="resources/main/js/custom/validate/add_wallet_validate.js" />"></script>
+
+<!-- Form submit -->
+<script src="<c:url value="resources/main/js/custom/submit_form/add_wallet_submit.js" />"></script>
 <script src="<c:url value="resources/main/js/custom/submit_form/update_profile_submit.js" />"></script>
 <!-- End Script -->
 </body>

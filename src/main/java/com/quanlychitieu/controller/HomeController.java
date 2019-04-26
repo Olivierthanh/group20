@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
 import java.security.Principal;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -67,6 +68,9 @@ public class HomeController {
             session.setAttribute("expenseCategoryList", expenseCategoryList);
         }
 
+        if (!isCurrencySet(session)) {
+            session.setAttribute("currencyList", Currency.values());
+        }
 
         return "page/home";
     }
@@ -89,6 +93,10 @@ public class HomeController {
 
     private boolean isCategoryListSet(HttpSession session) {
         return session.getAttribute("incomeCategoryList") != null && session.getAttribute("expenseCategoryList") != null;
+    }
+
+    private boolean isCurrencySet(HttpSession session) {
+        return session.getAttribute("currencyList") != null;
     }
 
 }

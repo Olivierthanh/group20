@@ -16,7 +16,8 @@ $("#add-transaction-form").validate({
         },
         "amount": {
             required: !0,
-            number: 5
+            number: !0,
+            min: 1
         },
         "note": {
 
@@ -30,7 +31,8 @@ $("#add-transaction-form").validate({
         "category": "Please select a transaction category",
         "amount": {
             required: "Please provide a amount of transaction",
-            number: "Please enter a valid number"
+            number: "Please enter a valid number",
+            min: "Please enter an amount greater than 0"
         },
         "date-transaction": {
             required: "Please provide a transaction date",

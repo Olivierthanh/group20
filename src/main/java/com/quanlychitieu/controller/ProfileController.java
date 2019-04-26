@@ -63,4 +63,19 @@ public class ProfileController {
     public @ResponseBody String changePasswordProcess(HttpServletRequest request) {
         return userService.processChangePassword(request);
     }
+
+    @RequestMapping("/updatePassword")
+    public String updatePasswordView(Model model, Principal principal) {
+        User user = userService.getUser(principal.getName());
+        model.addAttribute("user", user);
+        return "page/updatePassword";
+    }
+
+    @RequestMapping(value = "/updatePasswordProcess", method = RequestMethod.GET)
+    public @ResponseBody String updatePasswordProcess(HttpServletRequest request, Principal principal) {
+        String oldPassword = request.getParameter("old-password");
+        String newPassword = request.getParameter("new-password");
+        String email = principal.getName();
+        return userService.updatePassword(oldPassword, newPassword, email);
+    }
 }

@@ -26,7 +26,7 @@ public class Transaction {
 	@Enumerated(EnumType.STRING)
 	private TransactionType type;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "walletId")
     private Wallet wallet = new Wallet();
 

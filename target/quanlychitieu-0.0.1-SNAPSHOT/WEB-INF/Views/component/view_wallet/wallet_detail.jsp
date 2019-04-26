@@ -12,7 +12,8 @@
     <div class="card-header pb-0">
         <h4 class="card-title">Wallet Detail</h4>
         <div class="table-action float-right">
-            <form action="#" id="delete-wallet-form">
+            <form action="<c:url value="/deleteWallet" />" home="<c:url value="/home" />" method="get" id="delete-wallet-form">
+                <input type="text" name="wallet-id" value="${wallet.walletId}" hidden />
                 <button type="submit" class="btn btn-circle btn-danger" data-toggle="tooltip"
                         data-placement="right" title data-original-title="Delete wallet"
                         id="delete-wallet-button"><i class="fa fa-trash" aria-hidden="true"></i>
@@ -27,7 +28,7 @@
                 <p>Loại:</p>
             </div>
             <div class="col">
-                <p>
+                <p id="wallet-type">
                     <c:choose>
                         <c:when test="${wallet.getWalletType() == 'personal'}">
                             Ví cá nhân
@@ -43,15 +44,15 @@
             <div class="offset-2 col-4">
                 <p>Người dùng chung:</p>
             </div>
-            <div class="col">
+            <div class="col" id="shared-user-view">
                 <c:choose>
                     <c:when test="${fn:length(userList) > 0}" >
                         <c:forEach var="sharedUser" items="${userList}" >
-                            <span class="d-block">
-                                <form action="#" class="delete-shared-user-form">
+                            <span class="d-block shared-user">
+                                <form action="<c:url value="/deleteSharedUser" />" class="delete-shared-user-form">
                                     <span class="shared-user-name">${sharedUser.name}</span>
                                     <input type="text" name="wallet-id" value="${wallet.walletId}" hidden/>
-                                    <input type="text" name="user-id" value="${sharedUser.userId}" hidden/>
+                                    <input type="text" name="shared-user-id" value="${sharedUser.userId}" hidden/>
                                     <button type="submit" class="text-danger btn-primary-outline"
                                             data-toggle="tooltip"
                                             data-placement="right" title
@@ -63,7 +64,9 @@
                         </c:forEach>
                     </c:when>
                     <c:otherwise>
-                        Không có
+                        <span id="no-user">
+                            Không có
+                        </span>
                     </c:otherwise>
                 </c:choose>
 
@@ -80,7 +83,7 @@
                                     </button>
                                 </div>
                                 <hr>
-                                <form action="#" id="add-shared-user-form">
+                                <form action="<c:url value="/addSharedUser" />" method="get" id="add-shared-user-form">
                                     <div class="modal-body px-5">
                                         <div class="row px-5 mb-4">
                                             <div class="col-2 align-middle">
@@ -88,7 +91,7 @@
                                             </div>
                                             <div class="col">
                                                 <input class="form-control" type="text" name="shared-user" id="shared-user" value="" placeholder="Shared User" />
-                                                <input type="text" name="wallet-id" hidden />
+                                                <input type="text" name="wallet-id" hidden value="${wallet.walletId}" />
                                             </div>
                                         </div>
                                     </div>

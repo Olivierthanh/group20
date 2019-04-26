@@ -17,7 +17,7 @@ $(document).ready(() => {
                 formData.forEach((value, key) => {
                     dataSubmit[key] = value;
                 });
-                console.log(dataSubmit);
+                // console.log(dataSubmit);
                 if (isConfirmed.value) {
                     $.ajax({
                         type: "GET",
@@ -29,8 +29,9 @@ $(document).ready(() => {
                         success: data => {
                             swal(`${data['title']} !!`, `${data['message']} !!`, data['type']).then((value) => {
                                 if (data['type'] === 'success') {
-                                    let deleteTransactionUrl = action.split("/")[1] + '/deleteTransaction';
+                                    let deleteTransactionUrl = "/" + action.split("/")[1] + '/deleteTransaction';
                                     updateModel(dataSubmit, data, deleteTransactionUrl);
+                                    $(event.target)[0].reset();
                                 }
                             });
                         },
@@ -66,7 +67,7 @@ function getTransactionNode(dataSubmit, dataReturn, username, action) {
             <div class="col-4">
                 <div class="row float-right w-75">
                     <form action="${action}" method="get" class="delete-transaction-form">
-                        <p class="w-100">
+                        <p class="w-100 transaction-amount">
                             ${(dataSubmit['transaction-type'] === 'income' ? '+ ': '- ') + dataSubmit['amount']}
                         </p>
                         <input type="text" name="transaction-id" value="${dataReturn['attachedData']}" hidden />
@@ -156,6 +157,7 @@ function updateOverview(amount, transactionType) {
     }
     else {
         let outflow = $("#outflow")[0];
+        console.log($(outflow).text());
         $(outflow).text(parseInt($(outflow).text()) - amount);
         $(balanceAmount).text(parseInt($(balanceAmount).text()) - amount);
     }

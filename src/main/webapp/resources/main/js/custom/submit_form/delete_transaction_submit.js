@@ -32,7 +32,9 @@ $("body").on("submit", ".delete-transaction-form", event => {
                 success: data => {
                     swal(`${data['title']} !!`, `${data['message']} !!`, data['type']).then((value) => {
                         if (data['type'] === "success") {
-                            let amount = parseInt($($(event.target).find(".transaction-amount")[0]).text().replace('/\s+/g', ''));
+                            let transactionAmountNode = $(event.target).find(".transaction-amount")[0];
+                            let amount = parseInt($(transactionAmountNode).text().replace(/\s+/g, ''));
+                            console.log("amount", amount);
                             let transactionDate = $(event.target).closest(".card").attr("transaction-date");
                             if ($(event.target).closest(".card").find(".card-body").length === 1) {
                                 cards = $("#view-transaction").find(".card");
@@ -71,16 +73,18 @@ function updateModelAfterDeleteTransaction(event, transactionDate, amount, isTra
         $(sumNode).text(newSum);
     }
 
-    let balanceAmount = $("#balance-amount")[0];
-    $(balanceAmount).text(parseInt($(balanceAmount).text()) - amount);
+    let balanceAmount = $("#balance-amount");
+    balanceAmount.text(parseInt(balanceAmount.text()) - amount);
 
     if (amount > 0) {
-        let inflow = $("#inflow")[0];
-        $(inflow).text(parseInt($(inflow).text()) - amount);
+        let inflow = $("#inflow");
+        console.log(inflow.text());
+        inflow.text(parseInt(inflow.text()) - amount);
     }
     else {
-        let outflow = $("#outflow")[0];
-        $(outflow).text(parseInt($(outflow).text()) - amount);
+        let outflow = $("#outflow");
+        console.log(parseInt(outflow.text()) - amount);
+        outflow.text(parseInt(outflow.text()) - amount);
     }
 
     updateChart(transactionDate);

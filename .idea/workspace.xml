@@ -7,110 +7,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abfd2aca-90b7-4f22-b99b-269e5f109d9d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/quanlychitieu_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/quanlychitieu_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quanlychitieu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/quanlychitieu.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/ProfileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/WalletController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/WalletController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/dao/TransactionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/dao/TransactionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/dao/WalletDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/dao/WalletDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/Wallet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/service/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/service/WalletService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/service/WalletService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/utils/AjaxMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/utils/AjaxMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/overview.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/overview.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/static_chart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/static_chart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/view_transaction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/view_transaction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/sidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/sidebar.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/wallet_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/wallet_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/changePassword.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/changePassword.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/profile.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/viewWallet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/viewWallet.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html_css_js/main/html/page/view_wallet.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html_css_js/main/html/page/view_wallet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html_css_js/main/js/gleek.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html_css_js/main/js/gleek.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html_css_js/main/js/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html_css_js/main/js/settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/balance-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/balance-chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/expense-pie-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/expense-pie-chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/income-pie-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/income-pie-chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/click/category_select_click.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/click/category_select_click.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/click/pagination_view_transaction_click.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/click/pagination_view_transaction_click.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html_css_js/main/js/custom.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html_css_js/main/js/custom.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/add_transaction_submit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/add_transaction_submit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/delete_shared_user_submit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/delete_shared_user_submit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/delete_transaction_submit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/delete_transaction_submit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/delete_wallet_submit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/delete_wallet_submit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/table/init_wallet_table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/table/init_wallet_table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/add_transaction_validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/add_transaction_validate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/main/js/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/main/js/settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/login_validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/login_validate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/controller/ProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/controller/ProfileController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/controller/RegisterController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/controller/WalletController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/controller/WalletController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/dao/CategoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/dao/CategoryDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/dao/PasswordResetTokenDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/dao/PasswordResetTokenDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/dao/TransactionDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/dao/TransactionDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/dao/UserDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/dao/WalletDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/dao/WalletDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/entity/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/entity/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/entity/Currency.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/entity/Currency.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/entity/Gender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/entity/Gender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/entity/PasswordResetToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/entity/PasswordResetToken.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/entity/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/entity/Transaction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/entity/TransactionType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/entity/TransactionType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/entity/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/entity/Wallet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/entity/Wallet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/entity/WalletType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/entity/WalletType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/exception/EmptyInputException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/exception/EmptyInputException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/service/CategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/service/EmailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/service/EmailService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/service/TransactionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/service/TransactionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/service/WalletService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/service/WalletService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/utils/AjaxMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/utils/AjaxMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/quanlychitieu/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quanlychitieu/utils/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/component/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/component/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/component/view_wallet/overview.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/component/view_wallet/overview.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/component/view_wallet/static_chart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/component/view_wallet/static_chart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/component/view_wallet/view_transaction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/component/view_wallet/view_transaction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/component/sidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/component/sidebar.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/component/view_wallet/wallet_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/component/view_wallet/wallet_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/page/changePassword.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/page/changePassword.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/page/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/page/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/page/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/page/profile.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/page/viewWallet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/Views/page/viewWallet.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/controller/ProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/controller/ProfileController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/controller/RegisterController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/controller/WalletController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/controller/WalletController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/dao/CategoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/dao/CategoryDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/dao/PasswordResetTokenDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/dao/PasswordResetTokenDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/dao/TransactionDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/dao/TransactionDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/dao/UserDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/dao/WalletDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/dao/WalletDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/entity/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/entity/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/entity/Currency.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/entity/Currency.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/entity/Gender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/entity/Gender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/entity/PasswordResetToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/entity/PasswordResetToken.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/entity/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/entity/Transaction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/entity/TransactionType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/entity/TransactionType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/entity/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/entity/Wallet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/entity/Wallet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/entity/WalletType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/entity/WalletType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/exception/EmptyInputException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/exception/EmptyInputException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/service/CategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/service/EmailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/service/EmailService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/service/TransactionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/service/TransactionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/service/WalletService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/service/WalletService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/utils/AjaxMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/utils/AjaxMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/classes/com/quanlychitieu/utils/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/html_css_js/main/html/page/view_wallet.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/html_css_js/main/html/page/view_wallet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/html_css_js/main/js/gleek.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/html_css_js/main/js/gleek.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/html_css_js/main/js/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/html_css_js/main/js/settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/chart_init/balance-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/chart_init/balance-chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/chart_init/expense-pie-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/chart_init/expense-pie-chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/chart_init/income-pie-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/chart_init/income-pie-chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/click/category_select_click.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/click/category_select_click.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/click/pagination_view_transaction_click.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/click/pagination_view_transaction_click.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/html_css_js/main/js/custom.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/WEB-INF/html_css_js/main/js/custom.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/chart_init/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/chart_init/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/submit_form/add_transaction_submit.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/submit_form/add_transaction_submit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/submit_form/delete_shared_user_submit.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/submit_form/delete_shared_user_submit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/submit_form/delete_transaction_submit.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/submit_form/delete_transaction_submit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/submit_form/delete_wallet_submit.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/submit_form/delete_wallet_submit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/table/init_wallet_table.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/table/init_wallet_table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/validate/add_transaction_validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/validate/add_transaction_validate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/validate/login_validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/validate/login_validate.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -139,94 +92,94 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/balance-chart.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-129">
-              <caret line="87" column="25" lean-forward="true" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/change/chart_by_yearmonth_on_change.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/add_transaction_submit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="31" column="105" selection-start-line="31" selection-start-column="105" selection-end-line="31" selection-end-column="105" />
+            <state relative-caret-position="301">
+              <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/utils.js">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/profile.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="125">
+              <caret line="189" selection-start-line="189" selection-end-line="189" selection-end-column="107" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/updatePassword.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="155" column="41" lean-forward="true" selection-start-line="155" selection-start-column="41" selection-end-line="155" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/delete_shared_user_submit.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="49" column="7" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="49" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/delete_transaction_submit.js">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/update_password_submit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="34" column="99" selection-start-line="34" selection-start-column="99" selection-end-line="34" selection-end-column="99" />
+            <state relative-caret-position="345">
+              <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/click/pagination_view_transaction_click.js">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/ProfileController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            <state relative-caret-position="275">
+              <caret line="78" column="75" selection-start-line="78" selection-start-column="75" selection-end-line="78" selection-end-column="75" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/view_transaction.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/sidebar.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="78" column="82" selection-start-line="78" selection-start-column="82" selection-end-line="78" selection-end-column="82" />
+            <state relative-caret-position="-456">
+              <caret line="48" column="69" lean-forward="true" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/expense-pie-chart.js">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/update_password_validate.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/viewWallet.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="111" column="69" selection-start-line="111" selection-start-column="69" selection-end-line="111" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/static_chart.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+            <state relative-caret-position="442">
+              <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/add_wallet_submit.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="502">
+              <caret line="44" column="56" lean-forward="true" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/wallet_detail.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -238,16 +191,14 @@
       <list>
         <option value="spring-beans.schema" />
         <option value="Enum" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
         <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>maint</find>
-      <find>icon_131</find>
       <find>foot</find>
       <find>icon_132</find>
       <find>person</find>
@@ -276,6 +227,8 @@
       <find>wallet-id</find>
       <find>active</find>
       <find>caractive</find>
+      <find>drag</find>
+      <find>update</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -284,57 +237,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html_css_js/data/category.csv" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/dao/WalletDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/dao/PasswordResetTokenDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/dao/CategoryDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/TransactionType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/service/CategoryService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/table/init_wallet_table.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/WalletType.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html_css_js/main/html/page/index.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/dashboard.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/delete_wallet_submit.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/delete_shared_user_submit.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html_css_js/main/html/page/view_wallet.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/login_validate.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/add_shared_user_validate.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/css/custom.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/home.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/RegisterController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/profile.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/sidebar.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/utils/Utils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/service/WalletService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/Category.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/wallet_detail.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/chart_by_yearmonth_submit.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/Wallet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/click/category_select_click.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/dao/TransactionDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/Transaction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/WalletController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/utils/AjaxMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/service/TransactionService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/header.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/add_transaction_validate.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/overview.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/settings.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/balance-chart.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/ajax-init-chart.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/viewWallet.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/click/pagination_view_transaction_click.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/static_chart.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/expense-pie-chart.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/income-pie-chart.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/view_transaction.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/utils.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/add_transaction_submit.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom.min.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/add_transaction_validate.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/add_user_submit.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/delete_transaction_submit.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/delete_shared_user_submit.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/dao/WalletDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/wallet_detail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/delete_wallet_submit.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/login_validate.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/changePassword.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/Transaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/Wallet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/WalletController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/add_wallet_validate.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/profile.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/viewWallet.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/add_shared_user_submit.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/add_transaction_submit.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/utils/AjaxMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/service/WalletService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/utils.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/table/init_wallet_table.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/home.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/changePasswordProfile.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/ProfileController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quanlychitieu/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/dashboard.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/add_wallet_submit.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/sidebar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/updatePassword.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/update_password_validate.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/update_password_submit.js" />
       </list>
     </option>
   </component>
@@ -388,35 +341,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="quanlychitieu" type="58d84e3e:PackageViewProjectNode" />
-              <item name="quanlychitieu" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="quanlychitieu" type="58d84e3e:PackageViewProjectNode" />
-              <item name="quanlychitieu" type="616d4139:PackageViewModuleNode" />
-              <item name="com.quanlychitieu" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="quanlychitieu" type="58d84e3e:PackageViewProjectNode" />
-              <item name="quanlychitieu" type="616d4139:PackageViewModuleNode" />
-              <item name="com.quanlychitieu" type="1f31426a:PackageElementNode" />
-              <item name="controller" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="quanlychitieu" type="58d84e3e:PackageViewProjectNode" />
-              <item name="quanlychitieu" type="616d4139:PackageViewModuleNode" />
-              <item name="com.quanlychitieu" type="1f31426a:PackageElementNode" />
-              <item name="entity" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -593,6 +517,30 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
+              <item name="table" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="quanlychitieu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="quanlychitieu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
+              <item name="validate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="quanlychitieu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="quanlychitieu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -602,7 +550,70 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="html_css_js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="quanlychitieu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="quanlychitieu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="html_css_js" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="quanlychitieu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="quanlychitieu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="html_css_js" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="quanlychitieu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="quanlychitieu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="html_css_js" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="quanlychitieu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="quanlychitieu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="Views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="quanlychitieu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="quanlychitieu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="quanlychitieu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="quanlychitieu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+              <item name="view_wallet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="quanlychitieu" type="b2602c69:ProjectViewProjectNode" />
@@ -618,6 +629,35 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="quanlychitieu" type="58d84e3e:PackageViewProjectNode" />
+              <item name="quanlychitieu" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="quanlychitieu" type="58d84e3e:PackageViewProjectNode" />
+              <item name="quanlychitieu" type="616d4139:PackageViewModuleNode" />
+              <item name="com.quanlychitieu" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="quanlychitieu" type="58d84e3e:PackageViewProjectNode" />
+              <item name="quanlychitieu" type="616d4139:PackageViewModuleNode" />
+              <item name="com.quanlychitieu" type="1f31426a:PackageElementNode" />
+              <item name="controller" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="quanlychitieu" type="58d84e3e:PackageViewProjectNode" />
+              <item name="quanlychitieu" type="616d4139:PackageViewModuleNode" />
+              <item name="com.quanlychitieu" type="1f31426a:PackageElementNode" />
+              <item name="entity" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -625,7 +665,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556080219283" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556254279206" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -855,12 +895,20 @@
       <workItem from="1556083820373" duration="491000" />
       <workItem from="1556089933465" duration="1018000" />
       <workItem from="1556096183316" duration="813000" />
-      <workItem from="1556112201043" duration="7029000" />
+      <workItem from="1556112201043" duration="20295000" />
+      <workItem from="1556156584003" duration="4678000" />
+      <workItem from="1556162509813" duration="3854000" />
+      <workItem from="1556174147581" duration="1254000" />
+      <workItem from="1556178734773" duration="1439000" />
+      <workItem from="1556182800211" duration="1048000" />
+      <workItem from="1556196216149" duration="10616000" />
+      <workItem from="1556220304604" duration="8321000" />
+      <workItem from="1556251511292" duration="2845000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="251156000" />
+    <option name="totallyTimeSpent" value="298477000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -874,7 +922,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4988764" visible="true" weight="0.22818792" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4988764" visible="true" weight="0.25503355" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -884,7 +932,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.25139666" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.33519554" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39944133" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -958,258 +1006,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/quanlychitieuDispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-208" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/sidebar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/profile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="81" column="7" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/database-dump/dump.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3111">
-          <caret line="183" selection-start-line="183" selection-end-line="183" selection-end-column="142" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/time/YearMonth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="294" selection-start-line="294" selection-end-line="294" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/time/format/DateTimeFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="1847" selection-start-line="1847" selection-end-line="1847" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/utils/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="160" selection-start-line="160" selection-end-line="160" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/assets/images/icons/1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/assets/images/icons/2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="113" column="12" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/TransactionType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/service/WalletService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/register_submit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/Wallet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="35" column="15" lean-forward="true" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/dao/CategoryDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="34" column="64" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="66" column="53" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/update_profile_submit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="679">
-          <caret line="46" column="10" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="46" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/delete_wallet_submit.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-336">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/RegisterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/service/CategoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/click/category_select_click.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/dao/TransactionDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/Transaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/WalletController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="151" column="40" lean-forward="true" selection-start-line="151" selection-start-column="40" selection-end-line="151" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/utils/AjaxMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
-          <folding>
-            <element signature="e#1103#1104#0" expanded="true" />
-            <element signature="e#1159#1160#0" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="114" lean-forward="true" selection-start-line="17" selection-start-column="114" selection-end-line="17" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/service/TransactionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="121" column="135" selection-start-line="121" selection-start-column="135" selection-end-line="121" selection-end-column="135" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/register_validate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/add_transaction_validate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="4" column="55" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/overview.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="168" column="63" selection-start-line="168" selection-start-column="63" selection-end-line="168" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/settings.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4437">
@@ -1233,13 +1029,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/wallet_detail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/static_chart.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
@@ -1250,13 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/viewWallet.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="111" column="69" selection-start-line="111" selection-start-column="69" selection-end-line="111" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/income-pie-chart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
@@ -1264,24 +1046,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/view_transaction.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="78" column="82" selection-start-line="78" selection-start-column="82" selection-end-line="78" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/click/pagination_view_transaction_click.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/expense-pie-chart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1299,24 +1067,323 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/utils.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/expense-pie-chart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="159">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/add_transaction_submit.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="31" column="105" selection-start-line="31" selection-start-column="105" selection-end-line="31" selection-end-column="105" />
+        <state relative-caret-position="1630">
+          <caret line="192" column="19" selection-start-line="192" selection-start-column="15" selection-end-line="192" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/add_transaction_validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="34" column="56" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/dao/TransactionDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="84" column="15" selection-start-line="84" selection-start-column="15" selection-end-line="84" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="47" column="70" selection-start-line="47" selection-start-column="70" selection-end-line="47" selection-end-column="70" />
+          <folding>
+            <element signature="e#3014#3015#0" expanded="true" />
+            <element signature="e#3077#3078#0" expanded="true" />
+            <element signature="e#3325#3326#0" expanded="true" />
+            <element signature="e#3392#3393#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/view_transaction.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="78" column="63" selection-start-line="78" selection-start-column="63" selection-end-line="78" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/register_validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/login_validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-49">
+          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-43">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/dao/WalletDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/Wallet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="29" column="105" selection-start-line="29" selection-start-column="105" selection-end-line="29" selection-end-column="105" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/entity/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/WalletController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="179" column="65" selection-start-line="179" selection-start-column="65" selection-end-line="179" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/viewWallet.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="22" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/add_wallet_validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/delete_wallet_submit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/add_shared_user_submit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/table/init_wallet_table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/chart_init/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/utils/AjaxMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1565#1566#0" expanded="true" />
+            <element signature="e#1592#1593#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/service/WalletService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="136" column="32" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/reset_password.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/change_password_submit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="80" column="86" lean-forward="true" selection-start-line="80" selection-start-column="86" selection-end-line="80" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html_css_js/main/html/page/changePassword.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-426" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/changePassword.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="85" column="68" selection-start-line="85" selection-start-column="68" selection-end-line="85" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html_css_js/main/html/page/change_password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="20" lean-forward="true" selection-end-line="276" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="73" column="38" lean-forward="true" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="96" column="27" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/dashboard.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="99" column="59" selection-start-line="99" selection-start-column="59" selection-end-line="99" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/add_wallet_submit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="44" column="56" lean-forward="true" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/view_wallet/wallet_detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/ProfileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="78" column="75" selection-start-line="78" selection-start-column="75" selection-end-line="78" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/change_password_validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/component/sidebar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-456">
+          <caret line="48" column="69" lean-forward="true" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/delete_transaction_submit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="34" column="99" selection-start-line="34" selection-start-column="99" selection-end-line="34" selection-end-column="99" />
+        <state relative-caret-position="563">
+          <caret line="35" column="96" selection-start-line="35" selection-start-column="96" selection-end-line="35" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/delete_shared_user_submit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="49" column="7" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="49" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/register_submit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="189" selection-start-line="189" selection-end-line="189" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Views/page/updatePassword.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="155" column="41" lean-forward="true" selection-start-line="155" selection-start-column="41" selection-end-line="155" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/validate/update_password_validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/add_transaction_submit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/submit_form/update_password_submit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
         </state>
       </provider>
     </entry>

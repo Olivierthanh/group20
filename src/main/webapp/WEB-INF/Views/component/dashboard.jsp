@@ -97,7 +97,7 @@
                         <tbody>
                         <c:forEach items="${sessionScope.walletList}" var="wallet" >
                             <tr>
-                                <td>${wallet.walletName}</td>
+                                <td><a href="<c:url value="/viewWallet${wallet.walletId}" />">${wallet.walletName}</a> </td>
                                 <td class="text-right" style="padding-right: 5%;"><fmt:formatNumber value="${wallet.balance}" type="number" maxFractionDigits="3" /></td>
                                 <td class="text-center">${wallet.currency}</td>
                                 <td class="text-center"><fmt:formatDate value="${wallet.createdDate}" pattern="yyyy-MM-dd" /></td>

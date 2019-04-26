@@ -1,14 +1,10 @@
 package com.quanlychitieu.entity;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import org.codehaus.jackson.annotate.JsonBackReference;
 import org.codehaus.jackson.annotate.JsonIgnore;
-import org.codehaus.jackson.annotate.JsonManagedReference;
+import org.hibernate.annotations.OptimisticLock;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import javax.persistence.*;
 
@@ -29,12 +25,13 @@ public class Wallet {
 	@ManyToMany(fetch = FetchType.EAGER, cascade = { CascadeType.PERSIST, CascadeType.MERGE })
 	@JoinTable(name = "user_wallet", joinColumns = {@JoinColumn(name = "walletId")}, inverseJoinColumns = {@JoinColumn(name = "userId")})
     @JsonBackReference
-	private Set<User> listUser;
+	private Set<User> listUser = new HashSet<>();
 	
-	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
-	@JoinColumn(name="transactionId")
+	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL, orphanRemoval = true, mappedBy = "wallet")
+//	@JoinColumn(name="transactionId")
+	@OptimisticLock(excluded = true)
 	@JsonIgnore
-	private List<Transaction> listTransaction;
+	private List<Transaction> listTransaction = new ArrayList<>();
 	
 	@Temporal(TemporalType.DATE)
 	private Date createdDate;
@@ -63,6 +60,17 @@ public class Wallet {
 		this.listUser = listUser;
 		this.createdDate = createdDate;
 		this.walletType = walletType;
+	}
+
+	public Wallet(String walletName, Currency currency, User user) {
+		this.walletName = walletName;
+		this.balance = 0;
+		this.listUser = new HashSet<>();
+		this.listUser.add(user);
+		this.listTransaction = new ArrayList<>();
+		this.currency = currency;
+		this.createdDate = new Date();
+		this.walletType = WalletType.personal;
 	}
 
 	public int getWalletId() {

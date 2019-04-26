@@ -80,7 +80,10 @@
 <%--Validate--%>
 <script src="<c:url value="resources/assets/plugins/jquery-validation/jquery.validate.min.js" /> "></script>
 <script src="<c:url value="resources/main/js/custom/validate/change_password_validate.js" />"></script>
+<script src="<c:url value="resources/main/js/custom/validate/add_wallet_validate.js" />"></script>
+<%-- Submit --%>
 <script src="<c:url value="resources/main/js/custom/submit_form/change_password_submit.js" />"></script>
+<script src="<c:url value="resources/main/js/custom/submit_form/add_wallet_submit.js" />"></script>
 </body>
 
 </html>

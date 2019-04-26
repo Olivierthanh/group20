@@ -19,6 +19,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="<c:url value="resources/assets/images/wallet.png" />">
     <!-- Cdn css -->
     <!-- <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.5.95/css/materialdesignicons.min.css"> -->
+    <!-- SweetAlert2 -->
+    <link href="<c:url value="resources/assets/plugins/sweetalert2/dist/sweetalert2.min.css" />" rel="stylesheet">
+
     <%-- Table Data css--%>
     <link href="<c:url value="resources/assets/plugins/datatables/css/jquery.dataTables.min.css" />" rel="stylesheet">
     <!-- Custom Stylesheet -->
@@ -73,9 +76,23 @@
 <script src="<c:url value="resources/main/js/settings.js" />"></script>
 <script src="<c:url value="resources/main/js/gleek.js" />"></script>
 <script src="<c:url value="resources/main/js/styleSwitcher.js" />"></script>
+
+<%-- Utils --%>
+<script src="<c:url value="resources/main/js/custom/chart_init/utils.js" />"></script>
+
+<!-- SweetAlert2 -->
+<script src="<c:url value="resources/assets/plugins/sweetalert2/dist/sweetalert2.min.js" />"></script>
+
 <%-- Table Data--%>
 <script src="<c:url value="resources/assets/plugins/datatables/js/jquery.dataTables.min.js" />"></script>
 <script src="<c:url value="resources/main/js/custom/table/init_wallet_table.js" />"></script>
+
+<%-- Form validate --%>
+<script src="<c:url value="resources/assets/plugins/jquery-validation/jquery.validate.min.js" /> "></script>
+<script src="<c:url value="resources/main/js/custom/validate/add_wallet_validate.js" />"></script>
+
+<%-- Form submit --%>
+<script src="<c:url value="resources/main/js/custom/submit_form/add_wallet_submit.js" />"></script>
 <!-- End Script -->
 </body>
 

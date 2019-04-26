@@ -9,6 +9,7 @@ import java.util.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import com.quanlychitieu.entity.Currency;
 import com.quanlychitieu.entity.TransactionType;
 import com.quanlychitieu.service.CategoryService;
 import com.quanlychitieu.service.TransactionService;
@@ -150,6 +151,46 @@ public class WalletController {
         int walletId = Integer.parseInt(request.getParameter("wallet-id"));
 
         return transactionService.addTransaction(categoryId, type, amount, note, date, walletId, email);
+    }
+
+    @RequestMapping(value = "/addSharedUser", method = RequestMethod.GET)
+    public @ResponseBody String addSharedUser(HttpServletRequest request, Principal principal) {
+        int walletId = Integer.parseInt(request.getParameter("wallet-id"));
+        String sharedUserEmail = request.getParameter("shared-user");
+        String ownerEmail = principal.getName();
+
+        return walletService.addSharedUserIntoWallet(walletId, ownerEmail, sharedUserEmail);
+    }
+
+    @RequestMapping(value = "/deleteSharedUser", method = RequestMethod.GET)
+    public @ResponseBody String deleteSharedUser(HttpServletRequest request, Principal principal) {
+        String ownerEmail = principal.getName();
+        int sharedUserId = Integer.parseInt(request.getParameter("shared-user-id"));
+        int walletId = Integer.parseInt(request.getParameter("wallet-id"));
+
+        return walletService.deleteSharedUserFromWallet(walletId, ownerEmail, sharedUserId);
+    }
+
+    @RequestMapping(value = "/deleteWallet", method = RequestMethod.GET)
+    public @ResponseBody String deleteWallet(HttpServletRequest request, Principal principal, HttpSession session) {
+        int walletId = Integer.parseInt(request.getParameter("wallet-id"));
+        String email = principal.getName();
+        String message = walletService.deleteWallet(walletId, email);
+        User user = userService.getUser(email);
+        session.setAttribute("walletList", user.getListWallet());
+        return message;
+    }
+
+    @RequestMapping(value = "/addWallet", method = RequestMethod.GET)
+    public @ResponseBody String addWallet(HttpServletRequest request, Principal principal, HttpSession session) {
+        String walletName = request.getParameter("wallet-name");
+        Currency currency = Currency.valueOf(request.getParameter("currency"));
+        String email = principal.getName();
+        User user = userService.getUser(email);
+        String message = walletService.addWallet(walletName, currency, user);
+        user = userService.getUser(email);
+        session.setAttribute("walletList", user.getListWallet());
+        return message;
     }
     
 }
