@@ -52,6 +52,19 @@ public class TransactionDao {
          }
          return flag;
     }
+
+    public boolean updateTransaction(Transaction transaction) {
+        boolean flag;
+        try {
+            getSession().update(transaction);
+            flag = true;
+        }
+        catch (HibernateException ex) {
+            ex.printStackTrace();
+            flag = false;
+        }
+        return flag;
+    }
     
   
     public List<Transaction> getTransactionByTransactionType(int walletId , TransactionType type) {

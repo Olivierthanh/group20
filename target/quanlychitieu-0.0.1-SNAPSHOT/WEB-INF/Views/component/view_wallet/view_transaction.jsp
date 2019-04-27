@@ -14,16 +14,6 @@
 		<h4 class="card-title m-t-10">Transaction</h4>
 		<div class="table-action float-right">
 			<form action="#">
-				<!-- <div class="form-row">
-                        <div class="form-group m-b-0">
-                            <select class="selectpicker show-tick" data-width="auto">
-                                <option selected="selected">Last 30 Days</option>
-                                <option>Last 1 MOnth</option>
-                                <option>Last 6 MOnth</option>
-                                <option>Last Year</option>
-                            </select>
-                        </div>
-                    </div> -->
 
 			</form>
 		</div>
@@ -34,9 +24,9 @@
 			<div class="col" id="transaction-day-list">
 				<c:forEach items="${transactionsByDateMap}" var="entry" >
 					<!-- One day -->
-					<div class="card w-100 p-4" transaction-date="<fmt:formatDate value="${entry.key}" pattern="yyyy-MM-dd" />">
+					<div class="card w-100 p-4 transaction-day" transaction-date="<fmt:formatDate value="${entry.key}" pattern="yyyy-MM-dd" />">
 						<div class="card-header">
-							<h3 class="card-title m-t-10">
+							<h3 class="card-title m-t-10 transaction-day-date">
 								<fmt:formatDate value="${entry.key}" pattern="yyyy-MM-dd EEEE" />
 							</h3>
 							<c:set var="sum" value="${0}" />
@@ -54,23 +44,31 @@
 								<p class="sum">${sum}</p>
 							</div>
 						</div>
-						<!-- One transaction -->
 
+						<!-- One transaction -->
 						<c:forEach var="transaction" items="${entry.value}">
-							<div class="card-body py-0">
+							<div class="card-body py-0"
+								 transaction-id="${transaction.transactionId}"
+								 transaction-type="${transaction.type}"
+								 category-name="${transaction.category.categoryName}"
+								 category-id="${transaction.category.categoryId}"
+								 amount="${transaction.amount}"
+								 note="${transaction.note}"
+								 transaction-date="${transaction.date}"
+							>
 								<hr>
 								<div class="row">
 									<div class="col-2">
-										<img class="img-fluid" src="<c:url value="resources/main/icons/category_icon/cat_${transaction.category.categoryId}.png" />"
+										<img class="img-fluid img-category" src="<c:url value="resources/main/icons/category_icon/cat_${transaction.category.categoryId}.png" />"
 											 alt="des" />
 									</div>
 									<div class="col-6">
-										<div class="row">
+										<div class="row transaction-row">
 											<p class="w-100">
-												<span class="d-block">${transaction.category.categoryName}</span> <span>${transaction.user.name}</span>
-												- <span>${transaction.getDate()}</span>
+												<span class="d-block category-name">${transaction.category.categoryName}</span> <span>${transaction.user.name}</span>
+												- <span class="transaction-date">${transaction.date}</span>
 											</p>
-											<p class="w-100">${transaction.getNote()}</p>
+											<p class="w-100 note">${transaction.note}</p>
 										</div>
 									</div>
 									<div class="col-4">
@@ -85,7 +83,7 @@
 															-
 														</c:otherwise>
 													</c:choose>
-														${transaction.getAmount() }
+														${transaction.amount }
 												</p>
 												<input type="text" name="transaction-id" value="${transaction.transactionId}" hidden />
 												<input type="text" name="wallet-id" value="${wallet.walletId}" hidden />

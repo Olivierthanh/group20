@@ -142,6 +142,49 @@ public class TransactionService {
         return ajaxResponse;
     }
 
+    public String updateTransaction(int categoryId, TransactionType type, int amount, String note, Date date, int walletId, String email, int transactionId) {
+        String ajaxResponse = "";
+        AjaxMessage message;
+        Wallet wallet = walletDao.getWalletByWalletId(walletId);
+        Transaction oldTransaction = null;
+        for (Transaction transaction: wallet.getListTransaction()) {
+            if (transaction.getTransactionId() == transactionId){
+                oldTransaction = transaction;
+                break;
+            }
+        }
+
+        if (oldTransaction != null) {
+            Transaction newTransaction = new Transaction(transactionId, amount, date, note, type, walletId, categoryId);
+            if (oldTransaction.getUser().getEmail().equals(email)) {
+                updateBalance(wallet, oldTransaction, newTransaction);
+                updateTransaction(oldTransaction, newTransaction);
+
+                if (walletDao.updateWallet(wallet)) {
+                    message = new AjaxMessage("success", "Updated transaction", "Your transaction is updated");
+                }
+                else {
+                    message = new AjaxMessage("error", "Cannot updated transaction", "Please try again");
+                }
+            }
+            else {
+                message = new AjaxMessage("error", "Cannot updated transaction", "You can only update your transaction");
+            }
+        }
+        else {
+            message = new AjaxMessage("error", "Transaction is not existed", "Please reload page and try again");
+        }
+
+        try {
+            ajaxResponse = new ObjectMapper().writeValueAsString(message);
+        }
+        catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return ajaxResponse;
+    }
+
     private void updateBalance(Wallet wallet, TransactionType type, int amount, String action) {
         int realAmount;
         if (action.equals("add")) {
@@ -159,6 +202,21 @@ public class TransactionService {
         else {
             wallet.setBalance(oldBalance - realAmount);
         }
+    }
+
+    private void updateBalance(Wallet wallet, Transaction oldTransaction, Transaction newTransaction) {
+        int oldAmount = oldTransaction.getType().equals(TransactionType.income) ? oldTransaction.getAmount() : -oldTransaction.getAmount();
+        int newAmount = newTransaction.getType().equals(TransactionType.income) ? newTransaction.getAmount() : -newTransaction.getAmount();
+        int oldBalanceAmount = wallet.getBalance();
+        wallet.setBalance(oldBalanceAmount - oldAmount + newAmount);
+    }
+
+    private void updateTransaction(Transaction oldTransaction, Transaction newTransaction) {
+        oldTransaction.setAmount(newTransaction.getAmount());
+        oldTransaction.setCategory(newTransaction.getCategory());
+        oldTransaction.setDate(newTransaction.getDate());
+        oldTransaction.setNote(newTransaction.getNote());
+        oldTransaction.setType(newTransaction.getType());
     }
 	
 }

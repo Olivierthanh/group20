@@ -68,7 +68,7 @@
                 <div class="media">
                     <img class="mr-5 m-t-13 m-l-5" src="<c:url value="resources/assets/images/icons/18.png" />" alt="">
                     <div class="media-body">
-                        <h2 class="mt-0 mb-1">50</h2>
+                        <h2 class="mt-0 mb-1">${noTransaction}</h2>
                         <h5>No. Transactions</h5>
                     </div>
                 </div>

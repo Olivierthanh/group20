@@ -162,6 +162,30 @@ public class WalletController {
         return message;
     }
 
+    @RequestMapping(value = "/updateTransaction", method = RequestMethod.GET)
+    public @ResponseBody String updateTransaction(HttpServletRequest request, Principal principal, HttpSession session) {
+        String email = principal.getName();
+        int categoryId = Integer.parseInt(request.getParameter("category-id"));
+        TransactionType type = TransactionType.valueOf(request.getParameter("transaction-type"));
+        int amount = Integer.parseInt(request.getParameter("amount"));
+        String note = request.getParameter("note");
+        Date date = null;
+        try {
+            date = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("date-transaction"));
+        }
+        catch (ParseException ex) {
+            ex.printStackTrace();
+        }
+        int walletId = Integer.parseInt(request.getParameter("wallet-id"));
+        int transactionId = Integer.parseInt(request.getParameter("transaction-id"));
+
+        String message = transactionService.updateTransaction(categoryId, type, amount, note, date, walletId, email, transactionId);
+        User user = userService.getUser(email);
+        session.setAttribute("walletList", user.getListWallet());
+
+        return message;
+    }
+
     @RequestMapping(value = "/addSharedUser", method = RequestMethod.GET)
     public @ResponseBody String addSharedUser(HttpServletRequest request, Principal principal) {
         int walletId = Integer.parseInt(request.getParameter("wallet-id"));

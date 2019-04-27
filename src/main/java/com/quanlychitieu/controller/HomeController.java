@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
 import java.security.Principal;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -46,7 +45,9 @@ public class HomeController {
             session.setAttribute("walletList", user.getListWallet());
         }
         walletList = (Set<Wallet>) session.getAttribute("walletList");
+
         model.addAttribute("noWallet", walletList.size());
+        model.addAttribute("noTransaction", getNoTransaction(walletList));
 
         int noSharedWallet = 0;
         int noPersonalWallet = 0;
@@ -97,6 +98,14 @@ public class HomeController {
 
     private boolean isCurrencySet(HttpSession session) {
         return session.getAttribute("currencyList") != null;
+    }
+
+    private int getNoTransaction(Set<Wallet> walletList) {
+        int noTransaction = 0;
+        for (Wallet wallet: walletList) {
+            noTransaction += wallet.getListTransaction().size();
+        }
+        return noTransaction;
     }
 
 }

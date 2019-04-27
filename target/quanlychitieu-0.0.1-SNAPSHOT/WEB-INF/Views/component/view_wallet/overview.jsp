@@ -11,13 +11,13 @@
     <div class="card-header pb-0">
         <h4 class="card-title m-t-10">Overview</h4>
         <div class="table-action float-right">
-            <span data-toggle="modal" data-target="#add-transaction-view">
-                <button type="button" class="btn btn-circle btn-success"
-                        id="add-transaction-button" data-toggle="tooltip" data-placement="right"
-                        title data-original-title="Add transaction"><i class="fa fa-plus"
-                                                                       aria-hidden="true"></i>
-                </button>
-            </span>
+            <%--<span data-toggle="modal" data-target="#add-transaction-view">--%>
+            <button type="button" class="btn btn-circle btn-success"
+                    id="add-transaction-button" data-toggle="tooltip" data-placement="right"
+                    title data-original-title="Add transaction"><i class="fa fa-plus"
+                                                                   aria-hidden="true"></i>
+            </button>
+            <%--</span>--%>
             <!-- begin modal -->
             <div class="modal fade" id="add-transaction-view">
                 <div class="modal-dialog" role="document">
@@ -39,6 +39,7 @@
                                         <input class="form-control" type="text" name="category-name" id="category-name" value="" placeholder="Category" />
                                         <input type="text" name="transaction-type" id="transaction-type" value="" hidden />
                                         <input type="text" name="category-id" id="category-id" value="" hidden />
+                                        <input type="text" name="transaction-id" id="transaction-id" hidden />
                                     </div>
                                 </div>
                                 <div class="row px-5 mb-4">

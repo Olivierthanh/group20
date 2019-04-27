@@ -185,13 +185,13 @@
                             <div class="card-header pb-0">
                                 <h4 class="card-title m-t-10">Overview</h4>
                                 <div class="table-action float-right">
-                                    <span data-toggle="modal" data-target="#add-transaction-view">
+                                    <!-- <span data-toggle="modal" data-target="#add-transaction-view"> -->
                                         <button type="button" class="btn btn-circle btn-success"
                                             id="add-transaction-button" data-toggle="tooltip" data-placement="right"
                                             title data-original-title="Add transaction"><i class="fa fa-plus"
                                                 aria-hidden="true"></i>
                                         </button>
-                                    </span>
+                                    <!-- </span> -->
                                     <!-- begin modal -->
                                     <div class="modal fade" id="add-transaction-view">
                                         <div class="modal-dialog" role="document">
@@ -203,22 +203,17 @@
                                                     </button>
                                                 </div>
                                                 <hr>
-                                                <form action="#" id="add-transaction-form">
+                                                <form action="/abc/xyz" id="add-transaction-form">
                                                     <div class="modal-body px-5">
                                                         <div class="row px-5 mb-4">
                                                             <div class="col-2 align-middle">
                                                                 <span class="mdi mdi-help mdi-36px"></span>
                                                             </div>
                                                             <div class="col">
-                                                                <!-- Category select -->
-                                                                <!-- <select class="form-control" name="category"
-                                                                    id="category-select">
-                                                                    <option value="">Category</option>
-                                                                    <option value="income">Income</option>
-                                                                    <option value="expense">Expense</option>
-                                                                </select> -->
-                                                                <!-- End category select -->
-                                                                <input class="form-control" type="text" name="category" id="category" value="" category-id="" placeholder="Category" />
+                                                                <input class="form-control" type="text" name="category-name" id="category-name" value="" placeholder="Category" />
+                                                                <input type="text" name="transaction-type" id="transaction-type" value="" hidden />
+                                                                <input type="text" name="category-id" id="category-id" value="" hidden />
+                                                                <input type="text" name="transaction-id" id="transaction-id" value="" hidden />
                                                             </div>
                                                         </div>
                                                         <div class="row px-5 mb-4">
@@ -245,7 +240,7 @@
                                                                 <span class="mdi mdi-calendar-clock mdi-36px"></span>
                                                             </div>
                                                             <div class="col">
-                                                                <input type="datetime-local" class="form-control"
+                                                                <input type="date" class="form-control"
                                                                     name="date-transaction" id="date-transaction">
                                                             </div>
                                                         </div>
@@ -630,13 +625,13 @@
                                             
                                             <div class="card-body py-0">
                                                 <hr>
-                                                <div class="row">
+                                                <div class="row" category="Award" note="">
                                                     <div class="col-2">
                                                         <img class="img-fluid"
                                                              src="../../../data/img/cat_1.png" alt="des" />
                                                     </div>
                                                     <div class="col-6">
-                                                        <div class="row">
+                                                        <div class="row transaction-row" category-name="Award" category-id="1" note="Lorem ipsum dolor sit amet consectetur adipisicing elit." transaction-date="2019-04-26" amount="100000" transaction-id="1" transaction-type="income">
                                                             <p>
                                                                 <span class="d-block">Award</span>
                                                                 <span>Nguyen Van A</span> -
@@ -666,13 +661,13 @@
                                             
                                             <div class="card-body py-0">
                                                 <hr>
-                                                <div class="row">
+                                                <div class="row" category="Award" note="">
                                                     <div class="col-2">
                                                         <img class="img-fluid"
                                                              src="../../../data/img/cat_1.png" alt="des" />
                                                     </div>
                                                     <div class="col-6">
-                                                        <div class="row">
+                                                        <div class="row transaction-row" category-name="Award" category-id="1" note="Lorem ipsum dolor sit amet consectetur adipisicing elit." transaction-date="2019-04-26" amount="100000" transaction-id="1" transaction-type="income">
                                                             <p>
                                                                 <span class="d-block">Award</span>
                                                                 <span>Nguyen Van A</span> -
@@ -701,13 +696,13 @@
                                             
                                             <div class="card-body py-0">
                                                 <hr>
-                                                <div class="row">
+                                                <div class="row" category="Award" note="">
                                                     <div class="col-2">
                                                         <img class="img-fluid"
                                                              src="../../../data/img/cat_1.png" alt="des" />
                                                     </div>
                                                     <div class="col-6">
-                                                        <div class="row">
+                                                        <div class="row transaction-row" category-name="Award" category-id="1" note="Lorem ipsum dolor sit amet consectetur adipisicing elit." transaction-date="2019-04-26" amount="100000" transaction-id="1" transaction-type="income">
                                                             <p>
                                                                 <span class="d-block">Award</span>
                                                                 <span>Nguyen Van A</span> -
@@ -747,13 +742,13 @@
                                             
                                             <div class="card-body py-0">
                                                 <hr>
-                                                <div class="row">
+                                                <div class="row" category="Award" note="">
                                                     <div class="col-2">
                                                         <img class="img-fluid"
                                                              src="../../../data/img/cat_1.png" alt="des" />
                                                     </div>
                                                     <div class="col-6">
-                                                        <div class="row">
+                                                        <div class="row transaction-row" category-name="Award" category-id="1" note="Lorem ipsum dolor sit amet consectetur adipisicing elit." transaction-date="2019-04-26" amount="100000" transaction-id="1" transaction-type="income">
                                                             <p>
                                                                 <span class="d-block">Award</span>
                                                                 <span>Nguyen Van A</span> -
@@ -783,13 +778,13 @@
                                             
                                             <div class="card-body py-0">
                                                 <hr>
-                                                <div class="row">
+                                                <div class="row" category="Award" note="">
                                                     <div class="col-2">
                                                         <img class="img-fluid"
                                                              src="../../../data/img/cat_1.png" alt="des" />
                                                     </div>
                                                     <div class="col-6">
-                                                        <div class="row">
+                                                        <div class="row transaction-row" category-name="Award" category-id="1" note="Lorem ipsum dolor sit amet consectetur adipisicing elit." transaction-date="2019-04-26" amount="100000" transaction-id="1" transaction-type="income">
                                                             <p>
                                                                 <span class="d-block">Award</span>
                                                                 <span>Nguyen Van A</span> -
@@ -818,13 +813,13 @@
                                             
                                             <div class="card-body py-0">
                                                 <hr>
-                                                <div class="row">
+                                                <div class="row" category="Award" note="">
                                                     <div class="col-2">
                                                         <img class="img-fluid"
                                                              src="../../../data/img/cat_1.png" alt="des" />
                                                     </div>
                                                     <div class="col-6">
-                                                        <div class="row">
+                                                        <div class="row transaction-row" category-name="Award" category-id="1" note="Lorem ipsum dolor sit amet consectetur adipisicing elit." transaction-date="2019-04-26" amount="100000" transaction-id="1" transaction-type="income">
                                                             <p>
                                                                 <span class="d-block">Award</span>
                                                                 <span>Nguyen Van A</span> -
@@ -864,13 +859,13 @@
                                             
                                             <div class="card-body py-0">
                                                 <hr>
-                                                <div class="row">
+                                                <div class="row" category="Award" note="">
                                                     <div class="col-2">
                                                         <img class="img-fluid"
                                                              src="../../../data/img/cat_1.png" alt="des" />
                                                     </div>
                                                     <div class="col-6">
-                                                        <div class="row">
+                                                        <div class="row transaction-row" category-name="Award" category-id="1" note="Lorem ipsum dolor sit amet consectetur adipisicing elit." transaction-date="2019-04-26" amount="100000" transaction-id="1" transaction-type="income">
                                                             <p>
                                                                 <span class="d-block">Award</span>
                                                                 <span>Nguyen Van A</span> -
@@ -900,13 +895,13 @@
                                             
                                             <div class="card-body py-0">
                                                 <hr>
-                                                <div class="row">
+                                                <div class="row" category="Award" note="">
                                                     <div class="col-2">
                                                         <img class="img-fluid"
                                                              src="../../../data/img/cat_1.png" alt="des" />
                                                     </div>
                                                     <div class="col-6">
-                                                        <div class="row">
+                                                        <div class="row transaction-row" category-name="Award" category-id="1" note="Lorem ipsum dolor sit amet consectetur adipisicing elit." transaction-date="2019-04-26" amount="100000" transaction-id="1" transaction-type="income">
                                                             <p>
                                                                 <span class="d-block">Award</span>
                                                                 <span>Nguyen Van A</span> -
@@ -935,13 +930,13 @@
                                             
                                             <div class="card-body py-0">
                                                 <hr>
-                                                <div class="row">
+                                                <div class="row" category="Award" note="">
                                                     <div class="col-2">
                                                         <img class="img-fluid"
                                                              src="../../../data/img/cat_1.png" alt="des" />
                                                     </div>
                                                     <div class="col-6">
-                                                        <div class="row">
+                                                        <div class="row transaction-row" category-name="Award" category-id="1" note="Lorem ipsum dolor sit amet consectetur adipisicing elit." transaction-date="2019-04-26" amount="100000" transaction-id="1" transaction-type="income">
                                                             <p>
                                                                 <span class="d-block">Award</span>
                                                                 <span>Nguyen Van A</span> -
@@ -981,13 +976,13 @@
                                             
                                             <div class="card-body py-0">
                                                 <hr>
-                                                <div class="row">
+                                                <div class="row" category="Award" note="">
                                                     <div class="col-2">
                                                         <img class="img-fluid"
                                                              src="../../../data/img/cat_1.png" alt="des" />
                                                     </div>
                                                     <div class="col-6">
-                                                        <div class="row">
+                                                        <div class="row transaction-row" category-name="Award" category-id="1" note="Lorem ipsum dolor sit amet consectetur adipisicing elit." transaction-date="2019-04-26" amount="100000" transaction-id="1" transaction-type="income">
                                                             <p>
                                                                 <span class="d-block">Award</span>
                                                                 <span>Nguyen Van A</span> -
@@ -1017,13 +1012,13 @@
                                             
                                             <div class="card-body py-0">
                                                 <hr>
-                                                <div class="row">
+                                                <div class="row" category="Award" note="">
                                                     <div class="col-2">
                                                         <img class="img-fluid"
                                                              src="../../../data/img/cat_1.png" alt="des" />
                                                     </div>
                                                     <div class="col-6">
-                                                        <div class="row">
+                                                        <div class="row transaction-row" category-name="Award" category-id="1" note="Lorem ipsum dolor sit amet consectetur adipisicing elit." transaction-date="2019-04-26" amount="100000" transaction-id="1" transaction-type="income">
                                                             <p>
                                                                 <span class="d-block">Award</span>
                                                                 <span>Nguyen Van A</span> -
@@ -1058,7 +1053,7 @@
                                                              src="../../../data/img/cat_1.png" alt="des" />
                                                     </div>
                                                     <div class="col-6">
-                                                        <div class="row">
+                                                        <div class="row transaction-row" category-name="Award" category-id="1" note="Lorem ipsum dolor sit amet consectetur adipisicing elit." transaction-date="2019-04-26" amount="100000" transaction-id="1" transaction-type="income">
                                                             <p>
                                                                 <span class="d-block">Award</span>
                                                                 <span>Nguyen Van A</span> -
@@ -1471,7 +1466,7 @@
     </script> -->
 
     <script>
-        $("#category").on("click", event => {
+        $("#category-name").on("click", event => {
             $("#add-transaction-view").modal("hide").on('hidden.bs.modal', event => {
                 $("#transaction-category-select").modal('show');
                 $(event.target).off('hidden.bs.modal');
@@ -1567,6 +1562,47 @@
             success: function(e) {
                 jQuery(e).closest(".col").removeClass("is-invalid"), jQuery(e).remove()
             },
+        })
+    </script>
+
+    <script>
+        $("#add-transaction-button").on("click", event => {
+            let action = "/" + $("#add-transaction-form").attr("action").split("/")[1] + "/addTransaction";
+            $("#add-transaction-form")[0].reset();
+            $("#add-transaction-form").attr("action", action);
+            $("#add-transaction-view .modal-title").text("Add Transaction");
+            $("#add-transaction-view button[type=submit]").text("Add");
+
+            $("#add-transaction-view").modal("show");
+        })
+
+        $("body").on("click", ".transaction-row", event => {
+            let node = $(event.currentTarget);
+            let categoryName = node.attr("category-name");
+            let categoryId = node.attr("category-id");
+            let transactionType = node.attr("transaction-type");
+            let transactionId = node.attr("transaction-id");
+            let amount = node.attr("amount");
+            let note = node.attr("note");
+            let transactionDate = node.attr("transaction-date");
+            let action = "/" + $("#add-transaction-form").attr("action").split("/")[1] + "/updateTransaction";
+            
+            $("#category-name").val(categoryName);
+            $("#category-id").val(categoryId);
+            $("#transaction-type").val(transactionType);
+            $("#transaction-id").val(transactionId);
+            $("#amount").val(amount);
+            $("#note").val(note);
+            $("#date-transaction").val(transactionDate);
+
+            $("#add-transaction-form").attr("action", action);
+            $("#add-transaction-view .modal-title").text("Update Transaction");
+            $("#add-transaction-view button[type=submit]").text("Update");
+
+            $("#add-transaction-view").modal("show");
+
+
+
         })
     </script>
     <!-- End Script -->

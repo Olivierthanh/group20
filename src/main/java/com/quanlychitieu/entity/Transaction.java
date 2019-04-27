@@ -73,6 +73,27 @@ public class Transaction {
 		this.user = user;
 	}
 
+	public Transaction(int transactionId, int amount, Date date, String note, TransactionType type, int walletId, int categoryId, User user) {
+		this.transactionId = transactionId;
+		this.amount = amount;
+		this.date = date;
+		this.note = note;
+		this.type = type;
+		this.wallet.setWalletId(walletId);
+		this.category.setCategoryId(categoryId);
+		this.user = user;
+	}
+
+	public Transaction(int transactionId, int amount, Date date, String note, TransactionType type, int walletId, int categoryId) {
+		this.transactionId = transactionId;
+		this.amount = amount;
+		this.date = date;
+		this.note = note;
+		this.type = type;
+		this.wallet.setWalletId(walletId);
+		this.category.setCategoryId(categoryId);
+	}
+
     public int getTransactionId() {
 		return transactionId;
 	}

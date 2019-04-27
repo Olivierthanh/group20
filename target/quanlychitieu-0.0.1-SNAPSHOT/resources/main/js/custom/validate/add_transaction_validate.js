@@ -2,7 +2,7 @@ jQuery.validator.addMethod("dateLessThan",
     function(value, element, params) {
         if (params === "now")
             if (!/Invalid|NaN/.test(new Date(value))) {
-                return new Date(value).toISOString() <= new Date().toISOString();
+                return new Date(value).toLocaleDateString() <= new Date().toLocaleDateString();
             }
     }
 );

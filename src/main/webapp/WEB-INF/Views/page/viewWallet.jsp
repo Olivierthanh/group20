@@ -137,5 +137,8 @@
 <script src="<c:url value="resources/main/js/custom/validate/add_transaction_validate.js" />"></script>
 <script src="<c:url value="resources/main/js/custom/validate/add_shared_user_validate.js" />"></script>
 <script src="<c:url value="resources/main/js/custom/validate/add_wallet_validate.js" />"></script>
+
+<%-- Click --%>
+<script src="<c:url value="resources/main/js/custom/click/transaction_row_click.js" />"></script>
 </body>
 </html>

@@ -54,3 +54,7 @@ button#add-transaction-button, button#delete-wallet-button {
 #b-line {
     overflow: auto;
 }
+
+.transaction-row:hover {
+    cursor: pointer;
+}

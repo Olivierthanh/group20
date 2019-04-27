@@ -39,12 +39,22 @@ $("body").on("submit", ".delete-transaction-form", event => {
                             if ($(event.target).closest(".card").find(".card-body").length === 1) {
                                 cards = $("#view-transaction").find(".card");
                                 $(event.target).closest(".card").remove();
-                                if (cardActive > 0) {
-                                    cardActive = cardActive - 1;
-                                    $(cards[cardActive]).removeClass("d-none");
+                                // if (cardActive > 0) {
+                                //     cardActive = cardActive - 1;
+                                //     $(cards[cardActive]).removeClass("d-none");
+                                // }
+                                // else if (cardActive + 1 < cards.length) {
+                                //     $(cards[cardActive + 1]).removeClass("d-none");
+                                // }
+                                if ($("#view-transaction .card:not(.d-none) + .card").length > 0) {
+                                    let nextCard = $("#view-transaction .card:not(.d-none) + .card");
+                                    $("#view-transaction .card:not(.d-none)").addClass("d-none");
+                                    nextCard.removeClass("d-none");
                                 }
-                                else if (cardActive + 1 < cards.length) {
-                                    $(cards[cardActive + 1]).removeClass("d-none");
+                                else if ($("#view-transaction .card:not(.d-none) ~ .card").length > 0) {
+                                    let previousCard = $("#view-transaction .card:not(.d-none) ~ .card");
+                                    $("#view-transaction .card:not(.d-none)").addClass("d-none");
+                                    previousCard.removeClass("d-none");
                                 }
 
                                 updateModelAfterDeleteTransaction(event, transactionDate, amount, false);
