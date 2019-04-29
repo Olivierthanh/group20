@@ -55,7 +55,7 @@ CREATE TABLE `password_reset_token` (
   PRIMARY KEY (`tokenId`),
   KEY `fk_password_reset_token_user_idx` (`userId`),
   CONSTRAINT `fk_password_reset_token_user` FOREIGN KEY (`userId`) REFERENCES `user` (`userid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -77,17 +77,20 @@ DROP TABLE IF EXISTS `transaction`;
 CREATE TABLE `transaction` (
   `transactionId` int(11) NOT NULL AUTO_INCREMENT,
   `amount` int(11) NOT NULL,
-  `date` timestamp NOT NULL,
-  `note` text,
+  `date` date DEFAULT NULL,
+  `note` text NOT NULL,
   `type` enum('income','expense') NOT NULL,
   `walletId` int(11) NOT NULL,
   `categoryId` int(11) NOT NULL,
+  `userId` int(11) NOT NULL,
   PRIMARY KEY (`transactionId`),
   KEY `fk_expense_wallet1_idx` (`walletId`),
   KEY `fk_expense_category1_idx` (`categoryId`),
+  KEY `fk_transaction_user1_idx` (`userId`),
   CONSTRAINT `fk_expense_category1` FOREIGN KEY (`categoryId`) REFERENCES `category` (`categoryid`),
-  CONSTRAINT `fk_expense_wallet1` FOREIGN KEY (`walletId`) REFERENCES `wallet` (`walletid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT `fk_expense_wallet1` FOREIGN KEY (`walletId`) REFERENCES `wallet` (`walletid`),
+  CONSTRAINT `fk_transaction_user1` FOREIGN KEY (`userId`) REFERENCES `user` (`userid`)
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -96,6 +99,7 @@ CREATE TABLE `transaction` (
 
 LOCK TABLES `transaction` WRITE;
 /*!40000 ALTER TABLE `transaction` DISABLE KEYS */;
+INSERT INTO `transaction` VALUES (3,200000,'2019-04-22','Travel expense','expense',1,22,1),(4,500000,'2019-04-10','Some thing Love','expense',1,14,1),(5,300000,'2019-04-15','Interest Money','income',1,3,1),(12,500000,'2019-04-23','Some thing','expense',1,11,1),(15,200000,'2019-04-21','some awards','income',1,1,1),(16,1000000,'2019-04-21','đi mua sắm','expense',1,20,1),(17,1000000,'2019-04-20','mua giày','expense',1,33,1),(18,1000000,'2019-04-19','test','income',1,3,1),(19,500000,'2019-04-19','Rút tiền','expense',1,23,1),(20,500000,'2019-04-18','Rút tiền','expense',1,23,1),(21,1000000,'2019-04-17','luwong','income',1,5,1),(22,600000,'2019-04-16','Mua game','expense',1,35,1),(23,1500000,'2019-04-14','restaurant','expense',1,50,1),(24,10000000,'2019-04-13','Thưởng','income',1,1,1),(25,100000,'2019-04-12','Đổ xăng','expense',1,45,1),(55,500000,'2019-04-26','Khám sức khỏe','expense',24,16,1),(58,100000,'2019-04-25','Chơi','expense',1,10,1),(60,100000,'2019-04-26','bán nhà','income',24,6,1),(61,2000000,'2019-04-20','nhận lương','income',1,5,1),(62,2000000,'2019-04-27','some award','income',1,1,1),(63,1000000,'2019-04-26','tiền học','expense',1,9,1),(64,1000000,'2019-04-27','mua quan ao','expense',1,29,1),(65,5000000,'2019-04-28','Mua dien thoai','expense',1,35,1);
 /*!40000 ALTER TABLE `transaction` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -115,7 +119,7 @@ CREATE TABLE `user` (
   `dateOfBirth` date NOT NULL,
   `address` varchar(60) NOT NULL,
   PRIMARY KEY (`userId`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -124,7 +128,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'thanhlt998@gmail.com','$2a$10$WjatkZfOKejvj93WAXWQH.JmW3croR/HOiufBbUEQlKaSdzJQHytW','Lê Tuấn Thành','male','1998-01-01','Hà Nội');
+INSERT INTO `user` VALUES (1,'thanhlt998@gmail.com','$2a$10$k6dR7692BEvrtpeygt2t2e8PjBfaBGezW.65BM6X66ZrtFMxcO18S','Lê Tuấn Thành','male','1998-01-01','Hưng Yên'),(2,'test@gmail.com','$2a$10$WjatkZfOKejvj93WAXWQH.JmW3croR/HOiufBbUEQlKaSdzJQHytW','Test','female','1998-01-01','Hưng Yên');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -144,7 +148,7 @@ CREATE TABLE `user_wallet` (
   KEY `fk_user_wallet_user1_idx` (`userId`),
   CONSTRAINT `fk_user_wallet_user1` FOREIGN KEY (`userId`) REFERENCES `user` (`userid`),
   CONSTRAINT `fk_user_wallet_wallet1` FOREIGN KEY (`walletId`) REFERENCES `wallet` (`walletid`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -153,7 +157,7 @@ CREATE TABLE `user_wallet` (
 
 LOCK TABLES `user_wallet` WRITE;
 /*!40000 ALTER TABLE `user_wallet` DISABLE KEYS */;
-INSERT INTO `user_wallet` VALUES (3,1,1),(4,2,1);
+INSERT INTO `user_wallet` VALUES (1,1,1),(2,2,1),(30,1,2),(37,24,1);
 /*!40000 ALTER TABLE `user_wallet` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -172,7 +176,7 @@ CREATE TABLE `wallet` (
   `createdDate` date NOT NULL,
   `walletType` enum('personal','shared') DEFAULT NULL,
   PRIMARY KEY (`walletId`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -181,7 +185,7 @@ CREATE TABLE `wallet` (
 
 LOCK TABLES `wallet` WRITE;
 /*!40000 ALTER TABLE `wallet` DISABLE KEYS */;
-INSERT INTO `wallet` VALUES (1,'Ví cá nhân',10000000,'VND','2019-04-13','personal'),(2,'Ví dùng chung',100000000,'VND','2019-04-13','shared');
+INSERT INTO `wallet` VALUES (1,'Ví cá nhân',3000000,'VND','2019-04-13','shared'),(2,'Ví dùng chung',0,'VND','2019-04-13','shared'),(24,'Test1',-400000,'VND','2019-04-26','personal');
 /*!40000 ALTER TABLE `wallet` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -198,4 +202,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-04-16  2:59:33
+-- Dump completed on 2019-04-29 16:17:18

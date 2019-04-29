@@ -7,6 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abfd2aca-90b7-4f22-b99b-269e5f109d9d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/main/js/custom/click/transaction_row_click.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/quanlychitieu-0.0.1-SNAPSHOT/resources/main/js/custom/click/transaction_row_click.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/WalletController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quanlychitieu/controller/WalletController.java" afterDir="false" />
@@ -834,12 +836,12 @@
       <workItem from="1556354354011" duration="2621000" />
       <workItem from="1556360550995" duration="1639000" />
       <workItem from="1556364115012" duration="2842000" />
-      <workItem from="1556375270629" duration="12141000" />
+      <workItem from="1556375270629" duration="12162000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="341995000" />
+    <option name="totallyTimeSpent" value="342016000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
