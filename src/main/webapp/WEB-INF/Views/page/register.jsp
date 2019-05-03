@@ -41,7 +41,7 @@
                                 </a>
                             </div> -->
                             <h2 class="text-center mt-4">Register</h2>
-                            <form id="register-form" class="mt-5 mb-5" action="<c:url value="/register_user" />" login-url="<c:url value="/login" />" method="post">
+                            <form id="register-form" class="mt-5 mb-5" action="<c:url value="/register_user" />" login-url="<c:url value="/login" />" method="get">
                                 <div class="form-group">
                                     <label class="text-label">Email</label>
                                     <div class="input-group">
@@ -172,7 +172,7 @@
 <script src="<c:url value="resources/assets/plugins/jquery-validation/jquery.validate.min.js" />"></script>
 <script src="<c:url value="resources/assets/plugins/sweetalert2/dist/sweetalert2.min.js" />"></script>
 <script src="<c:url value="resources/main/js/custom/validate/register_validate.js" />"></script>
-<script src="<c:url value="resources/main/js/custom/submit_form/register.js" />"></script>
+<script src="<c:url value="resources/main/js/custom/submit_form/register_submit.js" />"></script>
 </body>
 
 </html>
