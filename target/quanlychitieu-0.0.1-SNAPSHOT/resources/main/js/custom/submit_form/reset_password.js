@@ -2,9 +2,9 @@
 $("a#forgot-password").on("click", (event) => {
     event.preventDefault();
     swal({
-        title: 'Input email address',
+        title: 'Nhập email của bạn',
         input: 'email',
-        inputPlaceholder: 'Enter your email address'
+        inputPlaceholder: 'Nhập email của bạn vào đây'
     }).then(email => {
         let url = $("a#forgot-password").attr("href");
         if (email.value) {
@@ -22,7 +22,7 @@ $("a#forgot-password").on("click", (event) => {
 
                 },
                 error: error => {
-                    swal('Try again !!', 'There is something wrong happened !!', 'error');
+                    swal('Thử lại !!', 'Có vấn đề đã xảy ra !!', 'error');
                 }
             });
         }

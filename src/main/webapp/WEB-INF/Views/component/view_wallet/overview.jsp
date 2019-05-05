@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <div class="card">
     <div class="card-header pb-0">
-        <h4 class="card-title m-t-10">Overview</h4>
+        <h4 class="card-title m-t-10">Tổng quan</h4>
         <div class="table-action float-right">
             <%--<span data-toggle="modal" data-target="#add-transaction-view">--%>
             <button type="button" class="btn btn-circle btn-success"
@@ -23,7 +23,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Add transaction</h5>
+                            <h5 class="modal-title">Thêm giao dịch</h5>
                             <button type="button" class="close"
                                     data-dismiss="modal"><span>&times;</span>
                             </button>
@@ -36,7 +36,7 @@
                                         <span class="mdi mdi-help mdi-36px"></span>
                                     </div>
                                     <div class="col">
-                                        <input class="form-control" type="text" name="category-name" id="category-name" value="" placeholder="Category" />
+                                        <input class="form-control" type="text" name="category-name" id="category-name" value="" placeholder="Loại" />
                                         <input type="text" name="transaction-type" id="transaction-type" value="" hidden />
                                         <input type="text" name="category-id" id="category-id" value="" hidden />
                                         <input type="text" name="transaction-id" id="transaction-id" hidden />
@@ -48,7 +48,7 @@
                                     </div>
                                     <div class="col">
                                         <input type="text" class="form-control" name="amount"
-                                               id="amount" placeholder="How much?">
+                                               id="amount" placeholder="Bao nhiêu?">
                                     </div>
                                 </div>
                                 <div class="row px-5 mb-4">
@@ -56,7 +56,7 @@
                                        <span class="mdi mdi-note-multiple-outline mdi-36px"></span>
                                     </div>
                                     <div class="col">
-                                       <textarea class="form-control" name="note" cols="30" rows="5" id="note" placeholder="Note"></textarea>
+                                       <textarea class="form-control" name="note" cols="30" rows="5" id="note" placeholder="Ghi chú"></textarea>
                                     </div>
                                 </div>
                                 <div class="row px-5 mb-4">
@@ -72,8 +72,8 @@
                             </div>
                             <div class="modal-footer px-5">
                                 <button type="button" class="btn btn-secondary"
-                                        data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Add</button>
+                                        data-dismiss="modal">Đóng</button>
+                                <button type="submit" class="btn btn-primary">Thêm</button>
                             </div>
                         </form>
                     </div>
@@ -86,9 +86,9 @@
                     <div class="modal-content">
                         <div class="modal-header pb-0">
                             <ul class="nav nav-tabs mb-4">
-                                <li class="nav-item"><a class="nav-link active" id="income-tab" data-toggle="tab" href="#income">Income</a>
+                                <li class="nav-item"><a class="nav-link active" id="income-tab" data-toggle="tab" href="#income">Thu nhập</a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" id="expense-tab" data-toggle="tab" href="#expense">Expense</a>
+                                <li class="nav-item"><a class="nav-link" id="expense-tab" data-toggle="tab" href="#expense">Chi tiêu</a>
                                 </li>
                             </ul>
                             <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
@@ -141,7 +141,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
                         </div>
                     </div>
                 </div>
@@ -154,10 +154,10 @@
             <div class="offset-2 col-4">
                 <div class="card-content">
                     <div class="row p-2">
-                        <p>Inflow</p>
+                        <p>Tổng thu nhập</p>
                     </div>
                     <div class="row p-2">
-                        <p>Outflow</p>
+                        <p>Tổng chi tiêu</p>
                     </div>
                 </div>
             </div>

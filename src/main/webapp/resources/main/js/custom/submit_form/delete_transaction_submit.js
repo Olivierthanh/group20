@@ -4,12 +4,12 @@ $("body").on("submit", ".delete-transaction-form", event => {
 
     swal(
         {
-            title: `Are you sure to delete this transaction ?`,
-            text: "You will not be able to recover this user !!",
+            title: `Bạn chắc chắn muốn xóa giao dịch này ?`,
+            text: "Bạn không thể phục hồi thao tác này !!",
             type: "warning",
             showCancelButton: !0,
             confirmButtonColor: "#DD6B55",
-            confirmButtonText: "Yes, delete  !!",
+            confirmButtonText: "Có, xóa  !!",
             closeOnConfirm: !1
         }
     ).then(isConfirmed => {
@@ -39,13 +39,6 @@ $("body").on("submit", ".delete-transaction-form", event => {
                             if ($(event.target).closest(".card").find(".card-body").length === 1) {
                                 cards = $("#view-transaction").find(".card");
                                 $(event.target).closest(".card").remove();
-                                // if (cardActive > 0) {
-                                //     cardActive = cardActive - 1;
-                                //     $(cards[cardActive]).removeClass("d-none");
-                                // }
-                                // else if (cardActive + 1 < cards.length) {
-                                //     $(cards[cardActive + 1]).removeClass("d-none");
-                                // }
                                 if ($("#view-transaction .card:not(.d-none) + .card").length > 0) {
                                     let nextCard = $("#view-transaction .card:not(.d-none) + .card");
                                     $("#view-transaction .card:not(.d-none)").addClass("d-none");
@@ -67,7 +60,7 @@ $("body").on("submit", ".delete-transaction-form", event => {
                     });
                 },
                 error: error => {
-                    swal('Try again !!', 'There is something wrong happened !!', 'error');
+                    swal('Thử lại !!', 'Có vấn đề đã xảy ra!!', 'error');
                 }
             });
         }

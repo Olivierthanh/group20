@@ -15,7 +15,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Change Password</title>
+    <title>Khôi phục mật khẩu</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<c:url value="resources/assets/images/wallet.png" />">
     <%--Sweet Alert stylesheet--%>
@@ -47,18 +47,18 @@
                                   login-url="<C:url value="/login" />" class="mt-5 mb-5">
                                 <div class="form-group">
                                     <input type="password" class="form-control" id="password" name="password"
-                                           placeholder="Password">
+                                           placeholder="Mật khẩu">
                                 </div>
                                 <div class="form-group">
                                     <input type="password" class="form-control" id="confirm-password"
-                                           name="confirm-password" placeholder="Confirm Password">
+                                           name="confirm-password" placeholder="Xác nhận mật khẩu">
                                 </div>
                                 <c:if test="${userId != null && token != null}">
                                     <input type="text" value="${userId}" name="userId" id="userId" hidden/>
                                     <input type="text" value="${token}" name="token" id="token" hidden/>
                                 </c:if>
                                 <div class="text-center mb-4 mt-5">
-                                    <button type="submit" class="btn btn-primary">Reset</button>
+                                    <button type="submit" class="btn btn-primary">Khôi phục</button>
                                 </div>
                             </form>
                         </div>

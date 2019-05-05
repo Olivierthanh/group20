@@ -42,7 +42,7 @@ $(document).ready(() => {
             };
         },
         error: error => {
-            swal('Error !!', 'Failed to fetch data from server!!', 'error');
+            swal('Lỗi !!', 'Lỗi lấy dữ liệu từ server!!', 'error');
         }
     });
 });

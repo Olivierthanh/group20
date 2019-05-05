@@ -31,7 +31,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#" aria-expanded="false" data-toggle="modal" data-target="#add-wallet-view">Add Wallet</a>
+                        <a href="#" aria-expanded="false" data-toggle="modal" data-target="#add-wallet-view">Tạo ví</a>
                     </li>
                 </ul>
             </li>
@@ -43,10 +43,10 @@
             </a>
                 <ul aria-expanded="false">
                     <li>
-                        <a href="<c:url value="/profile" />" aria-expanded="false">View Profile</a>
+                        <a href="<c:url value="/profile" />" aria-expanded="false">Xem profile</a>
                     </li>
                     <li>
-                        <a href="<c:url value="/updatePassword" />" aria-expanded="false">Change Password</a>
+                        <a href="<c:url value="/updatePassword" />" aria-expanded="false">Đổi mật khẩu</a>
                     </li>
                 </ul>
             </li>
@@ -54,7 +54,7 @@
             <li>
                 <a class="has-arrow" href="<c:url value="/logout" />" aria-expanded="false">
                     <i class="mdi mdi-power"></i>
-                    <span class="nav-text">Log out</span>
+                    <span class="nav-text">Đăng xuất</span>
                     <span class="badge badge-success nav-badge">03</span>
                 </a>
             </li>
@@ -67,7 +67,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Add Wallet</h4>
+                <h4 class="modal-title">Thêm ví</h4>
                 <button type="button" class="close"
                         data-dismiss="modal"><span>&times;</span>
                 </button>
@@ -81,7 +81,7 @@
                         </div>
                         <div class="col">
                             <input type="text" class="form-control" name="wallet-name"
-                                   id="wallet-name" placeholder="Wallet Name">
+                                   id="wallet-name" placeholder="Tên ví">
                         </div>
                     </div>
                     <div class="row px-5 mb-4">
@@ -101,8 +101,8 @@
                 <div class="modal-footer px-5">
                     <div class="px-5">
                         <button type="button" class="btn btn-secondary"
-                                data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Add</button>
+                                data-dismiss="modal">Đóng</button>
+                        <button type="submit" class="btn btn-primary">Tạo ví</button>
                     </div>
                 </div>
             </form>

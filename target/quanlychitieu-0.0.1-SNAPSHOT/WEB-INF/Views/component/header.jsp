@@ -15,7 +15,7 @@
             <ul>
                 <li class="icons">
                     <a href="javascript:void(0)" class="log-user">
-                        <img src="<c:url value="resources/assets/images/avatar/1.jpg" />" alt=""> <span id="username">${sessionScope.username}</span> <i
+                        <img src="<c:url value="resources/main/images/user.png" />" alt=""> <span id="username">${sessionScope.username}</span> <i
                             class="fa fa-caret-down f-s-14" aria-hidden="true"></i>
                     </a>
                     <div class="drop-down dropdown-profile animated bounceInDown">
@@ -25,7 +25,7 @@
                                 </li>
                                 <li><a href="<c:url value="/home" />"><i class="icon-wallet"></i> <span>My Wallet</span></a>
                                 </li>
-                                <li><a href="<c:url value="/logout" />"><i class="icon-power"></i> <span>Logout</span></a>
+                                <li><a href="<c:url value="/logout" />"><i class="icon-power"></i> <span>Đăng xuất</span></a>
                                 </li>
                             </ul>
                         </div>

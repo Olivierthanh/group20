@@ -5,8 +5,8 @@ $(document).ready(() => {
         $("#add-transaction-form")[0].reset();
         $("#add-transaction-form #date-transaction").val(getTodayDate());
         $("#add-transaction-form").attr("action", action);
-        $("#add-transaction-view .modal-title").text("Add Transaction");
-        $("#add-transaction-view button[type=submit]").text("Add");
+        $("#add-transaction-view .modal-title").text("Thêm giao dịch");
+        $("#add-transaction-view button[type=submit]").text("Thêm");
 
         $("#add-transaction-view").modal("show");
     });
@@ -32,8 +32,8 @@ $(document).ready(() => {
        $("#date-transaction").val(transactionDate);
 
        addTransactionForm.attr("action", action);
-       $("#add-transaction-view .modal-title").text("Update Transaction");
-       $("#add-transaction-view button[type=submit]").text("Update");
+       $("#add-transaction-view .modal-title").text("Cập nhật giao dịch");
+       $("#add-transaction-view button[type=submit]").text("Cập nhật");
 
        $("#add-transaction-view").modal("show");
    })

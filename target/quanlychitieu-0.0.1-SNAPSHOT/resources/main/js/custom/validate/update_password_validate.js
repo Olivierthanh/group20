@@ -16,16 +16,16 @@ $("#update-password-form").validate({
     },
     "messages": {
         "old-password": {
-            required: "Please provide old password",
-            minlength: "Your password must be at least 5 characters long"
+            required: "Hãy cung cấp mật khẩu cũ",
+            minlength: "Mật khẩu có độ dài ít nhất 5 ký tự"
         },
         "new-password": {
-            required: "Please provide new password",
-            minlength: "Your password must be at least 5 characters long"
+            required: "Hãy cung cấp mật khẩu mới",
+            minlength: "Mật khẩu có độ dài ít nhất 5 ký tự"
         },
         "confirm-new-password": {
-            required: "Please provide confirm new password",
-            equalTo: "This field must be matched to new password"
+            required: "Hãy cung cấp xác nhận mật khẩu mới",
+            equalTo: "Mật khẩu xác nhận không trùng khớp"
         }
     },
     ignore: [],

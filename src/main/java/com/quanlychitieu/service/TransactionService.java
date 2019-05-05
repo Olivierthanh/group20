@@ -31,55 +31,6 @@ public class TransactionService {
 
 	@Autowired
     private WalletDao walletDao;
-	
-	
-//	public String addTransaction(HttpServletRequest request) {
-//        ObjectMapper mapper = new ObjectMapper();
-//        AjaxMessage message;
-//        String ajaxResponse = "";
-//        User user;
-//        try {
-//            Transaction = getTransactionFromFormData(request);
-//            user.setPassword(passwordEncoder.encode(user.getPassword()));
-//            boolean isSaved = userDao.saveUser(user);
-//            if (isSaved) {
-//                message = new AjaxMessage("success", "Register successfully", "Please return login page to login");
-//            }
-//            else {
-//                message = new AjaxMessage("error", "Register unsuccessfully", "This email " + user.getEmail() + " is already existed, please use another email");
-//            }
-//        }
-//        catch (ParseException parseException) {
-//            parseException.printStackTrace();
-//            message = new AjaxMessage("error", "Error", "Wrong date format (expected yyyy-MM-dd)");
-//        }
-//        catch (Exception ex) {
-//            ex.printStackTrace();
-//            message = new AjaxMessage("error", "Error", "Some thing wrong happen");
-//        }
-//
-//        try {
-//            ajaxResponse = mapper.writeValueAsString(message);
-//        }
-//        catch (Exception ex) {
-//            ex.printStackTrace();
-//        }
-//        return ajaxResponse;
-//    }
-//
-//
-//	private Transaction getTransactionFromFormData(HttpServletRequest request) {
-//        String category = request.getParameter("category");
-//        String amount = request.getParameter("amount");
-//        String note = request.getParameter("note");
-//        String address = request.getParameter("address");
-//        Gender gender = Gender.valueOf(request.getParameter("gender"));
-//        Set<Wallet> listWallet = new HashSet<Wallet>();
-//        Date date = Utils.getDate(request.getParameter("date-transaction"));
-//
-//        return 
-//	}
-
 
     public List<Transaction> getListTransactionByMonth(int walletId, YearMonth month) {
         List<Date> listDate = Utils.createDateListByYearMonth(month);
@@ -97,18 +48,18 @@ public class TransactionService {
                 Wallet wallet = walletDao.getWalletByWalletId(walletId);
                 updateBalance(wallet, transaction.getType(), transaction.getAmount(), "delete");
                 if (walletDao.updateWallet(wallet) && transactionDao.deleteTransaction(transaction)) {
-                    message = new AjaxMessage("success", "Hey, this transaction has been deleted from your wallet", "Deleted");
+                    message = new AjaxMessage("success", "Giao dịch này đã được xóa khỏi ví của bạn", "Đã xóa");
                 }
                 else {
-                    message = new AjaxMessage("error", "Something wrong happen", "Please try to delete your transaction again");
+                    message = new AjaxMessage("error", "Có lỗi xảy ra", "Hãy thử xóa giao dịch lại lần nữa");
                 }
             }
             else {
-                message = new AjaxMessage("error", "Invalid transaction", "Please only delete your transaction in this wallet");
+                message = new AjaxMessage("error", "Giao dịch không hợp lệ", "Hãy xóa giao dịch trong ví của bạn");
             }
         }
         else {
-            message = new AjaxMessage("error", "Transaction is not existed", "Transaction is not existed! Please reload the page and try again!");
+            message = new AjaxMessage("error", "Giao dịch không tồn tại", "Tải lại trang và thử lại!");
         }
 
         try {
@@ -128,10 +79,10 @@ public class TransactionService {
         Wallet wallet = walletDao.getWalletByWalletId(walletId);
         updateBalance(wallet, type, amount, "add");
         if (walletDao.updateWallet(wallet) && transactionDao.addTransaction(transaction)) {
-            message = new AjaxMessage("success", "Added", "Add transaction successfully", String.valueOf(transaction.getTransactionId()));
+            message = new AjaxMessage("success", "Đã thêm", "Thêm giao dịch thành công", String.valueOf(transaction.getTransactionId()));
         }
         else {
-            message = new AjaxMessage("error", "Error", "Cannot add transaction, please try again");
+            message = new AjaxMessage("error", "Lỗi", "Không thể thêm giao dịch, hãy thử lại");
         }
         try {
             ajaxResponse = new ObjectMapper().writeValueAsString(message);
@@ -161,18 +112,18 @@ public class TransactionService {
                 updateTransaction(oldTransaction, newTransaction);
 
                 if (walletDao.updateWallet(wallet)) {
-                    message = new AjaxMessage("success", "Updated transaction", "Your transaction is updated");
+                    message = new AjaxMessage("success", "Đã cập nhật giao dịch", "Giao dịch đã được cập nhật");
                 }
                 else {
-                    message = new AjaxMessage("error", "Cannot updated transaction", "Please try again");
+                    message = new AjaxMessage("error", "Không thể cập nhật giao dịch", "Hãy thử lại");
                 }
             }
             else {
-                message = new AjaxMessage("error", "Cannot updated transaction", "You can only update your transaction");
+                message = new AjaxMessage("error", "Không thể cập nhật giao dịch", "Bạn chỉ có thể cập nhật các giao dịch của chính bạn");
             }
         }
         else {
-            message = new AjaxMessage("error", "Transaction is not existed", "Please reload page and try again");
+            message = new AjaxMessage("error", "Giao dịch không tồn tại", "Hãy tải lại trang và thử lại");
         }
 
         try {

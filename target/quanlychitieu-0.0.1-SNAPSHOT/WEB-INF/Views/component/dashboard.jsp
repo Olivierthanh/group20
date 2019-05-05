@@ -30,7 +30,7 @@
                     <img class="mr-5 m-t-13 m-l-5" src="<c:url value="resources/assets/images/icons/15.png" />" alt="">
                     <div class="media-body">
                         <h2 class="mt-0 mb-1">${noWallet}</h2>
-                        <h5>No. Wallets</h5>
+                        <h5>Số lượng ví</h5>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                     <img class="mr-5 m-t-13 m-l-5" src="<c:url value="resources/assets/images/icons/7.png" />" alt="">
                     <div class="media-body">
                         <h2 class="mt-0 mb-1">${noPersonalWallet}</h2>
-                        <h5>No. Personal Wallets</h5>
+                        <h5>Số lượng ví cá nhân</h5>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                     <img class="mr-5 m-t-13 m-l-5" src="<c:url value="resources/assets/images/icons/8.png" />" alt="">
                     <div class="media-body">
                         <h2 class="mt-0 mb-1">${noSharedWallet}</h2>
-                        <h5>No. Shared Wallets</h5>
+                        <h5>Số lượng ví dùng chung</h5>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                     <img class="mr-5 m-t-13 m-l-5" src="<c:url value="resources/assets/images/icons/18.png" />" alt="">
                     <div class="media-body">
                         <h2 class="mt-0 mb-1">${noTransaction}</h2>
-                        <h5>No. Transactions</h5>
+                        <h5>Số lượng giao dịch</h5>
                     </div>
                 </div>
             </div>
@@ -80,18 +80,18 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header pb-0">
-                <h4 class="card-title">List of Wallet</h4>
+                <h4 class="card-title">Danh sách ví</h4>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
                     <table id="wallet-table" class="table display" style="min-width: 845px">
                         <thead>
                         <tr>
-                            <th>Wallet Name</th>
-                            <th>Balance</th>
-                            <th>Currency</th>
-                            <th>Created Date</th>
-                            <th>Type</th>
+                            <th>Tên ví</th>
+                            <th>Số dư</th>
+                            <th>Đơn vị</th>
+                            <th>Ngày tạo</th>
+                            <th>Loại</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -116,11 +116,11 @@
                         </tbody>
                         <tfoot>
                         <tr>
-                            <th>Name</th>
-                            <th>Balance</th>
-                            <th>Currency</th>
-                            <th>Created Date</th>
-                            <th>Type</th>
+                            <th>Tên</th>
+                            <th>Số dư</th>
+                            <th>Tiền tệ</th>
+                            <th>Ngày tạo</th>
+                            <th>Loại</th>
                         </tr>
                         </tfoot>
                     </table>

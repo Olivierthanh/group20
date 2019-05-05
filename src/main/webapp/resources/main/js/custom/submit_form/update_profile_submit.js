@@ -9,8 +9,8 @@ $("#update-profile-form").on("submit", event => {
     event.preventDefault();
     if ($("#update-profile-form").valid()) {
         swal({
-            title: "Accept to update your profile !!",
-            text: "Submit Ok to update, Cancel to cancel !!",
+            title: "Xác nhận cập nhật thông tin tài khoản !!",
+            text: "Ok để cập nhật, Cancel để hủy bỏ !!",
             type: "info",
             showCancelButton: true,
             confirmButtonText: 'OK',
@@ -40,7 +40,7 @@ $("#update-profile-form").on("submit", event => {
                         });
                     },
                     error: error => {
-                        swal('Try again !!', 'There is something wrong happened !!', 'error');
+                        swal('Thử lại !!', 'Có vấn đề đã xảy ra !!', 'error');
                     }
                 });
             }

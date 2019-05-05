@@ -11,8 +11,8 @@ import java.util.Date;
 
 @Service
 public class EmailService {
-    private static final String SUBJECT = "Wallet - Change account password";
-    private static final String MESSAGE = "Please follow this link to change your account password: \n";
+    private static final String SUBJECT = "Wallet - Khôi phục mật khẩu tài khoản";
+    private static final String MESSAGE = "Hãy truy cập đường link này để khôi phục lại tài khoản: \n";
 
     @Autowired
     private JavaMailSender mailSender;
@@ -33,11 +33,11 @@ public class EmailService {
         SimpleMailMessage mailMessage = createPasswordResetTokenEmail(url, email);
         try {
             mailSender.send(mailMessage);
-            message = new AjaxMessage("success", "Send email successfully", "Please check your inbox to reset your password!");
+            message = new AjaxMessage("success", "Gửi email thành công", "Hãy check hộp thư của bạn để khôi phục mật khẩu!");
         }
         catch (Exception ex) {
             ex.printStackTrace();
-            message = new AjaxMessage("error", "Cannot send email", "Please try again!");
+            message = new AjaxMessage("error", "Không thể gửi email", "Hãy thử lại!");
         }
 
         try {

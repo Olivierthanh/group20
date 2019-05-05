@@ -28,15 +28,15 @@ $("#add-transaction-form").validate({
         }
     },
     "messages": {
-        "category": "Please select a transaction category",
+        "category": "Hãy chọn loại giao dịch",
         "amount": {
-            required: "Please provide a amount of transaction",
-            number: "Please enter a valid number",
-            min: "Please enter an amount greater than 0"
+            required: "Hãy cung cấp lượng giao dịch",
+            number: "Hãy điền một số hợp lệ",
+            min: "Hãy điền một số lớn hơn 0"
         },
         "date-transaction": {
-            required: "Please provide a transaction date",
-            dateLessThan: "Transaction date must be less than now"
+            required: "Hãy cung cấp ngày giao dịch",
+            dateLessThan: "Ngày giao dịch không được sau ngày hôm nay"
         }
     },
     ignore: [],

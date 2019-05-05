@@ -12,10 +12,10 @@ $("#login-form").validate({
         }
     },
     "messages": {
-        "email": "Please enter a valid email address",
+        "email": "Hãy cung cấp email hợp lệ",
         "password": {
-            required: "Please provide a password",
-            minlength: "Your password must be at least 5 characters long"
+            required: "Hãy cung cấp mật khẩu",
+            minlength: "Mật khẩu có độ dài ít nhất 5 ký tự"
         }
     },
     ignore: [],

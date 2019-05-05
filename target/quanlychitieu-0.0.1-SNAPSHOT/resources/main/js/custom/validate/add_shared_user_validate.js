@@ -7,7 +7,7 @@ $("#add-shared-user-form").validate({
         },
     },
     "messages": {
-        "shared-user": "Please enter a valid email address",
+        "shared-user": "Bạn hãy điền một email hợp lệ",
     },
     ignore: [],
     errorClass: "invalid-feedback animated fadeInUp",

@@ -11,7 +11,8 @@ $("#update-profile-form").validate({
     "rules": {
         "name": {
             required: !0,
-            minlength: 3
+            minlength: 1,
+            maxlength: 45
         },
         "password": {
             required: !0,
@@ -30,16 +31,17 @@ $("#update-profile-form").validate({
     },
     "messages": {
         "name": {
-            required: "Please provide your name",
-            minlength: "Your name must be at least 5 characters long"
+            required: "Hãy cung cấp tên của bạn",
+            minlength: "Tên có độ dài ít nhất 1 ký tự",
+            maxlength: "Tên có độ dài tối đa 45 ký tự"
         },
         "password": {
-            required: "Please provide a password",
-            minlength: "Your password must be at least 5 characters long"
+            required: "Hãy cung cấp mật khẩu",
+            minlength: "Mật khẩu có độ dài ít nhất 5 ký tự"
         },
-        "address": "Please enter a valid address",
-        "date-of-birth": "Please enter a valid date",
-        "gender": "Please select gender"
+        "address": "Hãy cung cấp email hợp lệ",
+        "date-of-birth": "Hãy cung cấp ngày sinh hợp lệ",
+        "gender": "Hãy lựa chọn giới tính"
     },
     ignore: [],
     errorClass: "invalid-feedback animated fadeInUp",

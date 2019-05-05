@@ -4,8 +4,8 @@ $(document).ready(() => {
         event.preventDefault();
         if ($(event.target).valid()) {
             swal({
-                title: "Accept to submit !!",
-                text: "Submit Ok to add, Cancel to cancel !!",
+                title: "Xác nhận !!",
+                text: "Xác nhận Ok để thêm, Cancel để hủy bỏ !!",
                 type: "info",
                 showCancelButton: true,
                 confirmButtonText: 'OK',
@@ -41,7 +41,7 @@ $(document).ready(() => {
                             });
                         },
                         error: error => {
-                            swal('Try again !!', 'There is something wrong happened !!', 'error');
+                            swal('Thử lại !!', 'Có vấn đề đã xảy ra !!', 'error');
                         }
                     });
                 }
@@ -87,7 +87,7 @@ function getTransactionNode(dataSubmit, dataReturn, username, action) {
                         <input type="text" name="wallet-id" value="${dataSubmit['wallet-id']}" hidden />
                         <button type="submit" class="btn btn-circle btn-danger"
                                 data-toggle="tooltip" data-placement="right" title
-                                data-original-title="Delete transaction">
+                                data-original-title="Xóa">
                             <i class="fa fa-trash"></i>
                         </button>
                     </form>

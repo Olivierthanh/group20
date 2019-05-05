@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Login</title>
+    <title>Đăng nhập</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<c:url value="resources/assets/images/wallet.png" /> ">
     <%--Sweet Alert stylesheet--%>
@@ -45,14 +45,14 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="text-label">Password</label>
+                                    <label class="text-label">Mật khẩu</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                                 <span class="input-group-text">
                                                     <i class="fa fa-lock" aria-hidden="true"></i>
                                                 </span>
                                         </div>
-                                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="Mật khẩu">
                                     </div>
                                 </div>
                                 <div class="form-row">
@@ -61,16 +61,16 @@
                                             <input class="form-check-input ml-2" type="checkbox"
                                                    id="remember-me" name="remember-me">
                                             <label class="form-check-label ml-3" for="remember-me">
-                                                Check me out
+                                                Giữ tôi đăng nhập
                                             </label>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6 text-right">
-                                        <a id="forgot-password" href="<c:url value="/resetPassword" />">Forgot Password?</a>
+                                        <a id="forgot-password" href="<c:url value="/resetPassword" />">Quên mật khẩu?</a>
                                     </div>
                                 </div>
                                 <div class="text-center mb-4 mt-4">
-                                    <button type="submit" class="btn btn-primary" id="sign-in-submit">Sign in</button>
+                                    <button type="submit" class="btn btn-primary" id="sign-in-submit">Đăng nhập</button>
                                 </div>
                             </form>
                             <div class="text-center">
@@ -86,7 +86,7 @@
                                     </li>
                                 </ul> -->
                                 <p class="mt-5">
-                                    Dont have an account? <a href="<c:url value="/register" />">Register Now</a>
+                                    Bạn chưa có tài khoản? <a href="<c:url value="/register" />">Đăng ký ngay bây giờ</a>
                                 </p>
                             </div>
                         </div>
@@ -112,7 +112,7 @@
 <script src="<c:url value="resources/main/js/custom/submit_form/reset_password.js" />"></script>
 <c:if test="${param.error == true}">
     <script>
-        swal('Try again !!', 'Your email is not existed or your password is incorrect !!', 'error');
+        swal('Vui lòng thử lại !!', 'Email của bạn không tồn tại hoặc mật khẩu không đúng !!', 'error');
 </script>
 </c:if>
 </body>

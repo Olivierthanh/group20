@@ -14,7 +14,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>View Wallet</title>
+    <title>${wallet.walletName}</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<c:url value="resources/assets/images/wallet.png" />">
     <!-- Cdn css -->
@@ -86,11 +86,7 @@
     <!-- End content body -->
 
     <!-- Footer -->
-    <div class="footer">
-        <div class="copyright">
-            <p>Copyright © <a href="#">Group 20 - Cong nghe web -</a> 2018 - 2</p>
-        </div>
-    </div>
+    <jsp:include page="../component/footer.jsp" />
     <!-- End footer -->
 
 </div>

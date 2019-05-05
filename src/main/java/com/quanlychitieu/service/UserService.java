@@ -46,19 +46,19 @@ public class UserService {
             user.setPassword(passwordEncoder.encode(user.getPassword()));
             boolean isSaved = userDao.saveUser(user);
             if (isSaved) {
-                message = new AjaxMessage("success", "Register successfully", "Please return login page to login");
+                message = new AjaxMessage("success", "Đăng ký thành công", "Hãy quay trở lại trang đăng nhập để bắt đầu sử dụng");
             }
             else {
-                message = new AjaxMessage("error", "Register unsuccessfully", "This email " + user.getEmail() + " is already existed, please use another email");
+                message = new AjaxMessage("error", "Đăng ký không thành công", "Email " + user.getEmail() + " đã tồn tại, hãy thử lại email khác");
             }
         }
         catch (ParseException parseException) {
             parseException.printStackTrace();
-            message = new AjaxMessage("error", "Error", "Wrong date format (expected yyyy-MM-dd)");
+            message = new AjaxMessage("error", "Lỗi", "Sai định dạng ngày (yyyy-MM-dd)");
         }
         catch (Exception ex) {
             ex.printStackTrace();
-            message = new AjaxMessage("error", "Error", "Some thing wrong happen");
+            message = new AjaxMessage("error", "Lỗi", "Có lỗi xảy ra");
         }
 
         try {
@@ -77,14 +77,14 @@ public class UserService {
         if (passwordEncoder.matches(oldPassword, user.getPassword())) {
             user.setPassword(passwordEncoder.encode(newPassword));
             if (userDao.updateUser(user)) {
-                message = new AjaxMessage("success", "Updated password", "Your password is updated");
+                message = new AjaxMessage("success", "Đã cập nhật", "Mật khẩu của bạn đã được cập nhật");
             }
             else {
-                message = new AjaxMessage("error", "Failed to update password", "Your password is not updated, please try gain");
+                message = new AjaxMessage("error", "Không thể cập nhật", "Mật khẩu của bạn chưa được cập nhật, hãy thử lại");
             }
         }
         else {
-            message = new AjaxMessage("error", "Incorrect password", "Your old password is incorrect, please try gain");
+            message = new AjaxMessage("error", "Sai mật khẩu", "Mật khẩu cũ của bạn không đúng, hãy thử lại");
         }
 
         try {
@@ -114,24 +114,24 @@ public class UserService {
                 newProfile.setPassword(oldProfile.getPassword());
                 boolean isUpdated = userDao.updateUser(newProfile);
                 if (isUpdated) {
-                    message = new AjaxMessage("success", "Update successfully", "Your profile is updated");
+                    message = new AjaxMessage("success", "Cập nhật thành công", "Thông tin của bạn đã được cập nhật");
                 }
                 else {
-                    message = new AjaxMessage("error", "Update unsuccessfully", "Your profile is not updated! Please try to update profile again");
+                    message = new AjaxMessage("error", "Cập nhật không thành công", "Thông tin của bạn chưa được cập nhật, hãy thử lại");
                 }
             }
             else {
-                message = new AjaxMessage("error", "Incorrect Password", "Please enter the correct password");
+                message = new AjaxMessage("error", "Mật khẩu sai", "Hãy điền mật khẩu đúng");
             }
 
         }
         catch (ParseException parseException) {
             parseException.printStackTrace();
-            message = new AjaxMessage("error", "Error", "Wrong date format (expected yyyy-MM-dd)");
+            message = new AjaxMessage("error", "Lỗi", "Sai định dạng ngày (yyyy-MM-dd)");
         }
         catch (Exception ex) {
             ex.printStackTrace();
-            message = new AjaxMessage("error", "Error", "Some thing wrong happen");
+            message = new AjaxMessage("error", "Lỗi", "Có lỗi xảy ra");
         }
         try {
             ajaxResponse = mapper.writeValueAsString(message);
@@ -216,14 +216,14 @@ public class UserService {
                 user.setPassword(passwordEncoder.encode(newPassword));
                 userDao.updateUser(user);
                 passwordResetTokenDao.deletePasswordResetToken(passwordResetToken);
-                message = new AjaxMessage("success", "Change password successfully", "Your password is changed! Please return login page to login");
+                message = new AjaxMessage("success", "Mật khẩu được khôi phục thành công", "Mật khẩu của bạn đã được khôi phục");
             }
             else {
-                message = new AjaxMessage("error", "Token is invalid or expired", "Your password was not changed");
+                message = new AjaxMessage("error", "Token đã hết hạn", "Mật khẩu của bạn không được khôi phục");
             }
         }
         catch (EmptyInputException ex) {
-            message = new AjaxMessage("error", "Some thing wrong happen", ex.getMessage());
+            message = new AjaxMessage("error", "Có lỗi xảy ra", ex.getMessage());
             ex.printStackTrace();
         }
 

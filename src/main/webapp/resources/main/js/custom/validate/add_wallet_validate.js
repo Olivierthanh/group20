@@ -2,7 +2,8 @@ $("#add-wallet-form").validate({
     "rules": {
         "wallet-name": {
             required: !0,
-            minlength: 5
+            minlength: 3,
+            maxlength: 45
         },
         "currency": {
             required: !0,
@@ -10,11 +11,12 @@ $("#add-wallet-form").validate({
     },
     "messages": {
         "wallet-name": {
-            required: "Please enter a valid email address",
-            minlength: "Wallet name contains at least 5 characters"
+            required: "Hãy nhập một email hợp lệ",
+            minlength: "Tên ví ít nhất 3 ký tự",
+            maxlength: "Tên ví tối đa 45 ký tự"
         },
         "currency": {
-            required: "Please provide a currency",
+            required: "Hãy cung cấp loại tiền tệ",
         }
     },
     ignore: [],

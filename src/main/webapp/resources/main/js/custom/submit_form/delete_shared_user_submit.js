@@ -4,12 +4,12 @@ $("body").on("submit", ".delete-shared-user-form", event => {
     let sharedUserName = $(event.target).find("span.shared-user-name").text();
     swal(
         {
-            title: `Are you sure to delete ${sharedUserName} ?`,
-            text: "You will not be able to recover this user !!",
+            title: `Bạn chắc chắn muốn xóa ${sharedUserName} khỏi ví?`,
+            text: "Bạn không thể phục hồi thao tác này !!",
             type: "warning",
             showCancelButton: !0,
             confirmButtonColor: "#DD6B55",
-            confirmButtonText: "Yes, delete  !!",
+            confirmButtonText: "Có, xóa  !!",
             closeOnConfirm: !1
         }
     ).then(isConfirmed => {
@@ -41,7 +41,7 @@ $("body").on("submit", ".delete-shared-user-form", event => {
                     });
                 },
                 error: error => {
-                    swal('Try again !!', 'There is something wrong happened !!', 'error');
+                    swal('Thử lại !!', 'Có vấn đề đã xảy ra !!', 'error');
                 }
             });
 

@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Profile</title>
+    <title>Đổi mật khẩu</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<c:url value="resources/assets/images/wallet.png" />">
     <!-- Cdn css -->
@@ -56,7 +56,7 @@
                         </li>
                         <!-- <li class="breadcrumb-item"><a href="javascript:void(0)">Apps</a>
                         </li> -->
-                        <li class="breadcrumb-item active">Update Password</li>
+                        <li class="breadcrumb-item active">Đổi mật khẩu</li>
                     </ol>
                 </div>
             </div>
@@ -65,23 +65,23 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="user-info-settings">
-                                <h4 class="text-primary section-heading card-intro-title">Settings</h4>
+                                <h4 class="text-primary section-heading card-intro-title">Đổi mật khẩu</h4>
                                 <form action="<c:url value="/updatePasswordProcess" />" method="get" id="update-password-form">
                                     <div class="form-group">
-                                        <label class="text-label">Old Password</label>
-                                        <input type="password" class="form-control" name="old-password" placeholder="Old Password" />
+                                        <label class="text-label">Mật khẩu cũ</label>
+                                        <input type="password" class="form-control" name="old-password" placeholder="Mật khẩu cũ" />
                                     </div>
                                     <div class="form-group">
-                                        <label class="text-label">New Password</label>
-                                        <input type="password" class="form-control" name="new-password" id="new-password" placeholder="New Password" />
+                                        <label class="text-label">Mật khẩu mới</label>
+                                        <input type="password" class="form-control" name="new-password" id="new-password" placeholder="Mật khẩu mới" />
                                     </div>
                                     <div class="form-group">
-                                        <label class="text-label">Confirm New Password</label>
-                                        <input type="password" class="form-control" name="confirm-new-password" placeholder="Confirm New Password" />
+                                        <label class="text-label">Xác nhận mật khẩu mới</label>
+                                        <input type="password" class="form-control" name="confirm-new-password" placeholder="Xác nhận mật khẩu" />
                                     </div>
                                     <div class="submit-buttons mb-5">
-                                        <button type="submit" class="btn btn-card btn-success">Update Password</button>
-                                        <button type="reset" class="btn btn-card btn-danger">Cancel</button>
+                                        <button type="submit" class="btn btn-card btn-success">Đổi mật khẩu</button>
+                                        <button type="reset" class="btn btn-card btn-danger">Hủy bỏ</button>
                                     </div>
                                 </form>
                             </div>
@@ -92,25 +92,25 @@
                     <div class="card card-full-width rounded-0">
                         <div class="card-body user-details-contact text-center">
                             <div class="user-details-image mb-3">
-                                <img class="rounded-circle" src="<c:url value="resources/assets/images/users/1.jpg" />" alt="image">
+                                <img class="rounded-circle" src="<c:url value="resources/main/images/user.png" />" alt="image">
                             </div>
                             <div class="user-intro">
-                                <h4 class="text-primary card-intro-title mb-0">name</h4>
+                                <h4 class="text-primary card-intro-title mb-0">Tên</h4>
                                 <p><small>@ ${user.name}</small>
                                 </p>
                             </div>
                             <div class="contact-addresses">
                                 <ul class="contact-address-list">
                                     <li class="email">
-                                        <h5><i class="fa fa-envelope text-primary"></i> Email Address</h5>
+                                        <h5><i class="fa fa-envelope text-primary"></i> Địa chỉ email</h5>
                                         <p>${user.email}</p>
                                     </li>
                                     <li class="address">
-                                        <h5><i class="fa fa-map text-primary" aria-hidden="true"></i> Address</h5>
+                                        <h5><i class="fa fa-map text-primary" aria-hidden="true"></i> Địa chỉ</h5>
                                         <p>${user.address}</p>
                                     </li>
                                     <li class="social">
-                                        <h5>Social Profile</h5>
+                                        <h5>Mạng xã hội</h5>
                                         <ul class="social-navigation">
                                             <li>
                                                 <a class="bg-facebook" href="https://www.facebook.com"><i class="fa fa-facebook color-white"></i></a>

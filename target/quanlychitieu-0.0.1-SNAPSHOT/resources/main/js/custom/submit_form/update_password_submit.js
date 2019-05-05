@@ -5,12 +5,12 @@ $(document).ready(() => {
        if ($(event.target).valid()) {
            swal(
                {
-                   title: `Are you sure to update your password ?`,
+                   title: `Bạn chắc chắn muốn đổi mật khẩu ?`,
                    // text: "You will not be able to recover this user !!",
                    type: "warning",
                    showCancelButton: !0,
                    confirmButtonColor: "#DD6B55",
-                   confirmButtonText: "Yes",
+                   confirmButtonText: "Có",
                    closeOnConfirm: !1
                }
            ).then(isConfirmed => {
@@ -37,7 +37,7 @@ $(document).ready(() => {
                            });
                        },
                        error: error => {
-                           swal('Try again !!', 'There is something wrong happened !!', 'error');
+                           swal('Thử lại !!', 'Có vấn đề đã xảy ra!!', 'error');
                        }
                    });
                }

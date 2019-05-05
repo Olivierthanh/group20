@@ -11,7 +11,7 @@
 	language="java"%>
 <div class="card">
 	<div class="card-header pb-5">
-		<h4 class="card-title m-t-10">Transaction</h4>
+		<h4 class="card-title m-t-10">Giao dịch</h4>
 		<div class="table-action float-right">
 			<form action="#">
 
@@ -27,7 +27,7 @@
 					<div class="card w-100 p-4 transaction-day" transaction-date="<fmt:formatDate value="${entry.key}" pattern="yyyy-MM-dd" />">
 						<div class="card-header">
 							<h3 class="card-title m-t-10 transaction-day-date">
-								<fmt:formatDate value="${entry.key}" pattern="yyyy-MM-dd EEEE" />
+								<fmt:formatDate value="${entry.key}" pattern="EEE MMM dd yyyy" />
 							</h3>
 							<c:set var="sum" value="${0}" />
 							<c:forEach var="transaction" items="${entry.value}" >
@@ -89,7 +89,7 @@
 												<input type="text" name="wallet-id" value="${wallet.walletId}" hidden />
 												<button type="submit" class="btn btn-circle btn-danger"
 														data-toggle="tooltip" data-placement="right" title
-														data-original-title="Delete transaction">
+														data-original-title="Xóa">
 													<i class="fa fa-trash"></i>
 												</button>
 											</form>

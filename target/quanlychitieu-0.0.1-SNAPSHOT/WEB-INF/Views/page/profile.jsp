@@ -14,7 +14,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Profile</title>
+    <title>Thông tin cá nhân</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<c:url value="resources/assets/images/wallet.png" />">
     <!-- Cdn css -->
@@ -52,7 +52,7 @@
                 </div>
                 <div class="col p-md-0">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<c:url value="/home" /> ">Home</a>
+                        <li class="breadcrumb-item"><a href="<c:url value="/home" /> ">Trang chủ</a>
                         </li>
                         <!-- <li class="breadcrumb-item"><a href="javascript:void(0)">Apps</a>
                         </li> -->
@@ -65,22 +65,22 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="user-info-settings">
-                                <h4 class="text-primary section-heading card-intro-title">Settings</h4>
+                                <h4 class="text-primary section-heading card-intro-title">Thông tin cá nhân</h4>
                                 <form id="update-profile-form" action="<c:url value="/profile/update_profile" />" method="post" class="user-info-setting-form">
                                     <div class="form-group">
-                                        <label class="text-label">Full Name</label>
-                                        <input type="text" class="form-control" name="name" id="name" value="${user.name}" placeholder="Name" />
+                                        <label class="text-label">Tên</label>
+                                        <input type="text" class="form-control" name="name" id="name" value="${user.name}" placeholder="Tên" />
                                     </div>
                                     <div class="form-group">
-                                        <label class="text-label">Email Address</label>
+                                        <label class="text-label">Email</label>
                                         <input type="email" class="form-control" name="email" id="email" value="${user.email}" disabled />
                                     </div>
                                     <div class="form-group">
-                                        <label class="text-label">Confirm Password</label>
+                                        <label class="text-label">Xác nhận mật khẩu</label>
                                         <input type="password" class="form-control" name="password" id="password" placeholder="******" />
                                     </div>
                                     <div class="form-group">
-                                        <label class="text-label">Date Of Birth</label>
+                                        <label class="text-label">Ngày sinh</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                     <span class="input-group-text">
@@ -91,22 +91,22 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="text-label">Address</label>
-                                        <input type="text" class="form-control" name="address" id="address" value="${user.address}" placeholder="Address" />
+                                        <label class="text-label">Địa chỉ</label>
+                                        <input type="text" class="form-control" name="address" id="address" value="${user.address}" placeholder="Địa chỉ" />
                                     </div>
                                     <div class="form-group">
-                                        <label class="text-label">Gender</label>
+                                        <label class="text-label">Giới tình</label>
                                         <div class="form-check">
                                             <input id="radio1" class="radio-outlined" value="male" name="gender" type="radio" <c:if test="${user.gender == 'male'}">checked</c:if> />
-                                            <label for="radio1" class="">Male</label>
+                                            <label for="radio1" class="">Nam</label>
                                         </div>
                                         <div class="form-check">
                                             <input id="radio2" class="radio-outlined" value="female" name="gender" type="radio" <c:if test="${user.gender == 'female'}">checked</c:if> />
-                                            <label for="radio2" class="">Female</label>
+                                            <label for="radio2" class="">Nữ</label>
                                         </div>
                                     </div>
                                     <div class="submit-buttons mb-5">
-                                        <button type="submit" class="btn btn-card btn-success" id="update-profile-submit-button" disabled>Update Profile</button>
+                                        <button type="submit" class="btn btn-card btn-success" id="update-profile-submit-button" disabled>Cập nhật thông tin</button>
                                         <%--<button type="submit" class="btn btn-card btn-danger" id="cancel-update-profile-button" disabled>Cancel</button>--%>
                                     </div>
                                 </form>
@@ -118,25 +118,25 @@
                     <div class="card card-full-width rounded-0">
                         <div class="card-body user-details-contact text-center">
                             <div class="user-details-image mb-3">
-                                <img class="rounded-circle" src="<c:url value="resources/assets/images/users/1.jpg" />" alt="user-image">
+                                <img class="rounded-circle" src="<c:url value="resources/main/images/user.png" />" alt="user-image">
                             </div>
                             <div class="user-intro">
-                                <h4 class="text-primary card-intro-title mb-0">Name</h4>
+                                <h4 class="text-primary card-intro-title mb-0">Tên</h4>
                                 <p><small>@ ${user.name}</small>
                                 </p>
                             </div>
                             <div class="contact-addresses">
                                 <ul class="contact-address-list">
                                     <li class="email">
-                                        <h5><i class="fa fa-envelope text-primary"></i> Email Address</h5>
+                                        <h5><i class="fa fa-envelope text-primary"></i> Địa chỉ email</h5>
                                         <p>${user.email}</p>
                                     </li>
                                     <li class="address">
-                                        <h5><i class="fa fa-map text-primary" aria-hidden="true"></i> Address</h5>
+                                        <h5><i class="fa fa-map text-primary" aria-hidden="true"></i> Địa chỉ</h5>
                                         <p>${user.address}</p>
                                     </li>
                                     <li class="social">
-                                        <h5>Social Profile</h5>
+                                        <h5>Mạng xã hội</h5>
                                         <ul class="social-navigation">
                                             <li>
                                                 <a class="bg-facebook" href="https://www.facebook.com">

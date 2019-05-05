@@ -12,13 +12,13 @@ $("#reset-password-form").validate({
     },
     "messages": {
         "password": {
-            required: "Please provide a password",
-            minlength: "Your password must be at least 5 characters long"
+            required: "Hãy cung cấp mật khẩu hợp lệ",
+            minlength: "Mật khẩu có độ dài ít nhất 5 ký tự"
         },
         "confirm-password": {
-            required: "Please provide a password",
-            minlength: "Your password must be at least 5 characters long",
-            equalTo: "Please enter the same password as above"
+            required: "Hãy cung cấp xác nhận mật khẩu",
+            minlength: "Mật khẩu xác nhận có độ dài ít nhất 5 ký tự",
+            equalTo: "Mật khẩu xác nhận không khớp"
         }
     },
     ignore: [],

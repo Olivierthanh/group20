@@ -93,7 +93,7 @@ public class WalletService {
 //	    User user = userDao.getUserByEmail(email);
 	    Wallet wallet = walletDao.getWalletByWalletId(walletId);
 	    if (wallet == null){
-	    	message = new AjaxMessage("error", "Wallet is not existed", "You are removed from this wallet or this wallet is not existed");
+	    	message = new AjaxMessage("error", "Ví không tồn tại", "Bạn đã bị xóa khỏi ví hoặc ví không tồn tại");
 		}
 	    else if (isWalletOwner(wallet, email)) {
             Set<User> users = wallet.getListUser();
@@ -101,20 +101,20 @@ public class WalletService {
 
 	        if (isNoUserInWalletAfterDelete) {
 	            walletDao.deleteWallet(wallet);
-	            message = new AjaxMessage("success", "Deleted wallet", "Your wallet is deleted");
+	            message = new AjaxMessage("success", "Đã xóa", "Ví của bạn đã được xóa");
             }
 	        else {
                 users.removeIf(u -> u.getEmail().equals(email));
                 if (walletDao.updateWallet(wallet)) {
-					message = new AjaxMessage("success", "Deleted wallet", "Your are removed from this wallet");
+					message = new AjaxMessage("success", "Đã xóa", "Bạn đã bị xóa khỏi ví này");
                 }
                 else {
-                	message = new AjaxMessage("error", "Error", "There something wrong happpen, please try again");
+                	message = new AjaxMessage("error", "Lỗi", "Có lỗi xảy ra, hãy thử lại");
 				}
             }
         }
 	    else {
-	    	message = new AjaxMessage("error", "Error", "You don't own this wallet");
+	    	message = new AjaxMessage("error", "Lỗi", "Bạn không sở hữu ví này");
 		}
 	    try {
 	    	ajaxResponse = new ObjectMapper().writeValueAsString(message);
@@ -135,10 +135,10 @@ public class WalletService {
 	    	map.put("walletId", String.valueOf(wallet.getWalletId()));
 	    	map.put("walletName", walletName);
 	    	map.put("createdDate", new SimpleDateFormat("yyyy-MM-dd").format(wallet.getCreatedDate()));
-	        message = new AjaxMessage("success", "Added", "Wallet " + walletName + " is added to your wallet list", map);
+	        message = new AjaxMessage("success", "Đã thêm", "Ví " + walletName + " đã được thêm vào danh sách ví của bạn", map);
         }
 	    else {
-	        message = new AjaxMessage("error", "Something wrong happen", "Cannot create new wallet, please try again!");
+	        message = new AjaxMessage("error", "Có lỗi xảy ra", "Không thể xóa ví, hãy thử lại!");
         }
 
 	    try {
@@ -158,13 +158,13 @@ public class WalletService {
 		if (sharedUser != null) {
 			Wallet wallet = walletDao.getWalletByWalletId(walletId);
 			if (wallet == null) {
-				message = new AjaxMessage("error", "Wallet is not existed", "You are removed from this wallet or this wallet is not existed");
+				message = new AjaxMessage("error", "Ví không tồn tại", "Bạn đã bị xóa khỏi ví hoặc ví không tồn tại");
 			}
 			else if (isWalletOwner(wallet, sharedUserEmail)) {
-				message = new AjaxMessage("error", "Error", "This user is already shared this wallet");
+				message = new AjaxMessage("error", "Lỗi", "Người này đã nằm trong danh sách người dùng chung");
 			}
 			else if (!isWalletOwner(wallet, ownerEmail)) {
-				message = new AjaxMessage("error", "Error", "You are not allowed to add shared user to this wallet");
+				message = new AjaxMessage("error", "Lỗi", "Bạn không được phép thêm người dùng chung vào ví này");
 			}
 			else {
 				wallet.getListUser().add(sharedUser);
@@ -173,15 +173,15 @@ public class WalletService {
 					Map<String, String> data = new HashMap<>();
 					data.put("sharedUserId", String.valueOf(sharedUser.getUserId()));
 					data.put("sharedUserName", sharedUser.getName());
-					message = new AjaxMessage("success", "Added " + sharedUser.getName() + " into this wallet", sharedUser.getName() + "is successfully add into this wallet", data);
+					message = new AjaxMessage("success", "Đã thêm " + sharedUser.getName() + " vào ví này", sharedUser.getName() + "được thêm thành công vào ví này", data);
 				}
 				else {
-					message = new AjaxMessage("error", "Some thing wrong happened", "Please try again");
+					message = new AjaxMessage("error", "Có lỗi xảy ra", "Hãy thử lại");
 				}
 			}
 		}
 		else {
-			message = new AjaxMessage("error", "This user is not existed", "Please try again");
+			message = new AjaxMessage("error", "Email " + sharedUserEmail + " không tồn tại", "Please try again");
 		}
 
 		try {
@@ -218,18 +218,18 @@ public class WalletService {
                 }
 
 				if (walletDao.updateWallet(wallet)) {
-					message = new AjaxMessage("success", "Removed " + sharedUserName, "You are not allowed to add shared user to this wallet");
+					message = new AjaxMessage("success", "Đã xóa " + sharedUserName, "Xóa thành công " + sharedUserName + " khỏi ví này");
 				}
 				else {
-					message = new AjaxMessage("error", "Some thing wrong happened", "Please try again");
+					message = new AjaxMessage("error", "Có lỗi xảy ra", "Hãy thử lại");
 				}
 			}
 			else {
-				message = new AjaxMessage("error", "This user doesn't own this wallet", "Please try again");
+				message = new AjaxMessage("error", "Người dùng này không sở hữu ví này", "Hãy thử lại");
 			}
 		}
 		else {
-			message = new AjaxMessage("error", "Error", "You are not allowed to delete shared user to this wallet");
+			message = new AjaxMessage("error", "Lỗi", "Bạn không được phép xóa người dùng chung khỏi ví này");
 		}
 
 		try {

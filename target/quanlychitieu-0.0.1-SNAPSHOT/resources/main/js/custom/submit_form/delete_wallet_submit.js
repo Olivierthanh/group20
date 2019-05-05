@@ -3,12 +3,12 @@ $("#delete-wallet-form").on("submit", event => {
     event.preventDefault();
     swal(
         {
-            title: "Are you sure to delete ?",
-            text: "You will not be able to recover this wallet !!",
+            title: "Bạn chắc chắn muốn xóa ví này ?",
+            text: "Bạn không thể phục hồi thao tác này !!",
             type: "warning",
             showCancelButton: !0,
             confirmButtonColor: "#DD6B55",
-            confirmButtonText: "Yes, delete it !!",
+            confirmButtonText: "Có, xóa nó !!",
             closeOnConfirm: !1
         }
     ).then(isConfirmed => {
@@ -35,7 +35,7 @@ $("#delete-wallet-form").on("submit", event => {
                     });
                 },
                 error: error => {
-                    swal('Try again !!', 'There is something wrong happened !!', 'error');
+                    swal('Thử lại !!', 'Có vấn đề đã xảy ra !!', 'error');
                 }
             });
             // swal("Deleted !!", "Hey, your imaginary file has been deleted !!", "success");

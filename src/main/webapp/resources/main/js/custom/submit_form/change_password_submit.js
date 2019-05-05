@@ -25,7 +25,7 @@ $("#reset-password-form").on("submit", event => {
 
             },
             error: error => {
-                swal('Try again !!', 'There is something wrong happened !!', 'error');
+                swal('Thử lại !!', 'Có vấn đề đã xảy ra !!', 'error');
             }
         });
     }

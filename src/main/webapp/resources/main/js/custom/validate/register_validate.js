@@ -15,7 +15,7 @@ $("#register-form").validate({
         },
         "name": {
             required: !0,
-            minlength: 3
+            minlength: 1
         },
         "password": {
             required: !0,
@@ -37,23 +37,23 @@ $("#register-form").validate({
         }
     },
     "messages": {
-        "email": "Please enter a valid email address",
+        "email": "Hãy cung cấp email hợp lệ",
         "name": {
-            required: "Please provide your name",
-            minlength: "Your name must be at least 5 characters long"
+            required: "Hãy cung cấp tên của bạn",
+            minlength: "Tên của bạn độ dài ít nhât 1 ký tự"
         },
         "password": {
-            required: "Please provide a password",
-            minlength: "Your password must be at least 5 characters long"
+            required: "Hãy cung cấp mật khẩu",
+            minlength: "Mật khẩu có độ dài ít nhất 5 ký tự"
         },
         "confirm-password": {
-            required: "Please provide a password",
-            minlength: "Your password must be at least 5 characters long",
-            equalTo: "Please enter the same password as above"
+            required: "Hãy cung cấp mật khẩu xác nhận",
+            minlength: "Mật khẩu có độ dài ít nhất 5 ký tự",
+            equalTo: "Mật khẩu không trùng khớp"
         },
-        "address": "Please enter a valid address",
-        "date-of-birth": "Please enter a valid date",
-        "gender": "Please select gender"
+        "address": "Hãy cung cấp một email hợp lệ",
+        "date-of-birth": "Hãy cung cấp ngày sinh hợp lệ",
+        "gender": "Hãy cung cấp giới tính"
     },
     ignore: [],
     errorClass: "invalid-feedback animated fadeInUp",

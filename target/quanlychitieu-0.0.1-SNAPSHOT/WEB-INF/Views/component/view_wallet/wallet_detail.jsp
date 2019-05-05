@@ -10,7 +10,7 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <div class="card">
     <div class="card-header pb-0">
-        <h4 class="card-title">Wallet Detail</h4>
+        <h4 class="card-title">Thông tin ví</h4>
         <div class="table-action float-right">
             <form action="<c:url value="/deleteWallet" />" home="<c:url value="/home" />" method="get" id="delete-wallet-form">
                 <input type="text" name="wallet-id" value="${wallet.walletId}" hidden />
@@ -71,13 +71,13 @@
                 </c:choose>
 
                 <span class="d-block">
-                    <a href="#" data-toggle="modal" data-target="#add-shared-user-view">Add user</a>
+                    <a href="#" data-toggle="modal" data-target="#add-shared-user-view">Thêm người dùng chung</a>
                     <!-- begin add user modal -->
                     <div class="modal fade" id="add-shared-user-view">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">Add shared user</h5>
+                                    <h5 class="modal-title">Thêm người dùng chung</h5>
                                     <button type="button" class="close"
                                             data-dismiss="modal"><span>&times;</span>
                                     </button>
@@ -90,15 +90,15 @@
                                                 <span class="mdi mdi-account-circle-outline mdi-36px"></span>
                                             </div>
                                             <div class="col">
-                                                <input class="form-control" type="text" name="shared-user" id="shared-user" value="" placeholder="Shared User" />
+                                                <input class="form-control" type="text" name="shared-user" id="shared-user" value="" placeholder="Người dùng chung" />
                                                 <input type="text" name="wallet-id" hidden value="${wallet.walletId}" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="modal-footer px-5">
                                         <button type="button" class="btn btn-secondary"
-                                                data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Add</button>
+                                                data-dismiss="modal">Đóng</button>
+                                        <button type="submit" class="btn btn-primary">Thêm</button>
                                     </div>
                                 </form>
                             </div>

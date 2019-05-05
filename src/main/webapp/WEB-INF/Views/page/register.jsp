@@ -14,7 +14,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Register</title>
+    <title>Đăng ký</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<c:url value="resources/assets/images/wallet.png" />">
     <%--Sweet Alert stylesheet--%>
@@ -54,59 +54,59 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="text-label">Name</label>
+                                    <label class="text-label">Tên</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                                 <span class="input-group-text">
                                                     <i class="fa fa-id-card" aria-hidden="true"></i>
                                                 </span>
                                         </div>
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Tên">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="text-label">Password</label>
+                                    <label class="text-label">Mật khẩu</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                                 <span class="input-group-text">
                                                     <i class="fa fa-lock" aria-hidden="true"></i>
                                                 </span>
                                         </div>
-                                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="Mật khẩu">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="text-label">Confirm Password</label>
+                                    <label class="text-label">Xác nhận mật khẩu</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                                 <span class="input-group-text">
                                                     <i class="fa fa-lock" aria-hidden="true"></i>
                                                 </span>
                                         </div>
-                                        <input type="password" class="form-control" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+                                        <input type="password" class="form-control" id="confirm-password" name="confirm-password" placeholder="Xác nhận mật khẩu">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="text-label">Address</label>
+                                    <label class="text-label">Địa chỉ</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                                 <span class="input-group-text">
                                                     <i class="fa fa-address-card"></i>
                                                 </span>
                                         </div>
-                                        <input type="text" class="form-control" id="address" name="address" placeholder="Address" />
+                                        <input type="text" class="form-control" id="address" name="address" placeholder="Địa chỉ" />
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-6">
-                                        <label class="text-label">Date Of Birth</label>
+                                        <label class="text-label">Ngày sinh</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                     <span class="input-group-text">
                                                         <i class="fa fa-calendar"></i>
                                                     </span>
                                             </div>
-                                            <input type="date" class="form-control" id="date-of-birth" name="date-of-birth" placeholder="Date Of Birth" />
+                                            <input type="date" class="form-control" id="date-of-birth" name="date-of-birth" placeholder="Ngày sinh" />
                                         </div>
                                     </div>
                                     <!-- <div class="col-md-6">
@@ -123,19 +123,19 @@
                                         </div>
                                     </div> -->
                                     <div class="form-group col-md-6">
-                                        <label class="text-label">Gender</label>
+                                        <label class="text-label">Giới tình</label>
                                         <div class="form-check">
                                             <input id="radio1" class="radio-outlined" name="gender" value="male" type="radio">
-                                            <label for="radio1" class="">Male</label>
+                                            <label for="radio1" class="">Nam</label>
                                         </div>
                                         <div class="form-check">
                                             <input id="radio2" class="radio-outlined" name="gender" value="female" type="radio">
-                                            <label for="radio2" class="">Female</label>
+                                            <label for="radio2" class="">Nữ</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="text-center mb-4 mt-4">
-                                    <button type="submit" class="btn btn-primary">Register</button>
+                                    <button type="submit" class="btn btn-primary">Đăng ký</button>
                                 </div>
                             </form>
                             <div class="text-center">
@@ -151,7 +151,7 @@
                                     </li>
                                 </ul> -->
                                 <p class="mt-5">
-                                    Already have an account? <a href="<c:url value="/login" />">Login Now</a>
+                                    Bạn đã có tài khoản? <a href="<c:url value="/login" />">Đăng nhập ngay bây giờ</a>
                                 </p>
                             </div>
                         </div>
