@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="col">
                                         <input type="date" class="form-control"
-                                               name="date-transaction" id="date-transaction">
+                                               name="date-transaction" id="date-transaction" required>
                                         <input type="text" name="wallet-id" value="${wallet.walletId}" hidden />
                                     </div>
                                 </div>

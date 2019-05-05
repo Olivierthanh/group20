@@ -23,7 +23,7 @@ function initExpenseChart(expenseTransactions) {
         calculable: true,
         series: [
             {
-                name: 'Source',
+                name: 'Loại',
                 type: 'pie',
                 radius: '55%',
                 center: ['50%', '70%'],

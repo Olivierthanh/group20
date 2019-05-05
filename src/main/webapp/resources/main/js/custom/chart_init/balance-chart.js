@@ -62,7 +62,8 @@ function getYAxisBalanceChart(data) {
 
         let balanceAmount = parseInt($("#balance-amount").text());
         console.log(balanceAmount);
-        yAxis = getBalanceArray(Object.values(transactionAmount), balanceAmount);
+        // yAxis = getBalanceArray(Object.values(transactionAmount), balanceAmount);
+        yAxis = Object.values(transactionAmount);
         console.log(yAxis);
         return yAxis;
     }
@@ -96,7 +97,7 @@ function initBalanceChart(data) {
         legend: {
             show: true,
             color: '#fff',
-            data: ['Balance']
+            data: ['Tổng chi phí']
         },
 
         calculable: true,
@@ -118,7 +119,7 @@ function initBalanceChart(data) {
         ],
         series: [
             {
-                name: 'Balance',
+                name: 'Tổng chi phí',
                 type: 'line',
                 data: yAxis,
                 markPoint: {

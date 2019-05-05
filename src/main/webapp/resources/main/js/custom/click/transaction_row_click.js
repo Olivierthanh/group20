@@ -3,6 +3,7 @@ $(document).ready(() => {
     $("#add-transaction-button").on("click", event => {
         let action = "/" + $("#add-transaction-form").attr("action").split("/")[1] + "/addTransaction";
         $("#add-transaction-form")[0].reset();
+        $("#add-transaction-form #date-transaction").val(getTodayDate());
         $("#add-transaction-form").attr("action", action);
         $("#add-transaction-view .modal-title").text("Add Transaction");
         $("#add-transaction-view button[type=submit]").text("Add");
@@ -37,3 +38,11 @@ $(document).ready(() => {
        $("#add-transaction-view").modal("show");
    })
 });
+
+function getTodayDate() {
+    let today = new Date();
+    let year = today.getFullYear();
+    let month = today.getMonth() + 1;
+    let date = today.getDate();
+    return `${year}-${month < 10 ? '0' + month: month}-${date < 10 ? '0' + date: date}`;
+}
