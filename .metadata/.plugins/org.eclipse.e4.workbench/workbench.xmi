@@ -98,7 +98,7 @@
               <children xsi:type="advanced:Placeholder" xmi:id="_yEegtU2EEem-CpQbJCyiFA" elementId="org.eclipse.jdt.ui.TypeHierarchy" toBeRendered="false" ref="_yDIc4E2EEem-CpQbJCyiFA"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_yEegtk2EEem-CpQbJCyiFA" elementId="org.eclipse.jdt.ui.PackagesView" toBeRendered="false" ref="_yEOpEE2EEem-CpQbJCyiFA"/>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_yEegt02EEem-CpQbJCyiFA" containerData="8004">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_yEegt02EEem-CpQbJCyiFA" containerData="8004" selectedElement="_yEegvU2EEem-CpQbJCyiFA">
               <children xsi:type="basic:PartSashContainer" xmi:id="_yEeguE2EEem-CpQbJCyiFA" containerData="7000" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_yEeguU2EEem-CpQbJCyiFA" elementId="org.eclipse.ui.editorss" containerData="7000" ref="_yCzswE2EEem-CpQbJCyiFA"/>
                 <children xsi:type="basic:PartStack" xmi:id="_yEeguk2EEem-CpQbJCyiFA" elementId="topRight" containerData="3000" selectedElement="_yEegu02EEem-CpQbJCyiFA">
@@ -289,7 +289,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xpyIwE2EEem-CpQbJCyiFA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_brCwQFbqEemg2c8Bbae8uA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_wBkNwU2EEem-CpQbJCyiFA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_0abJIHAaEemaFpPsUNhSKg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_wBkNwU2EEem-CpQbJCyiFA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xpyIwU2EEem-CpQbJCyiFA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -325,7 +325,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xpyIxU2EEem-CpQbJCyiFA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_brElc1bqEemg2c8Bbae8uA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_wBjm002EEem-CpQbJCyiFA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_0adlYHAaEemaFpPsUNhSKg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_wBjm002EEem-CpQbJCyiFA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xpyIxk2EEem-CpQbJCyiFA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -3466,7 +3466,7 @@
   <addons xmi:id="_wAoZs02EEem-CpQbJCyiFA" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_wAoZtE2EEem-CpQbJCyiFA" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_wA0m4E2EEem-CpQbJCyiFA" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_ziRZIXAaEemaFpPsUNhSKg" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_wBacwE2EEem-CpQbJCyiFA" elementId="org.eclipse.ui.category.edit" name="Edit"/>
   <categories xmi:id="_wBacwU2EEem-CpQbJCyiFA" elementId="org.eclipse.papyrus.infra.nattable.rows.command.category" name="NatTable Rows Catgerory" description="This category is used for all rows commands"/>

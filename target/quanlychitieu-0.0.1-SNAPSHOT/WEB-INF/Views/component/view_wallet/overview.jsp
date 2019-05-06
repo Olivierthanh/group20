@@ -164,17 +164,18 @@
             <div class="col-4">
                 <div class="card-content">
                     <div class="row p-2">
-                        <p class="w-100 text-right" id="inflow">${inflow}</p>
+                        <p class="w-100 text-right"><span id="inflow">${inflow}</span> ${wallet.currency}</p>
                     </div>
                     <div class="row p-2">
-                        <p class="w-100 text-right" id="outflow">${outflow }</p>
+                        <p class="w-100 text-right"><span id="outflow">${outflow }</span> ${wallet.currency}</p>
                     </div>
                     <hr>
                     <div class="row p-2">
-                        <p class="w-100 text-right" id="balance-amount">${sum}</p>
+                        <p class="w-100 text-right"><span id="balance-amount">${sum}</span> ${wallet.currency}</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<span id="currency" style="display: none;">${wallet.currency}</span>

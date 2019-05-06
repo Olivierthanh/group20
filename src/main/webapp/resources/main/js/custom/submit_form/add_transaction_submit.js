@@ -33,6 +33,7 @@ $(document).ready(() => {
                                         let deleteTransactionUrl = "/" + action.split("/")[1] + '/deleteTransaction';
                                         updateModel(dataSubmit, data, deleteTransactionUrl);
                                         $(event.target)[0].reset();
+                                        $("#date-transaction").val(getTodayDate());
                                     }
                                     else {
                                         updateTransaction(dataSubmit);
@@ -52,6 +53,7 @@ $(document).ready(() => {
 
 
 function getTransactionNode(dataSubmit, dataReturn, username, action) {
+    let currency = $("#currency").text();
     let node = `
     <div class="card-body py-0"
         transaction-id="${dataReturn['attachedData']}"
@@ -80,8 +82,10 @@ function getTransactionNode(dataSubmit, dataReturn, username, action) {
             <div class="col-4">
                 <div class="row float-right w-75">
                     <form action="${action}" method="get" class="delete-transaction-form">
-                        <p class="w-100 transaction-amount">
-                            ${(dataSubmit['transaction-type'] === 'income' ? '+ ': '- ') + dataSubmit['amount']}
+                        <p class="w-100">
+                            <span class="transaction-amount">
+                                ${(dataSubmit['transaction-type'] === 'income' ? '+ ': '- ') + dataSubmit['amount']}
+                            </span>
                         </p>
                         <input type="text" name="transaction-id" value="${dataReturn['attachedData']}" hidden />
                         <input type="text" name="wallet-id" value="${dataSubmit['wallet-id']}" hidden />
@@ -100,6 +104,7 @@ function getTransactionNode(dataSubmit, dataReturn, username, action) {
 }
 
 function createTransactionDayNode(dataSubmit, dataReturn, deleteTransactionUrl, isVisible) {
+    let currency = $("#currency").text();
     let node = `
     <div class="card w-100 p-4 transaction-day ${!isVisible ? 'd-none': ''}" transaction-date="${dataSubmit['date-transaction']}">
         <div class="card-header">
@@ -107,7 +112,11 @@ function createTransactionDayNode(dataSubmit, dataReturn, deleteTransactionUrl, 
                 ${new Date(dataSubmit['date-transaction']).toDateString()}
             </h3>
             <div class="float-right">
-                <p class="sum">${dataSubmit['transaction-type'] === 'income'? '+' + dataSubmit['amount']: '-' + dataSubmit['amount']}</p>
+                <p>
+                    <span class="sum">
+                        ${dataSubmit['transaction-type'] === 'income'? '+' + dataSubmit['amount']: '-' + dataSubmit['amount']}
+                    </span> ${currency}
+                </p>
             </div>
         </div>
     </div>
@@ -306,5 +315,4 @@ function updateTransactionNode(transactionNode, dataSubmit, isDateChange) {
     transactionNode.attr("note", dataSubmit['note']);
     transactionNode.attr("transaction-date", dataSubmit['date-transaction']);
 }
-
 

@@ -41,7 +41,7 @@
 								</c:choose>
 							</c:forEach>
 							<div class="float-right">
-								<p class="sum">${sum}</p>
+								<p><span class="sum">${sum}</span> ${wallet.currency}</p>
 							</div>
 						</div>
 
@@ -74,7 +74,8 @@
 									<div class="col-4">
 										<div class="row float-right w-75">
 											<form action="<c:url value="/deleteTransaction" />" method="get" class="delete-transaction-form">
-												<p class="w-100 transaction-amount">
+												<p class="w-100">
+													<span class="transaction-amount">
 													<c:choose>
 														<c:when test="${transaction.type == 'income'}" >
 															+
@@ -84,6 +85,8 @@
 														</c:otherwise>
 													</c:choose>
 														${transaction.amount }
+													</span>
+													<%--${wallet.currency}--%>
 												</p>
 												<input type="text" name="transaction-id" value="${transaction.transactionId}" hidden />
 												<input type="text" name="wallet-id" value="${wallet.walletId}" hidden />

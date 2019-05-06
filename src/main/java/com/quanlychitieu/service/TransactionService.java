@@ -23,13 +23,13 @@ import com.quanlychitieu.utils.Utils;
 @Service
 public class TransactionService {
 
-	@Autowired
-	private TransactionDao transactionDao;
+    @Autowired
+    private TransactionDao transactionDao;
 
-	@Autowired
+    @Autowired
     private UserDao userDao;
 
-	@Autowired
+    @Autowired
     private WalletDao walletDao;
 
     public List<Transaction> getListTransactionByMonth(int walletId, YearMonth month) {
@@ -48,18 +48,18 @@ public class TransactionService {
                 Wallet wallet = walletDao.getWalletByWalletId(walletId);
                 updateBalance(wallet, transaction.getType(), transaction.getAmount(), "delete");
                 if (walletDao.updateWallet(wallet) && transactionDao.deleteTransaction(transaction)) {
-                    message = new AjaxMessage("success", "Giao dịch này đã được xóa khỏi ví của bạn", "Đã xóa");
+                    message = new AjaxMessage("success", "Hey, this transaction has been deleted from your wallet", "Deleted");
                 }
                 else {
-                    message = new AjaxMessage("error", "Có lỗi xảy ra", "Hãy thử xóa giao dịch lại lần nữa");
+                    message = new AjaxMessage("error", "Something wrong happen", "Please try to delete your transaction again");
                 }
             }
             else {
-                message = new AjaxMessage("error", "Giao dịch không hợp lệ", "Hãy xóa giao dịch trong ví của bạn");
+                message = new AjaxMessage("error", "Invalid transaction", "Please only delete your transaction in this wallet");
             }
         }
         else {
-            message = new AjaxMessage("error", "Giao dịch không tồn tại", "Tải lại trang và thử lại!");
+            message = new AjaxMessage("error", "Transaction is not existed", "Transaction is not existed! Please reload the page and try again!");
         }
 
         try {
@@ -79,10 +79,10 @@ public class TransactionService {
         Wallet wallet = walletDao.getWalletByWalletId(walletId);
         updateBalance(wallet, type, amount, "add");
         if (walletDao.updateWallet(wallet) && transactionDao.addTransaction(transaction)) {
-            message = new AjaxMessage("success", "Đã thêm", "Thêm giao dịch thành công", String.valueOf(transaction.getTransactionId()));
+            message = new AjaxMessage("success", "Added", "Add transaction successfully", String.valueOf(transaction.getTransactionId()));
         }
         else {
-            message = new AjaxMessage("error", "Lỗi", "Không thể thêm giao dịch, hãy thử lại");
+            message = new AjaxMessage("error", "Error", "Cannot add transaction, please try again");
         }
         try {
             ajaxResponse = new ObjectMapper().writeValueAsString(message);
@@ -112,18 +112,18 @@ public class TransactionService {
                 updateTransaction(oldTransaction, newTransaction);
 
                 if (walletDao.updateWallet(wallet)) {
-                    message = new AjaxMessage("success", "Đã cập nhật giao dịch", "Giao dịch đã được cập nhật");
+                    message = new AjaxMessage("success", "Updated transaction", "Your transaction is updated");
                 }
                 else {
-                    message = new AjaxMessage("error", "Không thể cập nhật giao dịch", "Hãy thử lại");
+                    message = new AjaxMessage("error", "Cannot updated transaction", "Please try again");
                 }
             }
             else {
-                message = new AjaxMessage("error", "Không thể cập nhật giao dịch", "Bạn chỉ có thể cập nhật các giao dịch của chính bạn");
+                message = new AjaxMessage("error", "Cannot updated transaction", "You can only update your transaction");
             }
         }
         else {
-            message = new AjaxMessage("error", "Giao dịch không tồn tại", "Hãy tải lại trang và thử lại");
+            message = new AjaxMessage("error", "Transaction is not existed", "Please reload page and try again");
         }
 
         try {
@@ -169,5 +169,5 @@ public class TransactionService {
         oldTransaction.setNote(newTransaction.getNote());
         oldTransaction.setType(newTransaction.getType());
     }
-	
+
 }

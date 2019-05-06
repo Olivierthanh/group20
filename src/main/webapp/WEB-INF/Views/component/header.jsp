@@ -15,7 +15,7 @@
             <ul>
                 <li class="icons">
                     <a href="javascript:void(0)" class="log-user">
-                        <img src="<c:url value="resources/main/images/user.png" />" alt=""> <span id="username">${sessionScope.username}</span> <i
+                        <img src="<c:url value="resources/main/images/user.jpg" />" alt=""> <span id="username">${sessionScope.username}</span> <i
                             class="fa fa-caret-down f-s-14" aria-hidden="true"></i>
                     </a>
                     <div class="drop-down dropdown-profile animated bounceInDown">

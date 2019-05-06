@@ -19,6 +19,7 @@
 	<mvc:annotation-driven />
 	
 	<mvc:resources mapping="/resources/**" location="/resources/" cache-period="10" />
+	<!--31556926-->
 	
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

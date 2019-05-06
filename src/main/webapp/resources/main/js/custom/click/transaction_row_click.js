@@ -39,10 +39,10 @@ $(document).ready(() => {
    })
 });
 
-function getTodayDate() {
-    let today = new Date();
-    let year = today.getFullYear();
-    let month = today.getMonth() + 1;
-    let date = today.getDate();
-    return `${year}-${month < 10 ? '0' + month: month}-${date < 10 ? '0' + date: date}`;
-}
+// function getTodayDate() {
+//     let today = new Date();
+//     let year = today.getFullYear();
+//     let month = today.getMonth() + 1;
+//     let date = today.getDate();
+//     return `${year}-${month < 10 ? '0' + month: month}-${date < 10 ? '0' + date: date}`;
+// }
