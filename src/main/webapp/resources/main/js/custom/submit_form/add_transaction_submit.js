@@ -33,7 +33,7 @@ $(document).ready(() => {
                                         let deleteTransactionUrl = "/" + action.split("/")[1] + '/deleteTransaction';
                                         updateModel(dataSubmit, data, deleteTransactionUrl);
                                         $(event.target)[0].reset();
-                                        $("#date-transaction").val(getTodayDate());
+                                        // $("#date-transaction").val(getTodayDate());
                                     }
                                     else {
                                         updateTransaction(dataSubmit);
@@ -53,7 +53,7 @@ $(document).ready(() => {
 
 
 function getTransactionNode(dataSubmit, dataReturn, username, action) {
-    let currency = $("#currency").text();
+    let currency = $("#wallet-currency").text();
     let node = `
     <div class="card-body py-0"
         transaction-id="${dataReturn['attachedData']}"
@@ -104,7 +104,7 @@ function getTransactionNode(dataSubmit, dataReturn, username, action) {
 }
 
 function createTransactionDayNode(dataSubmit, dataReturn, deleteTransactionUrl, isVisible) {
-    let currency = $("#currency").text();
+    let currency = $("#wallet-currency").text();
     let node = `
     <div class="card w-100 p-4 transaction-day ${!isVisible ? 'd-none': ''}" transaction-date="${dataSubmit['date-transaction']}">
         <div class="card-header">

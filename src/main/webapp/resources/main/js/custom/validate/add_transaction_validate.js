@@ -24,7 +24,7 @@ $("#add-transaction-form").validate({
         },
         "date-transaction": {
             required: !0,
-            dateLessThan: "now"
+            // dateLessThan: "now"
         }
     },
     "messages": {
@@ -36,7 +36,7 @@ $("#add-transaction-form").validate({
         },
         "date-transaction": {
             required: "Hãy cung cấp ngày giao dịch",
-            dateLessThan: "Ngày giao dịch không được sau ngày hôm nay"
+            // dateLessThan: "Ngày giao dịch không được sau ngày hôm nay"
         }
     },
     ignore: [],

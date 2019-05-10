@@ -178,4 +178,4 @@
         </div>
     </div>
 </div>
-<span id="currency" style="display: none;">${wallet.currency}</span>
+<span id="wallet-currency" style="display: none;">VND</span>
