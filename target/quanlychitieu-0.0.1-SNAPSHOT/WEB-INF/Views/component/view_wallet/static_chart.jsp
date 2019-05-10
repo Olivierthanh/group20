@@ -15,7 +15,7 @@
                 <option>2019-02</option>
         </select>  -->
         <input class="form-control float-right" type="month" max="2019-05" id="month"
-               name="month" style="width: 20%;" required />
+               name="month" style="width: 150px;" required />
     </div>
 
     <div class="card-body">

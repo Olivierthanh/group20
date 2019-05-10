@@ -14,7 +14,7 @@
 		<h4 class="card-title m-t-10">Giao dịch</h4>
 		<div class="table-action float-right">
 			<form action="#">
-
+				<input class="form-control" type="date" id="view-transaction-by-date" />
 			</form>
 		</div>
 	</div>

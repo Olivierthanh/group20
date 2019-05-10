@@ -27,7 +27,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="logo text-center">
-                                <a href="/">
+                                <a href="<c:url value="/" />">
                                     <img src="<c:url value="resources/assets/images/wallet-sm.png" /> " class="img-fluid" alt="">
                                 </a>
                             </div>

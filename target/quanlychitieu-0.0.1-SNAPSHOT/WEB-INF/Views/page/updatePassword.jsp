@@ -92,7 +92,7 @@
                     <div class="card card-full-width rounded-0">
                         <div class="card-body user-details-contact text-center">
                             <div class="user-details-image mb-3">
-                                <img class="rounded-circle" src="<c:url value="resources/main/images/user.png" />" alt="image">
+                                <img class="rounded-circle" src="<c:url value="resources/main/images/user.jpg" />" alt="image">
                             </div>
                             <div class="user-intro">
                                 <h4 class="text-primary card-intro-title mb-0">Tên</h4>

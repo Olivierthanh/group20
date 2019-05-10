@@ -127,6 +127,7 @@
 
 <%-- On change event --%>
 <script src="<c:url value="resources/main/js/custom/change/chart_by_yearmonth_on_change.js" />"></script>
+<script src="<c:url value="resources/main/js/custom/change/transaction_by_date_on_change.js" />"></script>
 
 <%-- Validate form --%>
 <script src="<c:url value="resources/assets/plugins/jquery-validation/jquery.validate.min.js" /> "></script>
